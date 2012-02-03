@@ -1,5 +1,3 @@
-//= require ./app.js
-
 (function() {
 
   Zendesk.Apps.HighriseApp = Zendesk.Apps.App.extend({
