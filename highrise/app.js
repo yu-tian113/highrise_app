@@ -121,10 +121,10 @@
     requests: {
       addNote: function(data, userID) {
         return {
-          accepts: "application/xml",
-          data: data,
-          type: 'POST',
-          url: this._addNoteURL(),
+          data:     data,
+          dataType: 'xml',
+          type:     'POST',
+          url:      this._addNoteURL(),
           headers: {
             'Authorization': 'Basic ' + Base64.encode('%@:X'.fmt(userID))
           }
@@ -133,10 +133,10 @@
 
       addContact: function(data, userID) {
         return {
-          accepts: "application/xml",
-          data: data,
-          type: 'POST',
-          url: this._addContactURL(),
+          data:     data,
+          dataType: 'xml',
+          type:     'POST',
+          url:      this._addContactURL(),
           headers: {
             'Authorization': 'Basic ' + Base64.encode('%@:X'.fmt(userID))
           }
@@ -389,3 +389,4 @@
   });
 
 }());
+
