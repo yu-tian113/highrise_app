@@ -2,8 +2,8 @@
 
 (function() {
 
-  Zendesk.Apps.HighriseApp = Zendesk.Apps.App.extend({
-    location: Zendesk.Apps.Site.TICKET_PROPERTIES,
+  ZendeskApps.HighriseApp = ZendeskApps.App.extend({
+    location: ZendeskApps.Site.TICKET_PROPERTIES,
     appID: '/apps/01-highrise/versions/1.0.0',
     name: 'Highrise',
 
