@@ -10,9 +10,9 @@
     defaultSheet: 'loading',
 
     dependencies: {
-      currentTicketID:  'Zendesk.currentTicket.id',
-      requester:        'Zendesk.currentTicket.requester',
-      requesterEmail:   'Zendesk.currentTicket.requester.email'
+      currentTicketID:  'Zendesk.workspaces.current.ticket.id',
+      requester:        'Zendesk.workspaces.current.ticket.requester',
+      requesterEmail:   'Zendesk.workspaces.current.ticket.requester.email'
     },
 
     translations: {
@@ -180,11 +180,11 @@
       'click .search':        function() { this.request('search').perform(this.$('input.search_term').val(), this.config.token); },
 
       'requesterEmail.changed': function(e, value) {
-        if (this.config.token) {
-          Em.run.next(this, function() {
-            this.request('lookupByEmail').perform(this.deps.requesterEmail, this.config.token);
-          });
-        }
+        if ( !this.config.token || !this.deps.requesterEmail ) { return; }
+
+        Em.run.next(this, function() {
+          this.request('lookupByEmail').perform(this.deps.requesterEmail, this.config.token);
+        });
       },
 
       /** AJAX callbacks **/
