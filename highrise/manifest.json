@@ -1,3 +1,20 @@
 {
-  "name": "Highrise"
+  "name": "Highrise",
+
+  "configuration": {
+    "subdomain": {
+      "type": "url",
+      "required": "true"
+    },
+
+    "token": {
+      "type": "text",
+      "required": "true"
+    },
+
+    "useSSL": {
+      "type": "boolean",
+      "required": "true"
+    }
+  }
 }

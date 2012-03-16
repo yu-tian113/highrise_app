@@ -10,9 +10,9 @@
     defaultSheet: 'loading',
 
     dependencies: {
-      currentTicketID:  'Zendesk.workspaces.current.ticket.id',
-      requester:        'Zendesk.workspaces.current.ticket.requester',
-      requesterEmail:   'Zendesk.workspaces.current.ticket.requester.email'
+      currentTicketID:  'workspace.ticket.id',
+      requester:        'workspace.ticket.requester',
+      requesterEmail:   'workspace.ticket.requester.email'
     },
 
     translations: {
