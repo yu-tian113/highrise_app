@@ -175,21 +175,21 @@
 
       'click .note .cancel':  function() { this.$('.note form').hide(); },
       'click .note .submit':  'submitNote',
-      'click .add_contact a': function() { this.request('addContact').perform(this._addContactData(), this.config.token); },
-      'click .back a':        function() { this.request('lookupByEmail').perform(this.deps.requesterEmail, this.config.token); },
-      'click .search':        function() { this.request('search').perform(this.$('input.search_term').val(), this.config.token); },
+      'click .add_contact a': function() { this.request('addContact').perform(this._addContactData(), this.settings.token); },
+      'click .back a':        function() { this.request('lookupByEmail').perform(this.deps.requesterEmail, this.settings.token); },
+      'click .search':        function() { this.request('search').perform(this.$('input.search_term').val(), this.settings.token); },
 
       'requesterEmail.changed': function(e, value) {
-        if ( !this.config.token || !this.deps.requesterEmail ) { return; }
+        if ( !this.settings.token || !this.deps.requesterEmail ) { return; }
 
         Em.run.next(this, function() {
-          this.request('lookupByEmail').perform(this.deps.requesterEmail, this.config.token);
+          this.request('lookupByEmail').perform(this.deps.requesterEmail, this.settings.token);
         });
       },
 
       /** AJAX callbacks **/
       'addContact.fail':    function(event, jqXHR, textStatus, errorThrown) { this.showError(this.I18n.t('contact.problem', { error: errorThrown.toString() })); },
-      'addContact.success': function(event, data, textStatus, jqXHR) { this.request('lookupByEmail').perform(this.deps.requesterEmail, this.config.token); },
+      'addContact.success': function(event, data, textStatus, jqXHR) { this.request('lookupByEmail').perform(this.deps.requesterEmail, this.settings.token); },
 
       'addNote.fail': function(event, jqXHR, textStatus, errorThrown) {
         var form = this.$('.note form');
@@ -229,7 +229,7 @@
 
       textArea.val(this.I18n.t('note.body.message', { value: textArea.val(), ticketID: this.deps.currentTicketID }));
       this.disableSubmit(form);
-      this.request('addNote').perform(this._addNoteData({ body: textArea.val(), personID: personID }), this.config.token);
+      this.request('addNote').perform(this._addNoteData({ body: textArea.val(), personID: personID }), this.settings.token);
     },
 
     handleLookupResult: function(e, data) {
@@ -266,7 +266,7 @@
 
     handleSearchResult: function(e, data) {
       var self    = this,
-          config  = this.get('config'),
+          settings  = this.get('settings'),
           parties = data.parties || [],
           regex   = /^\/(people|companies)\/.*/,
           results = [],
@@ -281,7 +281,7 @@
           results.push({
             name:   name,
             type:   resource[1][0].toUpperCase(),
-            url:    "https://%@.highrisehq.com%@".fmt(config.subdomain, url)
+            url:    "https://%@.highrisehq.com%@".fmt(settings.subdomain, url)
           });
         }
       });
@@ -345,14 +345,14 @@
     },
 
     _proxyURL: function(resource) {
-      var config = this.config;
+      var settings = this.settings;
       return encodeURI(
         this.resources.PROXY_URI
             .fmt(
               this.resources.HIGHRISE_URI
                   .fmt(
-                    config.useSSL ? 's' : '',
-                    config.subdomain,
+                    settings.useSSL ? 's' : '',
+                    settings.subdomain,
                     resource
                   )
             )
