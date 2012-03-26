@@ -1,3 +1,9 @@
 {
-  "description": "Shows summary information from Highrise."
+  "description": "Shows summary information from Highrise.",
+
+  "configuration": {
+    "subdomain": { "label": "Subdomain" },
+    "token":     { "label": "Token" },
+    "useSSL":    { "label": "Use SSL?" }
+  }
 }
