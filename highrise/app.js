@@ -1,8 +1,6 @@
-//= require ./app.js
-
 (function() {
 
-  ZendeskApps.HighriseApp = ZendeskApps.App.extend({
+  return ZendeskApps.App.extend({
     location: ZendeskApps.Site.TICKET_PROPERTIES,
     appID: '/apps/01-highrise/versions/1.0.0',
     name: 'Highrise',
