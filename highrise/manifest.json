@@ -1,5 +1,6 @@
 {
   "name": "Highrise",
+  "private": true,
 
   "configuration": {
     "subdomain": {
