@@ -179,9 +179,7 @@
       'requesterEmail.changed': function(e, value) {
         if ( !this.settings.token || !this.deps.requesterEmail ) { return; }
 
-        Em.run.next(this, function() {
-          this.request('lookupByEmail').perform(this.deps.requesterEmail, this.settings.token);
-        });
+        this.request('lookupByEmail').perform(this.deps.requesterEmail, this.settings.token);
       },
 
       /** AJAX callbacks **/
