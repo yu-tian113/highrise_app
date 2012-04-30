@@ -233,7 +233,7 @@
       // This section starts hidden, and as lookupByEmail is the first thing called...
       this.$('.search_section').show();
 
-      results = $(data).find('people');
+      results = this.$(data).find('people');
       if (results.length === 0) {
         this.sheet('not_found').show();
         return;
@@ -267,7 +267,7 @@
           results = [],
           resultsData, name, resource, url;
 
-      $(parties).each(function(index, element) {
+      this.$(parties).each(function(index, element) {
         name      = element[1];
         url       = element[0];
         resource  = regex.exec(url);
@@ -292,12 +292,13 @@
     },
 
     _extractInfo: function(result, selector, fields) {
+      var self = this;
       return result
         .find(selector)
         .map(function(idx, el) {
           var hash = {};
-          $(fields).each(function(index, field) {
-              hash[field] = $(el).find(field).text();
+          self.$(fields).each(function(index, field) {
+              hash[field] = self.$(el).find(field).text();
             });
             return hash;
         }).toArray();
