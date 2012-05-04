@@ -1,9 +1,44 @@
 {
-  "description": "Shows summary information from Highrise.",
+  "app": {
+    "configuration": {
+      "name":       { "label": "Name" },
+      "subdomain":  { "label": "Subdomain" },
+      "token":      { "label": "Token" },
+      "useSSL":     { "label": "Use SSL?" }
+    },
 
-  "configuration": {
-    "subdomain": { "label": "Subdomain" },
-    "token":     { "label": "Token" },
-    "useSSL":    { "label": "Use SSL?" }
-  }
+    "description":  "Shows summary information from Highrise.",
+    "name":         "Highrise"
+  },
+
+  "auth": {
+    "error":    "We couldn't authenticate into Highrise",
+    "problem":  "There's been a problem!"
+  },
+
+  "contact": {
+    "add_to_highrise":  "Add this Zendesk user to Highrise",
+    "not_found":        "No contact found with this email address",
+    "problem":          "There's been a problem: %@"
+  },
+
+  "global": {
+    "back":       "Back",
+    "cancel":     "Cancel",
+    "search":     "search",
+    "submit":     "Submit",
+    "submitting": "Submitting..."
+  },
+
+  "note": {
+    "add_to": "Add a Note to",
+    "added":  "Note Added",
+    "body": {
+      "empty":    "Note body is empty!",
+      "message":  "{{value}} (Zendesk ticket #{{ticketID}})"
+    },
+    "create_another": "Create Another"
+  },
+
+  "search_results": "Search Results"
 }

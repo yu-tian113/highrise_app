@@ -2,7 +2,6 @@
 
   return ZendeskApps.defineApp(ZendeskApps.Site.TICKET_PROPERTIES, {
     appID: '/apps/01-highrise/versions/1.0.0',
-    name: 'Highrise',
 
     defaultSheet: 'loading',
 
@@ -10,39 +9,6 @@
       currentTicketID:  'workspace.ticket.id',
       requester:        'workspace.ticket.requester',
       requesterEmail:   'workspace.ticket.requester.email'
-    },
-
-    translations: {
-      auth:     {
-        error: "We couldn't authenticate into Highrise",
-        problem: "There's been a problem!"
-      },
-
-      contact:  {
-        add_to_highrise: "Add this Zendesk user to Highrise",
-        not_found: "No contact found with this email address",
-        problem: "There's been a problem: %@"
-      },
-
-      global:   {
-        back: "Back",
-        cancel: "Cancel",
-        search: "search",
-        submit: "Submit",
-        submitting: "Submitting..."
-      },
-
-      note:     {
-        add_to: "Add a Note to",
-        added: "Note Added",
-        body: {
-          empty: "Note body is empty!",
-          message: "{{value}} (Zendesk ticket #{{ticketID}})"
-        },
-        create_another: "Create Another"
-      },
-
-      search_results: "Search Results"
     },
 
     // Local var
@@ -82,7 +48,7 @@
 
     templates: {
       main: '<div class="highrise_app">' +
-            '  <div><h3>Highrise</h3></div><hr/>' +
+            '  <div><h3>{{I18n.app.name}}</h3></div><hr/>' +
             '  <section data-sheet-name="loading" class="loading"></section>' +
             '  <section data-sheet-name="auth_error"><p style="color: red; font-weight: bold;">{{I18n.auth.problem}}</p><p>{{I18n.auth.error}}</p></section>' +
             '  <section data-sheet-name="details"></section>' +
