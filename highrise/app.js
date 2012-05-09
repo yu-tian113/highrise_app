@@ -11,14 +11,16 @@
       requesterEmail:   'workspace.ticket.requester.email'
     },
 
-    // Local var
     resources: {
-      HIGHRISE_URI: 'http%@://%@.highrisehq.com/%@',
-      PROXY_URI:    '/proxy/direct?url=%@&timeout=10'
+      EMAIL_LOOKUP_URI: "people/search.xml?criteria[email]=%@",
+      HIGHRISE_URI:     "http%@://%@.highrisehq.com/%@",
+      NOTES_URI:        "notes.xml",
+      PEOPLE_URI:       "people.xml",
+      SEARCH_URI:       "search.json?term=%@&contenttype=application/json"
     },
 
     xmlTemplates: {
-      CONTACT:  'body=<?xml version="1.0" encoding="ISO-8859-1"?>' +
+      CONTACT:  '<?xml version="1.0" encoding="ISO-8859-1"?>' +
                 '<person>' +
                 '  <first-name>%@</first-name>' +
                 '  <last-name>%@</last-name>' +
@@ -38,7 +40,7 @@
                 '    </phone-numbers>' +
                 '  </contact-data>' +
                 '</person>',
-      NOTE: 'body=<?xml version="1.0" encoding="ISO-8859-1"?>' +
+      NOTE: '<?xml version="1.0" encoding="ISO-8859-1"?>' +
             '<note>' +
             '  <body>%@</body>' +
             '  <subject-id type="integer">%@</subject-id>' +
@@ -84,48 +86,10 @@
     },
 
     requests: {
-      addNote: function(data, userID) {
-        return {
-          data:     data,
-          dataType: 'xml',
-          type:     'POST',
-          url:      this._addNoteURL(),
-          headers: {
-            'Authorization': 'Basic ' + Base64.encode('%@:X'.fmt(userID))
-          }
-        };
-      },
-
-      addContact: function(data, userID) {
-        return {
-          data:     data,
-          dataType: 'xml',
-          type:     'POST',
-          url:      this._addContactURL(),
-          headers: {
-            'Authorization': 'Basic ' + Base64.encode('%@:X'.fmt(userID))
-          }
-        };
-      },
-
-      lookupByEmail: function(email, userID) {
-        return {
-          url: this._emailLookupURL(email),
-          headers: {
-            'Authorization': 'Basic ' + Base64.encode('%@:X'.fmt(userID))
-          }
-        };
-      },
-
-      search: function(str, userID) {
-        return {
-          dataType: 'json',
-          url: this._searchURL(str),
-          headers: {
-            'Authorization': 'Basic ' + Base64.encode('%@:X'.fmt(userID))
-          }
-        };
-      }
+      addNote: function(data)             { return this._postRequest(data, this.resources.NOTES_URI); },
+      addContact: function(data, userID)  { return this._postRequest(data, this.resources.PEOPLE_URI); },
+      lookupByEmail: function(email)      { return this._getRequest(this.resources.EMAIL_LOOKUP_URI.fmt(email)),
+      search: function(str)               { return this._getJsonRequest(this.resources.SEARCH_URI.fmt(str))
     },
 
     events: {
@@ -138,9 +102,9 @@
 
       'click .note .cancel':  function() { this.$('.note form').hide(); },
       'click .note .submit':  'submitNote',
-      'click .add_contact a': function() { this.request('addContact').perform(this._addContactData(), this.settings.token); },
-      'click .back a':        function() { this.request('lookupByEmail').perform(this.deps.requesterEmail, this.settings.token); },
-      'click .search':        function() { this.request('search').perform(this.$('input.search_term').val(), this.settings.token); },
+      'click .add_contact a': function() { this.request('addContact').perform(this._addContactData()); },
+      'click .back a':        function() { this.request('lookupByEmail').perform(this.deps.requesterEmail); },
+      'click .search':        function() { this.request('search').perform(this.$('input.search_term').val()); },
 
       'requesterEmail.changed': function(e, value) {
         if ( !this.settings.token || !this.deps.requesterEmail ) { return; }
@@ -150,7 +114,7 @@
 
       /** AJAX callbacks **/
       'addContact.fail':    function(event, jqXHR, textStatus, errorThrown) { this.showError(this.I18n.t('contact.problem', { error: errorThrown.toString() })); },
-      'addContact.success': function(event, data, textStatus, jqXHR) { this.request('lookupByEmail').perform(this.deps.requesterEmail, this.settings.token); },
+      'addContact.success': function(event, data, textStatus, jqXHR) { this.request('lookupByEmail').perform(this.deps.requesterEmail); },
 
       'addNote.fail': function(event, jqXHR, textStatus, errorThrown) {
         var form = this.$('.note form');
@@ -190,7 +154,7 @@
 
       textArea.val(this.I18n.t('note.body.message', { value: textArea.val(), ticketID: this.deps.currentTicketID }));
       this.disableSubmit(form);
-      this.request('addNote').perform(this._addNoteData({ body: textArea.val(), personID: personID }), this.settings.token);
+      this.request('addNote').perform(this._addNoteData({ body: textArea.val(), personID: personID }));
     },
 
     handleLookupResult: function(e, data) {
@@ -290,35 +254,47 @@
       );
     },
 
-    _addContactURL: function() {
-      return this._proxyURL("people.xml");
+    _getJsonRequest: function(resource) {
+      return {
+        dataType: 'json',
+        url:      this._highriseURL(resource),
+        headers: {
+          'Authorization': 'Basic ' + Base64.encode('%@:X'.fmt(this.settings.token))
+        }
+      };
     },
 
-    _addNoteURL: function() {
-      return this._proxyURL("notes.xml");
+    _getRequest: function(resource) {
+      return {
+        url: this._highriseURL(resource),
+        headers: {
+          'Authorization': 'Basic ' + Base64.encode('%@:X'.fmt(this.settings.token))
+        }
+      };
     },
 
-    _emailLookupURL: function(email) {
-      return this._proxyURL("people/search.xml?criteria[email]=%@".fmt(email));
-    },
-
-    _searchURL: function(term) {
-      return this._proxyURL("search.json?term=%@&contenttype=application/json".fmt(term));
-    },
-
-    _proxyURL: function(resource) {
+    _highriseURL: function(resource) {
       var settings = this.settings;
       return encodeURI(
-        this.resources.PROXY_URI
+        this.resources.HIGHRISE_URI
             .fmt(
-              this.resources.HIGHRISE_URI
-                  .fmt(
-                    settings.useSSL ? 's' : '',
-                    settings.subdomain,
-                    resource
-                  )
+              settings.useSSL ? 's' : '',
+              settings.subdomain,
+              resource
             )
        );
+    },
+
+    _postRequest: function(data, resource) {
+      return {
+        dataType: 'xml',
+        data:     data,
+        type:     'POST',
+        url:      this._highriseURL(resource),
+        headers: {
+          'Authorization': 'Basic ' + Base64.encode('%@:X'.fmt(this.settings.token))
+        }
+      };
     },
 
     /** Helpers **/
