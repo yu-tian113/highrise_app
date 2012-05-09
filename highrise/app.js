@@ -88,8 +88,8 @@
     requests: {
       addNote: function(data)             { return this._postRequest(data, this.resources.NOTES_URI); },
       addContact: function(data, userID)  { return this._postRequest(data, this.resources.PEOPLE_URI); },
-      lookupByEmail: function(email)      { return this._getRequest(this.resources.EMAIL_LOOKUP_URI.fmt(email)),
-      search: function(str)               { return this._getJsonRequest(this.resources.SEARCH_URI.fmt(str))
+      lookupByEmail: function(email)      { return this._getRequest(this.resources.EMAIL_LOOKUP_URI.fmt(email)); },
+      search: function(str)               { return this._getJsonRequest(this.resources.SEARCH_URI.fmt(str)); }
     },
 
     events: {
