@@ -6,7 +6,7 @@
       "useSSL":     { "label": "Use SSL?" }
     },
 
-    "description":  "Shows summary information from Highrise.",
+    "description":  "Highrise profiles in tickets, with sync and search",
     "name":         "Highrise"
   },
 
