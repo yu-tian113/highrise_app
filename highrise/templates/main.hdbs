@@ -1,0 +1,14 @@
+<div class="highrise_app">
+  <div><h3>{{I18n.app.name}}</h3></div><hr/>
+  <section data-sheet-name="loading" class="loading"></section>
+  <section data-sheet-name="auth_error"><p style="color: red; font-weight: bold;">{{I18n.auth.problem}}</p><p>{{I18n.auth.error}}</p></section>
+  <section data-sheet-name="details"></section>
+  <section data-sheet-name="not_found" class="add_contact">
+    <p>{{I18n.contact.not_found}}</p><p><a href="#" onclick="return false;">{{I18n.contact.add_to_highrise}}</a></p>
+  </section>
+  <section data-sheet-name="message" class="message"></section>
+  <section class="search_section" style="display: none;">
+    <hr/><input class="search_term" placeholder="{{I18n.global.search}}" type="text"/>
+    <input class="search" type="submit" value="{{I18n.global.search}}"/>
+  </section>
+</div>
