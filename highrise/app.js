@@ -275,14 +275,11 @@
 
     _highriseURL: function(resource) {
       var settings = this.settings;
-      return encodeURI(
-        this.resources.HIGHRISE_URI
-            .fmt(
-              settings.useSSL ? 's' : '',
-              settings.subdomain,
-              resource
-            )
-       );
+      return this.resources.HIGHRISE_URI.fmt(
+        settings.useSSL ? 's' : '',
+        settings.subdomain,
+        resource
+      );
     },
 
     _postRequest: function(data, resource) {
