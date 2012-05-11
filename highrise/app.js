@@ -77,7 +77,7 @@
 
       /** AJAX callbacks **/
       'addContact.fail':    function(event, jqXHR, textStatus, errorThrown) { this.showError(this.I18n.t('contact.problem', { error: errorThrown.toString() })); },
-      'addContact.success': function(event, data, textStatus, jqXHR) { this.request('lookupByEmail').perform(this.deps.requesterEmail); },
+      'addContact.done': function(event, data, textStatus, jqXHR) { this.request('lookupByEmail').perform(this.deps.requesterEmail); },
 
       'addNote.fail': function(event, jqXHR, textStatus, errorThrown) {
         var form = this.$('.note form');
@@ -86,7 +86,7 @@
         this.enableSubmit(form);
       },
 
-      'addNote.success': function(event, data, textStatus, jqXHR) {
+      'addNote.done': function(event, data, textStatus, jqXHR) {
         var form = this.$('.note form');
 
         this.resetForm(form);
@@ -100,8 +100,8 @@
         this.sheet('auth_error').show();
       },
 
-      'lookupByEmail.success':  'handleLookupResult',
-      'search.success':         'handleSearchResult'
+      'lookupByEmail.done':  'handleLookupResult',
+      'search.done':         'handleSearchResult'
     },
 
     submitNote: function() {
