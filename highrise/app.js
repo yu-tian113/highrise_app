@@ -48,43 +48,6 @@
             '</note>'
     },
 
-    templates: {
-      main: '<div class="highrise_app">' +
-            '  <div><h3>{{I18n.app.name}}</h3></div><hr/>' +
-            '  <section data-sheet-name="loading" class="loading"></section>' +
-            '  <section data-sheet-name="auth_error"><p style="color: red; font-weight: bold;">{{I18n.auth.problem}}</p><p>{{I18n.auth.error}}</p></section>' +
-            '  <section data-sheet-name="details"></section>' +
-            '  <section data-sheet-name="not_found" class="add_contact">' +
-            '    <p>{{I18n.contact.not_found}}</p><p><a href="#" onclick="return false;">{{I18n.contact.add_to_highrise}}</a></p>' +
-            '  </section>' +
-            '  <section data-sheet-name="message" class="message"></section>' +
-            '  <section class="search_section" style="display: none;">' +
-            '    <hr/><input class="search_term" placeholder="{{I18n.global.search}}" type="text"/> ' +
-            '    <input class="search" type="submit" value="{{I18n.global.search}}"/>' +
-            '  </section>' +
-            '</div>',
-      userData: '<table class="user_data note"><tr><td><img width="12" height="12" src="{{avatarURL}}"/></td><td><b>{{name}}{{#if title}} ({{title}}){{/if}}</b></td>' +
-                '{{#if companyName}}<tr><td>C</td><td>{{companyName}}</td></tr>{{/if}}' +
-                '{{#emails}}<tr><td>e</td><td>{{address}}</td></tr>{{/emails}}' +
-                '{{#phoneNumbers}}<tr><td>P</td><td><b>{{number}}</b></td></tr>{{/phoneNumbers}}' +
-                '{{#twitter_accounts}}<tr><td>t</td><td>@{{username}}</td></tr>{{/twitter_accounts}}' +
-                '<tr class="add_note"><td>+</td><td><b><a href="#" onclick="return false;">{{I18n.note.add_to}} {{firstName}}</a></td>' +
-                '<tr class="add_note" style="display: none"><td>+</td><td><b>{{I18n.note.added}} - </b><a href="#" onclick="return false;">{{I18n.note.create_another}}</a></td>' +
-                '<tr><td colspan="2">' +
-                '<form style="display: none;">' +
-                '<textarea name="body"></textarea>' +
-                '<input type="hidden" name="personID" value="{{personID}}"/>' +
-                '<input type="reset" value="{{I18n.global.cancel}}" class="cancel"><input type="submit" value="{{I18n.global.submit}}" id="submit" class="submit" onclick="return false;">' +
-                '</form>' +
-                '</td></tr></table>',
-      resultsData:  '<div class="results"><p>{{I18n.search_results}}<b> ({{total}})</b></p>' +
-                    '<table>{{#results}}<tr><td>{{type}}</td><td><a target="_blank" href="{{url}}">{{name}}</a></td></tr>{{/results}}</table>' +
-                    '<div class="back"><a href="#" onclick="return false;"><< {{I18n.global.back}}</a></div>' +
-                    '</div>',
-      error:  '<div class="error">{{message}}</div>' +
-              '<div class="back"><a href="#" onclick="return false;"><< {{I18n.global.back}}</a></div>'
-    },
-
     requests: {
       addNote: function(data)             { return this._postRequest(data, this.resources.NOTES_URI); },
       addContact: function(data, userID)  { return this._postRequest(data, this.resources.PEOPLE_URI); },
@@ -114,7 +77,7 @@
 
       /** AJAX callbacks **/
       'addContact.fail':    function(event, jqXHR, textStatus, errorThrown) { this.showError(this.I18n.t('contact.problem', { error: errorThrown.toString() })); },
-      'addContact.success': function(event, data, textStatus, jqXHR) { this.request('lookupByEmail').perform(this.deps.requesterEmail); },
+      'addContact.done': function(event, data, textStatus, jqXHR) { this.request('lookupByEmail').perform(this.deps.requesterEmail); },
 
       'addNote.fail': function(event, jqXHR, textStatus, errorThrown) {
         var form = this.$('.note form');
@@ -123,7 +86,7 @@
         this.enableSubmit(form);
       },
 
-      'addNote.success': function(event, data, textStatus, jqXHR) {
+      'addNote.done': function(event, data, textStatus, jqXHR) {
         var form = this.$('.note form');
 
         this.resetForm(form);
@@ -137,8 +100,8 @@
         this.sheet('auth_error').show();
       },
 
-      'lookupByEmail.success':  'handleLookupResult',
-      'search.success':         'handleSearchResult'
+      'lookupByEmail.done':  'handleLookupResult',
+      'search.done':         'handleSearchResult'
     },
 
     submitNote: function() {
