@@ -1,0 +1,8 @@
+<div class="highrise_app">
+  <div><h3>Highrise</h3></div><hr/>
+  <div data-main></div>
+  <section class="search_section" style="display: none;">
+    <hr/><input class="search_term" placeholder="t 'global.search'" type="text"/>
+    <input class="search" type="submit" value="t 'global.search'"/>
+  </section>
+</div>

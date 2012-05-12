@@ -1,0 +1,4 @@
+<div class="results"><p>{{t "search_results"}}<b> ({{total}})</b></p>
+<table>{{#results}}<tr><td>{{type}}</td><td><a target="_blank" href="{{url}}">{{name}}</a></td></tr>{{/results}}</table>
+<div class="back"><a href="#" onclick="return false;"><< {{t "global.back"}}</a></div>
+</div>

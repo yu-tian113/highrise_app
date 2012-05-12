@@ -3,12 +3,14 @@
   return ZendeskApps.defineApp(ZendeskApps.Site.TICKET_PROPERTIES, {
     appID: '/apps/01-highrise/versions/1.0.0',
 
-    defaultSheet: 'loading',
+    defaultState: 'loading',
 
     dependencies: {
-      currentTicketID:  'workspace.ticket.id',
-      requester:        'workspace.ticket.requester',
-      requesterEmail:   'workspace.ticket.requester.email'
+      currentTicketID:        'ticket.id',
+      requesterEmail:         'requester.email',
+      requesterName:          'requester.name',
+      requesterOrganization:  'requester.organization.name',
+      requesterPhone:         'requester.phone'
     },
 
     resources: {
@@ -51,8 +53,8 @@
     requests: {
       addNote: function(data)             { return this._postRequest(data, this.resources.NOTES_URI); },
       addContact: function(data, userID)  { return this._postRequest(data, this.resources.PEOPLE_URI); },
-      lookupByEmail: function(email)      { return this._getRequest(this.resources.EMAIL_LOOKUP_URI.fmt(email)); },
-      search: function(str)               { return this._getJsonRequest(this.resources.SEARCH_URI.fmt(str)); }
+      lookupByEmail: function(email)      { return this._getRequest(helpers.fmt(this.resources.EMAIL_LOOKUP_URI, email)); },
+      search: function(str)               { return this._getJsonRequest(helpers.fmt(this.resources.SEARCH_URI, str)); }
     },
 
     events: {
@@ -65,19 +67,20 @@
 
       'click .note .cancel':  function() { this.$('.note form').hide(); },
       'click .note .submit':  'submitNote',
-      'click .add_contact a': function() { this.request('addContact').perform(this._addContactData()); },
-      'click .back a':        function() { this.request('lookupByEmail').perform(this.deps.requesterEmail); },
-      'click .search':        function() { this.request('search').perform(this.$('input.search_term').val()); },
+      'click .add_contact a': function() { this.ajax('addContact', this._addContactData()); },
+      'click .back a':        function() { this.ajax('lookupByEmail', this.dependency('requesterEmail')); },
+      'click .search':        function() { this.ajax('search', this.$('input.search_term').val()); },
 
       'requesterEmail.changed': function(e, value) {
-        if ( !this.settings.token || !this.deps.requesterEmail ) { return; }
+        console.debug('changed')
+        if ( !this.settings.token || !this.dependency('requesterEmail') ) { return; }
 
-        this.request('lookupByEmail').perform(this.deps.requesterEmail, this.settings.token);
+        this.ajax('lookupByEmail', this.dependency('requesterEmail'), this.settings.token);
       },
 
       /** AJAX callbacks **/
       'addContact.fail':    function(event, jqXHR, textStatus, errorThrown) { this.showError(this.I18n.t('contact.problem', { error: errorThrown.toString() })); },
-      'addContact.done': function(event, data, textStatus, jqXHR) { this.request('lookupByEmail').perform(this.deps.requesterEmail); },
+      'addContact.done': function(event, data, textStatus, jqXHR) { this.ajax('lookupByEmail', this.dependency('requesterEmail')); },
 
       'addNote.fail': function(event, jqXHR, textStatus, errorThrown) {
         var form = this.$('.note form');
@@ -97,7 +100,7 @@
 
       'lookupByEmail.fail': function() {
         this.$('.search_section').hide();
-        this.sheet('auth_error').show();
+        this.switchTo('auth_error');
       },
 
       'lookupByEmail.done':  'handleLookupResult',
@@ -115,9 +118,9 @@
         return false;
       }
 
-      textArea.val(this.I18n.t('note.body.message', { value: textArea.val(), ticketID: this.deps.currentTicketID }));
+      textArea.val(this.I18n.t('note.body.message', { value: textArea.val(), ticketID: this.dependency('currentTicketID') }));
       this.disableSubmit(form);
-      this.request('addNote').perform(this._addNoteData({ body: textArea.val(), personID: personID }));
+      this.ajax('addNote', this._addNoteData({ body: textArea.val(), personID: personID }));
     },
 
     handleLookupResult: function(e, data) {
@@ -128,7 +131,7 @@
 
       results = this.$(data).find('people');
       if (results.length === 0) {
-        this.sheet('not_found').show();
+        this.switchTo('not_found');
         return;
       }
 
@@ -139,16 +142,14 @@
         emails:           this._extractInfo(result, 'contact-data > email-addresses > email-address', ['address']),
         firstName:        result.children('first-name').text(),
         im_accounts:      this._extractInfo(result, 'contact-data > instant-messengers > instant-messenger', ['address', 'protocol']),
-        name:             "%@ %@".fmt(result.children('first-name').text(), result.children('last-name').text()),
+        name:             helpers.fmt("%@ %@", result.children('first-name').text(), result.children('last-name').text()),
         personID:         result.children('id').text(),
         phoneNumbers:     this._extractInfo(result, 'contact-data > phone-numbers > phone-number', ['number']),
         title:            result.find('title').text(),
         twitter_accounts: this._extractInfo(result, 'contact-data > twitter-accounts > twitter-account', ['username'])
       };
 
-      this.sheet('details')
-        .render('userData', userData)
-        .show();
+      this.switchTo('user', userData);
     },
 
 
@@ -169,7 +170,7 @@
           results.push({
             name:   name,
             type:   resource[1][0].toUpperCase(),
-            url:    "https://%@.highrisehq.com%@".fmt(settings.subdomain, url)
+            url:    helpers.fmt("https://%@.highrisehq.com%@", settings.subdomain, url)
           });
         }
       });
@@ -179,9 +180,7 @@
         results: results
       };
 
-      this.sheet('details')
-        .render('resultsData', resultsData)
-        .show();
+      this.switchTo('results', resultsData);
     },
 
     _extractInfo: function(result, selector, fields) {
@@ -198,22 +197,21 @@
     },
 
     _addNoteData: function(options) {
-      return encodeURI( this.xmlTemplates.NOTE.fmt(options.body, options.personID) );
+      return encodeURI( helpers.fmt(this.xmlTemplates.NOTE, options.body, options.personID) );
     },
 
     _addContactData: function() {
-      var requester   = this.deps.requester,
-          name        = requester.get('name').split(' ');
+      var name = this.dependency('requesterName').split(' ');
 
       return encodeURI(
-        this.xmlTemplates.CONTACT
-            .fmt(
-              name.shift(),
-              name.join(' '),
-              (requester.get('organization') ? requester.get('organization').get('name') : ''),
-              requester.get('email'),
-              requester.get('phone') || ''
-            )
+        helpers.fmt(
+          this.xmlTemplates.CONTACT,
+          name.shift(),
+          name.join(' '),
+          this.dependency('requesterOrganization') || '',
+          this.dependency('requesterEmail'),
+          this.dependency('requesterPhone') || ''
+        )
       );
     },
 
@@ -222,7 +220,7 @@
         dataType: 'json',
         url:      this._highriseURL(resource),
         headers: {
-          'Authorization': 'Basic ' + Base64.encode('%@:X'.fmt(this.settings.token))
+          'Authorization': 'Basic ' + Base64.encode(helpers.fmt('%@:X', this.settings.token))
         }
       };
     },
@@ -231,14 +229,15 @@
       return {
         url: this._highriseURL(resource),
         headers: {
-          'Authorization': 'Basic ' + Base64.encode('%@:X'.fmt(this.settings.token))
+          'Authorization': 'Basic ' + Base64.encode(helpers.fmt('%@:X', this.settings.token))
         }
       };
     },
 
     _highriseURL: function(resource) {
       var settings = this.settings;
-      return this.resources.HIGHRISE_URI.fmt(
+      return helpers.fmt(
+        this.resources.HIGHRISE_URI,
         settings.useSSL ? 's' : '',
         settings.subdomain,
         resource
@@ -252,7 +251,7 @@
         type:     'POST',
         url:      this._highriseURL(resource),
         headers: {
-          'Authorization': 'Basic ' + Base64.encode('%@:X'.fmt(this.settings.token))
+          'Authorization': 'Basic ' + Base64.encode(helpers.fmt('%@:X', this.settings.token))
         }
       };
     },
@@ -274,9 +273,7 @@
     },
 
     showError: function(msg) {
-      this.sheet('message')
-        .render('error', { message: msg })
-        .show();
+      this.switchTo('error', { message: msg });
     },
 
     resetForm: function(form) {
