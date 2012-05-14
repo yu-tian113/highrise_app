@@ -1,8 +1,42 @@
+<style>
+  .highrise_app ul.options li {
+    display: block;
+    background: url({{assetURL "bullets.png"}}) no-repeat 0 -275px;
+    padding: 0 0 0 17px;
+    margin: 5px 11px 8px 0
+  }
+
+  .highrise_app ul.options li.people {
+    background: url({{assetURL "bullets.png"}}) no-repeat scroll 0 -732px;
+  }
+
+  .highrise_app ul.options li.email {
+    background: url({{assetURL "bullets.png"}}) no-repeat scroll 0 -426px;
+  }
+  .highrise_app ul.options li.phone {
+    background: url({{assetURL "bullets.png"}}) no-repeat scroll 0 -872px;
+  }
+  .highrise_app ul.options li.twitter {
+    background: url({{assetURL "bullets.png"}}) no-repeat scroll 0 -987px;
+  }
+  .highrise_app ul.options li.add_note {
+    background: url({{assetURL "bullets.png"}}) no-repeat scroll 0 -140px;
+  }
+
+  /* Not used */
+  .highrise_app ul.options li.link {
+    background: url({{assetURL "bullets.png"}}) no-repeat scroll 0 2px;
+  }
+  .highrise_app ul.options li.forum {
+    background: url({{assetURL "bullets.png"}}) no-repeat scroll 0 -578px;
+  }
+</style>
 <div class="highrise_app">
   <div><h3>{{t "app.name"}}</h3></div><hr/>
   <div data-main></div>
   <section class="search_section" style="display: none;">
-    <hr/><input class="search_term" placeholder="{{t "global.search"}}" type="text"/>
-    <input class="search" type="submit" value="{{t "global.search"}}"/>
+    <hr/>
+    <input class="search_term" placeholder="{{t "global.search"}}" type="text" style="width: 74%"/>
+    <input class="search btn" type="submit" value="{{t "global.search"}}"/>
   </section>
 </div>

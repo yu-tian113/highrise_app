@@ -1,14 +1,17 @@
-<table class="user_data note"><tr><td><img width="12" height="12" src="{{avatarURL}}"/></td><td><b>{{name}}{{#if title}} ({{title}}){{/if}}</b></td>
-{{#if companyName}}<tr><td>C</td><td>{{companyName}}</td></tr>{{/if}}
-{{#emails}}<tr><td>e</td><td>{{address}}</td></tr>{{/emails}}
-{{#phoneNumbers}}<tr><td>P</td><td><b>{{number}}</b></td></tr>{{/phoneNumbers}}
-{{#twitter_accounts}}<tr><td>t</td><td>@{{username}}</td></tr>{{/twitter_accounts}}
-<tr class="add_note"><td>+</td><td><b><a href="#" onclick="return false;">{{t "note.add_to"}} {{firstName}}</a></td>
-<tr class="add_note" style="display: none"><td>+</td><td><b>{{t "note.added"}} - </b><a href="#" onclick="return false;">{{t "note.create_another"}}</a></td>
-<tr><td colspan="2">
-<form style="display: none;">
-<textarea name="body"></textarea>
-<input type="hidden" name="personID" value="{{personID}}"/>
-<input type="reset" value="{{t "global.cancel"}}" class="cancel"><input type="submit" value="{{t "global.submit"}}" id="submit" class="submit" onclick="return false;">
-</form>
-</td></tr></table>
+<ul class="options user_data note">
+  <li style="background: url({{avatarURL}}) no-repeat 0 2px; background-size: 12px 12px;"><b>{{name}}{{#if title}} ({{title}}){{/if}}</b></li>
+  {{#if companyName}}<li>{{companyName}}</li>{{/if}}
+  {{#emails}}<li class="email">{{address}}</li>{{/emails}}
+  {{#phoneNumbers}}<li class="phone"><b>{{number}}</b></li>{{/phoneNumbers}}
+  {{#twitter_accounts}}<li class="twitter">@{{username}}</li>{{/twitter_accounts}}
+  <li class="add_note"><b><a href="#" onclick="return false;">{{t "note.add_to"}} {{firstName}}</a></li>
+  <li class="add_note" style="display: none"><b>{{t "note.added"}} - </b><a href="#" onclick="return false;">{{t "note.create_another"}}</a></li>
+  <li>
+    <form style="display: none;">
+    <textarea name="body"></textarea>
+    <input type="hidden" name="personID" value="{{personID}}"/>
+    <input type="reset" value="{{t "global.cancel"}}" class="cancel btn">
+    <input type="submit" value="{{t "global.submit"}}" id="submit" class="submit btn btn-primary" onclick="return false;">
+    </form>
+  </li>
+</ul>

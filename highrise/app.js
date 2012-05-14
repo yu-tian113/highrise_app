@@ -168,7 +168,7 @@
         if (resource) {
           results.push({
             name:   name,
-            type:   resource[1][0].toUpperCase(),
+            type:   resource[1].toLowerCase(),
             url:    helpers.fmt("https://%@.highrisehq.com%@", settings.subdomain, url)
           });
         }
