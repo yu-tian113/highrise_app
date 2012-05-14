@@ -72,7 +72,6 @@
       'click .search':        function() { this.ajax('search', this.$('input.search_term').val()); },
 
       'requesterEmail.changed': function(e, value) {
-        console.debug('changed')
         if ( !this.settings.token || !this.dependency('requesterEmail') ) { return; }
 
         this.ajax('lookupByEmail', this.dependency('requesterEmail'), this.settings.token);
