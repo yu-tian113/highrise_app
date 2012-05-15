@@ -11,7 +11,7 @@
     <textarea name="body"></textarea>
     <input type="hidden" name="personID" value="{{personID}}"/>
     <input type="reset" value="{{t "global.cancel"}}" class="cancel btn">
-    <input type="submit" value="{{t "global.submit"}}" id="submit" class="submit btn btn-primary" onclick="return false;">
+    <input type="submit" value="{{t "global.submit"}}" id="submit" class="submit btn btn-inverse" onclick="return false;">
     </form>
   </li>
 </ul>
