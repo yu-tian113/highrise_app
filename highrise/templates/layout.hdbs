@@ -1,4 +1,16 @@
 <style>
+  .highrise_app h3 {
+    line-height: 30px;
+  }
+
+  .highrise_app .logo {
+    background: transparent url({{assetURL "logo-small.png"}}) no-repeat;
+    background-size: 25px 25px;
+    float: right;
+    height: 25px;
+    width: 25px;
+  }
+
   .highrise_app ul.options li {
     display: block;
     background: url({{assetURL "bullets.png"}}) no-repeat 0 -275px;
@@ -32,7 +44,7 @@
   }
 </style>
 <div class="highrise_app">
-  <div><h3>{{t "app.name"}}</h3></div><hr/>
+  <div><h3>{{t "app.name"}} <span class="logo"></span></h3></div><hr/>
   <div data-main></div>
   <section class="search_section" style="display: none;">
     <hr/>
