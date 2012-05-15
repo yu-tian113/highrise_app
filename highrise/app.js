@@ -65,11 +65,12 @@
         this.$('.note textarea').focus();
       },
 
-      'click .note .cancel':  function() { this.$('.note form').hide(); },
-      'click .note .submit':  'submitNote',
-      'click .add_contact a': function() { this.ajax('addContact', this._addContactData()); },
-      'click .back a':        function() { this.ajax('lookupByEmail', this.dependency('requesterEmail')); },
-      'click .search':        function() { this.ajax('search', this.$('input.search_term').val()); },
+      'click .note .cancel':    function() { this.$('.note form').hide(); },
+      'click .note .submit':    'submitNote',
+      'click .add_contact a':   function() { this.ajax('addContact', this._addContactData()); },
+      'click .back a':          function() { this.ajax('lookupByEmail', this.dependency('requesterEmail')); },
+      'click .search':          function() { this.ajax('search', this.$('input.search_term').val()); },
+      'keypress .search_term':  function(event) { if ( event.which === 13 ) { this.ajax('search', this.$('input.search_term').val()); } },
 
       'requesterEmail.changed': function(e, value) {
         if ( !this.settings.token || !this.dependency('requesterEmail') ) { return; }
