@@ -9,7 +9,7 @@
       currentTicketID:        'ticket.id',
       requesterEmail:         'requester.email',
       requesterName:          'requester.name',
-      requesterOrganization:  'requester.organization.name',
+      requesterOrganization:  'organization.name',
       requesterPhone:         'requester.phone'
     },
 
