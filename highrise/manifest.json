@@ -18,8 +18,7 @@
     },
 
     "useSSL": {
-      "type": "boolean",
-      "required": "true"
+      "type": "checkbox"
     }
   }
 }
