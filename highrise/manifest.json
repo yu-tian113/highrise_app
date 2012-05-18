@@ -8,7 +8,7 @@
 
   "configuration": {
     "subdomain": {
-      "type": "url",
+      "type": "text",
       "required": "true"
     },
 
