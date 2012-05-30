@@ -1,6 +1,6 @@
 {
   "app": {
-    "configuration": {
+    "parameters": {
       "subdomain":  { "label": "Subdomain" },
       "token":      { "label": "Token" },
       "useSSL":     { "label": "Use SSL?" }

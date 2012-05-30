@@ -8,19 +8,22 @@
   "default_locale": "en",
   "private": false,
 
-  "configuration": {
-    "subdomain": {
+  "parameters": [
+    {
+      "name": "subdomain",
       "type": "text",
       "required": "true"
     },
 
-    "token": {
+    {
+      "name": "token",
       "type": "text",
       "required": "true"
     },
 
-    "useSSL": {
+    {
+      "name": "useSSL",
       "type": "checkbox"
     }
-  }
+  ]
 }
