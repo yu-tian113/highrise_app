@@ -6,9 +6,6 @@
     defaultState: 'loading',
 
     dependencies: {
-      currentTicketID:        'ticket.id',
-      requesterEmail:         'requester.email',
-      requesterName:          'requester.name',
       requesterOrganization:  'organization.name',
       requesterPhone:         'requester.phone'
     },
@@ -68,19 +65,20 @@
       'click .note .cancel':    function() { this.$('.note form').hide(); },
       'click .note .submit':    'submitNote',
       'click .add_contact a':   function() { this.ajax('addContact', this._addContactData()); },
-      'click .back a':          function() { this.ajax('lookupByEmail', this.dependency('requesterEmail')); },
+      'click .back a':          function() { this.ajax('lookupByEmail', this.ticket().requester().email()); },
       'click .search':          function() { this.ajax('search', this.$('input.search_term').val()); },
       'keypress .search_term':  function(event) { if ( event.which === 13 ) { this.ajax('search', this.$('input.search_term').val()); } },
 
-      'requesterEmail.changed': function(e, value) {
-        if ( !this.settings.token || !this.dependency('requesterEmail') ) { return; }
+      'ticket.requester.email.changed': function(e, value) {
+        requesterEmail = this.ticket().requester().email();
+        if ( !this.settings.token || !requesterEmail ) { return; }
 
-        this.ajax('lookupByEmail', this.dependency('requesterEmail'), this.settings.token);
+        this.ajax('lookupByEmail', requesterEmail, this.settings.token);
       },
 
       /** AJAX callbacks **/
       'addContact.fail':    function(event, jqXHR, textStatus, errorThrown) { this.showError(this.I18n.t('contact.problem', { error: errorThrown.toString() })); },
-      'addContact.done': function(event, data, textStatus, jqXHR) { this.ajax('lookupByEmail', this.dependency('requesterEmail')); },
+      'addContact.done': function(event, data, textStatus, jqXHR) { this.ajax('lookupByEmail', this.ticket().requester().email()); },
 
       'addNote.fail': function(event, jqXHR, textStatus, errorThrown) {
         var form = this.$('.note form');
@@ -118,7 +116,7 @@
         return false;
       }
 
-      textArea.val(this.I18n.t('note.body.message', { value: textArea.val(), ticketID: this.dependency('currentTicketID') }));
+      textArea.val(this.I18n.t('note.body.message', { value: textArea.val(), ticketID: this.ticket().id() }));
       this.disableSubmit(form);
       this.ajax('addNote', this._addNoteData({ body: textArea.val(), personID: personID }));
     },
@@ -201,7 +199,7 @@
     },
 
     _addContactData: function() {
-      var name = this.dependency('requesterName').split(' ');
+      var requesterName = this.ticket().requester().name() || '', name = requesterName.split(' ');
 
       return encodeURI(
         helpers.fmt(
@@ -209,7 +207,7 @@
           name.shift(),
           name.join(' '),
           this.dependency('requesterOrganization') || '',
-          this.dependency('requesterEmail'),
+          this.ticket().requester().email(),
           this.dependency('requesterPhone') || ''
         )
       );
