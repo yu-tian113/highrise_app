@@ -5,11 +5,6 @@
 
     defaultState: 'loading',
 
-    dependencies: {
-      requesterOrganization:  'organization.name',
-      requesterPhone:         'requester.phone'
-    },
-
     resources: {
       EMAIL_LOOKUP_URI: "people/search.xml?criteria[email]=%@",
       HIGHRISE_URI:     "http%@://%@.highrisehq.com/%@",
@@ -69,12 +64,8 @@
       'click .search':          function() { this.ajax('search', this.$('input.search_term').val()); },
       'keypress .search_term':  function(event) { if ( event.which === 13 ) { this.ajax('search', this.$('input.search_term').val()); } },
 
-      'ticket.requester.email.changed': function(e, value) {
-        requesterEmail = this.ticket().requester().email();
-        if ( !this.settings.token || !requesterEmail ) { return; }
-
-        this.ajax('lookupByEmail', requesterEmail, this.settings.token);
-      },
+      'app.activated': 'firstLookup',
+      'ticket.requester.email.changed': 'firstLookup',
 
       /** AJAX callbacks **/
       'addContact.fail':    function(event, jqXHR, textStatus, errorThrown) { this.showError(this.I18n.t('contact.problem', { error: errorThrown.toString() })); },
@@ -103,6 +94,13 @@
 
       'lookupByEmail.done':  'handleLookupResult',
       'search.done':         'handleSearchResult'
+    },
+
+    firstLookup: function() {
+      requesterEmail = this.ticket().requester().email();
+      if ( !this.settings.token || !requesterEmail ) { return; }
+
+      this.ajax('lookupByEmail', requesterEmail, this.settings.token);
     },
 
     submitNote: function() {
@@ -200,15 +198,15 @@
 
     _addContactData: function() {
       var requesterName = this.ticket().requester().name() || '', name = requesterName.split(' ');
-
+      // TODO: send requesterOrganization and requesterPhone after they're added to Ticket Data API
       return encodeURI(
         helpers.fmt(
           this.xmlTemplates.CONTACT,
           name.shift(),
           name.join(' '),
-          this.dependency('requesterOrganization') || '',
+          '',
           this.ticket().requester().email(),
-          this.dependency('requesterPhone') || ''
+          ''
         )
       );
     },
