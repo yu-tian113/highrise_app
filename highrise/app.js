@@ -97,8 +97,8 @@
     },
 
     firstLookup: function() {
-      requesterEmail = this.ticket().requester().email();
-      if ( !this.settings.token || !requesterEmail ) { return; }
+      var requesterEmail = this.ticket().requester().email();
+      if ( !requesterEmail ) { return; }
 
       this.ajax('lookupByEmail', requesterEmail, this.settings.token);
     },
