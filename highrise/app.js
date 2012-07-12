@@ -1,8 +1,6 @@
 (function() {
 
   return {
-    appID: '/apps/01-highrise/versions/1.0.0',
-
     defaultState: 'loading',
 
     resources: {
