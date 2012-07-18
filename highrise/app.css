@@ -1,0 +1,26 @@
+h3 { line-height: 30px; }
+
+.logo {
+  background: transparent app-asset-url("logo-small.png") no-repeat;
+  background-size: 25px 25px;
+  float: right;
+  height: 25px;
+  width: 25px;
+}
+
+ul.options li {
+  display: block;
+  background: app-asset-url("bullets.png") no-repeat scroll 0 -275px;
+  padding: 0 0 0 17px;
+  margin: 5px 11px 8px 0;
+
+  &.people   { background-position: 0 -732px; }
+  &.email    { background-position: 0 -426px; }
+  &.phone    { background-position: 0 -872px; }
+  &.twitter  { background-position: 0 -987px; }
+  &.add_note { background-position: 0 -140px; }
+
+  /* Not Used */
+  &.link     { background-position: 0 2px; }
+  &.forum    { background-position: 0 -578px; }
+}
