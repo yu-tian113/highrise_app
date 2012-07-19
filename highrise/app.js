@@ -66,17 +66,17 @@
       'ticket.requester.email.changed': 'firstLookup',
 
       /** AJAX callbacks **/
-      'addContact.fail':    function(event, jqXHR, textStatus, errorThrown) { this.showError(this.I18n.t('contact.problem', { error: errorThrown.toString() })); },
-      'addContact.done': function(event, data, textStatus, jqXHR) { this.ajax('lookupByEmail', this.ticket().requester().email()); },
+      'addContact.fail':    function(jqXHR, textStatus, errorThrown) { this.showError(this.I18n.t('contact.problem', { error: errorThrown.toString() })); },
+      'addContact.done': function(data, textStatus, jqXHR) { this.ajax('lookupByEmail', this.ticket().requester().email()); },
 
-      'addNote.fail': function(event, jqXHR, textStatus, errorThrown) {
+      'addNote.fail': function(jqXHR, textStatus, errorThrown) {
         var form = this.$('.note form');
 
         this.showError(this.I18n.t('contact.problem', { error: errorThrown.toString() }));
         this.enableSubmit(form);
       },
 
-      'addNote.done': function(event, data, textStatus, jqXHR) {
+      'addNote.done': function(data, textStatus, jqXHR) {
         var form = this.$('.note form');
 
         this.resetForm(form);
