@@ -13,13 +13,13 @@
     {
       "name": "subdomain",
       "type": "text",
-      "required": "true"
+      "required": true
     },
 
     {
       "name": "token",
       "type": "text",
-      "required": "true"
+      "required": true
     },
 
     {
