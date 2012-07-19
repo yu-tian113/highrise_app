@@ -117,7 +117,7 @@
       this.ajax('addNote', this._addNoteData({ body: textArea.val(), personID: personID }));
     },
 
-    handleLookupResult: function(e, data) {
+    handleLookupResult: function(data) {
       var result, results, userData;
 
       // This section starts hidden, and as lookupByEmail is the first thing called...
@@ -147,7 +147,7 @@
     },
 
 
-    handleSearchResult: function(e, data) {
+    handleSearchResult: function(data) {
       var self    = this,
           settings  = this.get('settings'),
           parties = data.parties || [],
