@@ -66,17 +66,17 @@
       'ticket.requester.email.changed': 'firstLookup',
 
       /** AJAX callbacks **/
-      'addContact.fail':    function(event, jqXHR, textStatus, errorThrown) { this.showError(this.I18n.t('contact.problem', { error: errorThrown.toString() })); },
-      'addContact.done': function(event, data, textStatus, jqXHR) { this.ajax('lookupByEmail', this.ticket().requester().email()); },
+      'addContact.fail':    function(jqXHR, textStatus, errorThrown) { this.showError(this.I18n.t('contact.problem', { error: errorThrown.toString() })); },
+      'addContact.done': function(data, textStatus, jqXHR) { this.ajax('lookupByEmail', this.ticket().requester().email()); },
 
-      'addNote.fail': function(event, jqXHR, textStatus, errorThrown) {
+      'addNote.fail': function(jqXHR, textStatus, errorThrown) {
         var form = this.$('.note form');
 
         this.showError(this.I18n.t('contact.problem', { error: errorThrown.toString() }));
         this.enableSubmit(form);
       },
 
-      'addNote.done': function(event, data, textStatus, jqXHR) {
+      'addNote.done': function(data, textStatus, jqXHR) {
         var form = this.$('.note form');
 
         this.resetForm(form);
@@ -117,7 +117,7 @@
       this.ajax('addNote', this._addNoteData({ body: textArea.val(), personID: personID }));
     },
 
-    handleLookupResult: function(e, data) {
+    handleLookupResult: function(data) {
       var result, results, userData;
 
       // This section starts hidden, and as lookupByEmail is the first thing called...
@@ -147,7 +147,7 @@
     },
 
 
-    handleSearchResult: function(e, data) {
+    handleSearchResult: function(data) {
       var self    = this,
           settings  = this.get('settings'),
           parties = data.parties || [],
