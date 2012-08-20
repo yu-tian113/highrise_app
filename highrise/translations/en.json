@@ -6,8 +6,7 @@
       "useSSL":     { "label": "Use SSL?" }
     },
 
-    "description":  "Highrise profiles in tickets, with sync and search",
-    "name":         "Highrise"
+    "description":  "Highrise profiles in tickets, with sync and search"
   },
 
   "auth": {
