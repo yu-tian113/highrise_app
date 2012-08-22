@@ -149,7 +149,7 @@
 
     handleSearchResult: function(data) {
       var self    = this,
-          settings  = this.get('settings'),
+          settings  = this.settings,
           parties = data.parties || [],
           regex   = /^\/(people|companies)\/.*/,
           results = [],
