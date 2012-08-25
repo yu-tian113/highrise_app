@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<person>
+  <first-name>{{firstName}}</first-name>
+  <last-name>{{lastName}}</last-name>
+  <company-name>{{companyName}}</company-name>
+  <contact-data>
+    <email-addresses>
+      <email-address>
+        <address>{{email}}</address>
+        <location>Work</location>
+      </email-address>
+    </email-addresses>
+    <phone-numbers>
+      <phone-number>
+        <number>{{phoneNumber}}</number>
+        <location>Work</location>
+      </phone-number>
+    </phone-numbers>
+  </contact-data>
+</person>

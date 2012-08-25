@@ -11,35 +11,6 @@
       SEARCH_URI:       "search.json?term=%@&contenttype=application/json"
     },
 
-    xmlTemplates: {
-      CONTACT:  '<?xml version="1.0" encoding="ISO-8859-1"?>' +
-                '<person>' +
-                '  <first-name>%@</first-name>' +
-                '  <last-name>%@</last-name>' +
-                '  <company-name>%@</company-name>' +
-                '  <contact-data>' +
-                '    <email-addresses>' +
-                '      <email-address>' +
-                '        <address>%@</address>' +
-                '        <location>Work</location>' +
-                '      </email-address>' +
-                '    </email-addresses>' +
-                '    <phone-numbers>' +
-                '      <phone-number>' +
-                '        <number>%@</number>' +
-                '        <location>Work</location>' +
-                '      </phone-number>' +
-                '    </phone-numbers>' +
-                '  </contact-data>' +
-                '</person>',
-      NOTE: '<?xml version="1.0" encoding="ISO-8859-1"?>' +
-            '<note>' +
-            '  <body>%@</body>' +
-            '  <subject-id type="integer">%@</subject-id>' +
-            '  <subject-type>Party</subject-type>' +
-            '</note>'
-    },
-
     requests: {
       addNote: function(data)             { return this._postRequest(data, this.resources.NOTES_URI); },
       addContact: function(data, userID)  { return this._postRequest(data, this.resources.PEOPLE_URI); },
@@ -191,22 +162,22 @@
     },
 
     _addNoteData: function(options) {
-      return encodeURI( helpers.fmt(this.xmlTemplates.NOTE, options.body, options.personID) );
+      var message = this.renderTemplate('note.xml', options);
+      return encodeURI( message );
     },
 
     _addContactData: function() {
-      var requesterName = this.ticket().requester().name() || '', name = requesterName.split(' ');
+      var requesterName = this.ticket().requester().name() || '',
+          name = requesterName.split(' ');
       // TODO: send requesterOrganization and requesterPhone after they're added to Ticket Data API
-      return encodeURI(
-        helpers.fmt(
-          this.xmlTemplates.CONTACT,
-          name.shift(),
-          name.join(' '),
-          '',
-          this.ticket().requester().email(),
-          ''
-        )
-      );
+      var message = this.renderTemplate('contact.xml', {
+        firstName: name.shift(),
+        lastName: name.join(' '),
+        companyName: '',
+        email: this.ticket().requester().email(),
+        phoneNumber: ''
+      });
+      return encodeURI( message );
     },
 
     _getJsonRequest: function(resource) {
