@@ -162,22 +162,20 @@
     },
 
     _addNoteData: function(options) {
-      var message = this.renderTemplate('note.xml', options);
-      return encodeURI( message );
+      return this.renderAndEscapeXML('note.xml', options);
     },
 
     _addContactData: function() {
       var requesterName = this.ticket().requester().name() || '',
           name = requesterName.split(' ');
       // TODO: send requesterOrganization and requesterPhone after they're added to Ticket Data API
-      var message = this.renderTemplate('contact.xml', {
+      return this.renderAndEscapeXML('contact.xml', {
         firstName: name.shift(),
         lastName: name.join(' '),
         companyName: '',
         email: this.ticket().requester().email(),
         phoneNumber: ''
       });
-      return encodeURI( message );
     },
 
     _getJsonRequest: function(resource) {
@@ -247,6 +245,13 @@
           .val('')
           .removeAttr('checked')
           .removeAttr('select');
+    },
+
+    renderAndEscapeXML: function(templateName, data) {
+      Object.keys(data).forEach(function(key) {
+        data[key] = helpers.safeString( data[key] );
+      });
+      return encodeURI( this.renderTemplate(templateName, data) );
     }
   };
 
