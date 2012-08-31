@@ -66,10 +66,10 @@
     },
 
     firstLookup: function() {
-      var requesterEmail = this.ticket().requester().email();
-      if ( !requesterEmail ) { return; }
+      var requester = this.ticket().requester();
+      if ( !requester ) { return; }
 
-      this.ajax('lookupByEmail', requesterEmail, this.settings.token);
+      this.ajax('lookupByEmail', requester.email(), this.settings.token);
     },
 
     submitNote: function() {
