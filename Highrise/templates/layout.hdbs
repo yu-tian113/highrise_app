@@ -1,9 +1,10 @@
-<div class="highrise_app">
-  <div><h3>{{setting "name"}} <span class="logo"></span></h3></div><hr/>
-  <div data-main></div>
-  <section class="search_section" style="display: none;">
-    <hr/>
-    <input class="search_term" placeholder="{{t "global.search"}}" type="text" style="width: 74%"/>
-    <input class="search btn btn-inverse" type="submit" value="{{t "global.search"}}"/>
-  </section>
-</div>
+<header>
+  <span class="logo"/>
+  <h3>{{setting "name"}}</h3>
+</header>
+<section data-main />
+<section class="search_section" style="display: none;">
+  <hr/>
+  <input class="search_term" placeholder="{{t "global.search"}}" type="text" style="width: 74%"/>
+  <input class="search btn btn-inverse" type="submit" value="{{t "global.search"}}"/>
+</section>
