@@ -1,7 +1,7 @@
 <ul class="options user_data note">
   <li style="background: url({{avatarURL}}) no-repeat 0 2px; background-size: 12px 12px;"><b>{{name}}{{#if title}} ({{title}}){{/if}}</b></li>
   {{#if companyName}}<li>{{companyName}}</li>{{/if}}
-  {{#emails}}<li class="email">{{address}}</li>{{/emails}}
+  {{#emails}}<li class="email"><a href="mailto:{{address}}">{{address}}</a></li>{{/emails}}
   {{#phoneNumbers}}<li class="phone"><b>{{number}}</b></li>{{/phoneNumbers}}
   {{#twitter_accounts}}<li class="twitter">@{{username}}</li>{{/twitter_accounts}}
   <li class="add_note"><b><a href="#" onclick="return false;">{{t "note.add_to"}} {{firstName}}</a></li>
