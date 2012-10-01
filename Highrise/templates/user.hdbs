@@ -1,5 +1,7 @@
 <ul class="options user_data note">
-  <li style="background: url({{avatarURL}}) no-repeat 0 2px; background-size: 12px 12px;"><b>{{name}}{{#if title}} ({{title}}){{/if}}</b></li>
+  <li style="background: url({{avatarURL}}) no-repeat 0 2px; background-size: 12px 12px;">
+    <b><a target="_blank" href="{{url}}">{{name}}{{#if title}} ({{title}})</a>{{/if}}</b>
+  </li>
   {{#if companyName}}<li>{{companyName}}</li>{{/if}}
   {{#emails}}<li class="email"><a href="mailto:{{address}}">{{address}}</a></li>{{/emails}}
   {{#phoneNumbers}}<li class="phone"><b>{{number}}</b></li>{{/phoneNumbers}}

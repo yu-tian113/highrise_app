@@ -111,7 +111,8 @@
         personID:         result.children('id').text(),
         phoneNumbers:     this._extractInfo(result, 'contact-data > phone-numbers > phone-number', ['number']),
         title:            result.find('title').text(),
-        twitter_accounts: this._extractInfo(result, 'contact-data > twitter-accounts > twitter-account', ['username'])
+        twitter_accounts: this._extractInfo(result, 'contact-data > twitter-accounts > twitter-account', ['username']),
+        url:              helpers.fmt("https://%@.highrisehq.com/people/%@", this.settings.subdomain, result.children('id').text())
       };
 
       this.switchTo('user', userData);
