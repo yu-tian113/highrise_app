@@ -163,14 +163,14 @@
     },
 
     _addNoteData: function(options) {
-      return this.renderAndEscapeXML('note.xml', options);
+      return this.renderXML('note.xml', options);
     },
 
     _addContactData: function() {
       var requesterName = this.ticket().requester().name() || '',
           name = requesterName.split(' ');
       // TODO: send requesterOrganization and requesterPhone after they're added to Ticket Data API
-      return this.renderAndEscapeXML('contact.xml', {
+      return this.renderXML('contact.xml', {
         firstName: name.shift(),
         lastName: name.join(' '),
         companyName: '',
@@ -248,11 +248,11 @@
           .removeAttr('select');
     },
 
-    renderAndEscapeXML: function(templateName, data) {
+    renderXML: function(templateName, data) {
       Object.keys(data).forEach(function(key) {
         data[key] = helpers.safeString( data[key] );
       });
-      return encodeURI( this.renderTemplate(templateName, data) );
+      return this.renderTemplate(templateName, data);
     }
   };
 
