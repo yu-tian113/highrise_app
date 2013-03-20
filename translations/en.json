@@ -20,10 +20,14 @@
     "problem":          "There's been a problem: %@"
   },
 
+  "search": {
+    "button_label":      "Search",
+    "field_placeholder": "Search for people by name"
+  },
+
   "global": {
     "back":       "Back",
     "cancel":     "Cancel",
-    "search":     "Search",
     "submit":     "Submit",
     "submitting": "Submitting..."
   },
