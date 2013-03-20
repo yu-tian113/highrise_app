@@ -8,14 +8,14 @@
       HIGHRISE_URI:     "http%@://%@.highrisehq.com/%@",
       NOTES_URI:        "notes.xml",
       PEOPLE_URI:       "people.xml",
-      SEARCH_URI:       "search.json?term=%@&contenttype=application/json"
+      SEARCH_URI:       "people/search.xml?term=%@"
     },
 
     requests: {
       addNote: function(data)             { return this._postRequest(data, this.resources.NOTES_URI); },
       addContact: function(data, userID)  { return this._postRequest(data, this.resources.PEOPLE_URI); },
       lookupByEmail: function(email)      { return this._getRequest(helpers.fmt(this.resources.EMAIL_LOOKUP_URI, email)); },
-      search: function(str)               { return this._getJsonRequest(helpers.fmt(this.resources.SEARCH_URI, str)); }
+      search: function(str)               { return this._getRequest(helpers.fmt(this.resources.SEARCH_URI, str)); }
     },
 
     events: {
@@ -121,24 +121,19 @@
 
     handleSearchResult: function(data) {
       var self    = this,
-          settings  = this.settings,
-          parties = data.parties || [],
-          regex   = /^\/(people|companies)\/.*/,
+          people  = this.$(data).find('person') || null,
           results = [],
           resultsData, name, resource, url;
 
-      this.$(parties).each(function(index, element) {
-        name      = element[1];
-        url       = element[0];
-        resource  = regex.exec(url);
+      this.$(people).each(function() {
+        var element = self.$(this),
+            name    = element.children('first-name').text(),
+            id      = element.children('id').text();
 
-        if (resource) {
-          results.push({
-            name:   name,
-            type:   resource[1].toLowerCase(),
-            url:    helpers.fmt("https://%@.highrisehq.com%@", settings.subdomain, url)
-          });
-        }
+        results.push({
+          name: name,
+          url:  helpers.fmt("https://%@.highrisehq.com/people/%@", self.settings.subdomain, id)
+        })
       });
 
       resultsData = {
@@ -177,16 +172,6 @@
         email: this.ticket().requester().email(),
         phoneNumber: ''
       });
-    },
-
-    _getJsonRequest: function(resource) {
-      return {
-        dataType: 'json',
-        url:      this._highriseURL(resource),
-        headers: {
-          'Authorization': 'Basic ' + Base64.encode(helpers.fmt('%@:X', this.settings.token))
-        }
-      };
     },
 
     _getRequest: function(resource) {
