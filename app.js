@@ -133,7 +133,7 @@
         results.push({
           name: name,
           url:  helpers.fmt("https://%@.highrisehq.com/people/%@", self.settings.subdomain, id)
-        })
+        });
       });
 
       resultsData = {
