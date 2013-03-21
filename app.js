@@ -67,7 +67,7 @@
 
     firstLookup: function() {
       var requester = this.ticket().requester();
-      if ( !requester || _.isEmpty(requester.email()) ) { return; }
+      if ( !requester ) { return; }
 
       this.ajax('lookupByEmail', requester.email(), this.settings.token);
     },
