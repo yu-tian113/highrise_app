@@ -1,0 +1,91 @@
+title: "Highrise App"
+packages:
+  - default
+  - app_highrise_app
+
+parts:
+  - translation:
+      key: "txt.apps.highrise_app.app.parameters.subdomain.label"
+      title: "Subdomain of highrise account"
+      value: "Subdomain"
+  - translation:
+      key: "txt.apps.highrise_app.app.parameters.token.label"
+      title: "API token"
+      value: "Token"
+  - translation:
+      key: "txt.apps.highrise_app.app.parameters.useSSL.label"
+      title: "Question for the admin when installing the app on wether or not he wants to use SSL"
+      value: "Use SSL?"
+  - translation:
+      key: "txt.apps.highrise_app.app.parameters.description"
+      title: "Description of the app"
+      value: "Highrise profiles in tickets, with sync and search"
+  - translation:
+      key: "txt.apps.highrise_app.auth.error"
+      title: "Error message when authentication fails"
+      value: "We couldn't authenticate into Highrise"
+  - translation:
+      key: "txt.apps.highrise_app.auth.problem"
+      title: "Error message for authentication"
+      value: "There's been a problem!"
+  - translation:
+      key: "txt.apps.highrise_app.contact.add_to_highrise"
+      title: "Button to add a zendesk user to highrise when the user isn't found in highrise first"
+      value: "Add this Zendesk user to Highrise"
+  - translation:
+      key: "txt.apps.highrise_app.contact.not_found"
+      title: "standard message when there is no contact"
+      value: "No contact found with this email address"
+  - translation:
+      key: "txt.apps.highrise_app.contact.problem"
+      title: "error message what follows is the error message from the api for example 'email incorrect' "
+      value: "There's been a problem: %@"
+  - translation:
+      key: "txt.apps.highrise_app.search.button_label"
+      title: "Search button"
+      value: "Search"
+  - translation:
+      key: "txt.apps.highrise_app.search.field_placeholder"
+      title: "Search button"
+      value: "Search for people by name"
+  - translation:
+      key: "txt.apps.highrise_app.global.back"
+      title: "Back button"
+      value: "Back"
+  - translation:
+      key: "txt.apps.highrise_app.global.cancel"
+      title: "Cancel button"
+      value: "Cancel"
+  - translation:
+      key: "txt.apps.highrise_app.global.submit"
+      title: "Submit button"
+      value: "Submit"
+  - translation:
+      key: "txt.apps.highrise_app.global.submitting"
+      title: "Wait text when the submit button has been pressed"
+      value: "Submitting..."
+  - translation:
+      key: "txt.apps.highrise_app.note.add_to"
+      title: "Help text to note box when it's empty"
+      value: "Add a Note to"
+  - translation:
+      key: "txt.apps.highrise_app.note.added"
+      title: "Success message when note is added"
+      value: "Note Added"
+  - translation:
+      key: "txt.apps.highrise_app.note.body.empty"
+      title: "Message inside the note box when note box is empty"
+      value: "Note body is empty!"
+  - translation:
+      key: "txt.apps.highrise_app.note.body.message"
+      title: "Gives the zendesk ticket number"
+      value: "{{value}} (Zendesk ticket #{{ticketID}})"
+  - translation:
+      key: "txt.apps.highrise_app.note.create_another"
+      title: "Button to create another note"
+      value: "Create Another"
+  - translation:
+      key: "txt.apps.highrise_app.search_results"
+      title: "Search results title"
+      value: "Search Results"
+
