@@ -1,0 +1,45 @@
+{
+  "app": {
+    "parameters": {
+      "subdomain": {
+        "label": "Subdomäne"
+      },
+      "token": {
+        "label": "Token"
+      },
+      "useSSL": {
+        "label": "SSL verwenden?"
+      },
+      "description": "Highrise-Profile in Tickets mit Synchronisations- und Suchfunktion"
+    }
+  },
+  "auth": {
+    "error": "Authentifizierung bei Highrise nicht möglich",
+    "problem": "Problem aufgetreten!"
+  },
+  "contact": {
+    "add_to_highrise": "Diesen Zendesk-Benutzer zu Highrise hinzufügen",
+    "not_found": "Keinen Kontakt mit dieser E-Mail-Adresse gefunden",
+    "problem": "Problem aufgetreten: %@"
+  },
+  "search": {
+    "button_label": "Suchen",
+    "field_placeholder": "Namentlich nach Personen suchen"
+  },
+  "global": {
+    "back": "Zurück",
+    "cancel": "Abbrechen",
+    "submit": "Einreichen",
+    "submitting": "Einreichen..."
+  },
+  "note": {
+    "add_to": "Notiz hinzufügen zu",
+    "added": "Notiz hinzugefügt",
+    "body": {
+      "empty": "Notiz ist leer!",
+      "message": "{{value}} (Zendesk-Ticket #{{ticketID}})"
+    },
+    "create_another": "Andere erstellen"
+  },
+  "search_results": "Suchergebnisse"
+}

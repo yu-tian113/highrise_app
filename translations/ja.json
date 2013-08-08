@@ -1,0 +1,45 @@
+{
+  "app": {
+    "parameters": {
+      "subdomain": {
+        "label": "サブドメイン"
+      },
+      "token": {
+        "label": "トークン"
+      },
+      "useSSL": {
+        "label": "SSLを使用しますか?"
+      },
+      "description": "チケットのHighriseプロファイル、同期および検索機能付き"
+    }
+  },
+  "auth": {
+    "error": "Highriseに認証できませんでした",
+    "problem": "問題が発生しました!"
+  },
+  "contact": {
+    "add_to_highrise": "このZendeskユーザーをHighriseに追加",
+    "not_found": "このメールアドレスの連絡先が見つかりません",
+    "problem": "問題が発生しました: %@"
+  },
+  "search": {
+    "button_label": "検索",
+    "field_placeholder": "名前で人を検索"
+  },
+  "global": {
+    "back": "戻る",
+    "cancel": "キャンセル",
+    "submit": "送信",
+    "submitting": "送信中・・・"
+  },
+  "note": {
+    "add_to": "メモを追加",
+    "added": "メモが追加されました",
+    "body": {
+      "empty": "メモの本文が空です!",
+      "message": "{{value}} （ZendeskチケットNo.#{{ticketID}}）"
+    },
+    "create_another": "別のメモを作成"
+  },
+  "search_results": "検索結果"
+}

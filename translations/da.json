@@ -1,0 +1,45 @@
+{
+  "app": {
+    "parameters": {
+      "subdomain": {
+        "label": "Underdomæne"
+      },
+      "token": {
+        "label": "Token"
+      },
+      "useSSL": {
+        "label": "Brug SSL?"
+      },
+      "description": "Highrise-profiler i tickets med synkronisering og søgning"
+    }
+  },
+  "auth": {
+    "error": "Vi kunne ikke autentificere i Highrise",
+    "problem": "Der opstod et problem!"
+  },
+  "contact": {
+    "add_to_highrise": "Føj denne Zendesk-bruger til Highrise",
+    "not_found": "Der blev ikke fundet nogen kontakt med denne e-mailadresse",
+    "problem": "Der opstod et problem: %@"
+  },
+  "search": {
+    "button_label": "Søg",
+    "field_placeholder": "Søg efter personer efter navn"
+  },
+  "global": {
+    "back": "Tilbage",
+    "cancel": "Annuller",
+    "submit": "Send",
+    "submitting": "Sender…"
+  },
+  "note": {
+    "add_to": "Føj en note til",
+    "added": "Note tilføjet",
+    "body": {
+      "empty": "Noten er tom!",
+      "message": "{{value}} (Zendesk ticket #{{ticketID}})"
+    },
+    "create_another": "Opret en anden"
+  },
+  "search_results": "Søgeresultater"
+}
