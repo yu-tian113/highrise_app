@@ -20,7 +20,7 @@
   "contact": {
     "add_to_highrise": "Add this Zendesk user to Highrise",
     "not_found": "No contact found with this email address",
-    "problem": "There's been a problem: %@"
+    "problem": "There's been a problem: {{error}}"
   },
   "search": {
     "button_label": "Search",
