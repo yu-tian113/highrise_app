@@ -177,6 +177,7 @@
     _getRequest: function(resource) {
       return {
         url: this._highriseURL(resource),
+        proxy_v2: true,
         headers: {
           'Authorization': 'Basic ' + Base64.encode(helpers.fmt('%@:X', this.settings.token))
         }
@@ -195,10 +196,12 @@
 
     _postRequest: function(data, resource) {
       return {
-        dataType: 'xml',
-        data:     data,
-        type:     'POST',
-        url:      this._highriseURL(resource),
+        dataType:    'xml',
+        data:        data,
+        type:        'POST',
+        contentType: "application/xml",
+        url:         this._highriseURL(resource),
+        proxy_v2:    true,
         headers: {
           'Authorization': 'Basic ' + Base64.encode(helpers.fmt('%@:X', this.settings.token))
         }
