@@ -37,8 +37,8 @@
       'ticket.requester.email.changed': 'firstLookup',
 
       /** AJAX callbacks **/
-      'addContact.fail':    function(jqXHR, textStatus, errorThrown) { this.showError(this.I18n.t('contact.problem', { error: errorThrown.toString() })); },
-      'addContact.done': function(data, textStatus, jqXHR) { this.ajax('lookupByEmail', this.ticket().requester().email()); },
+      'addContact.fail': function(jqXHR, textStatus, errorThrown) { this.showError(this.I18n.t('contact.problem', { error: errorThrown.toString() })); },
+      'addContact.done': function() { this.ajax('lookupByEmail', this.ticket().requester().email()); },
 
       'addNote.fail': function(jqXHR, textStatus, errorThrown) {
         var form = this.$('.note form');
@@ -177,6 +177,7 @@
     _getRequest: function(resource) {
       return {
         url: this._highriseURL(resource),
+        proxy_v2: true,
         headers: {
           'Authorization': 'Basic ' + Base64.encode(helpers.fmt('%@:X', this.settings.token))
         }
@@ -195,10 +196,12 @@
 
     _postRequest: function(data, resource) {
       return {
-        dataType: 'xml',
-        data:     data,
-        type:     'POST',
-        url:      this._highriseURL(resource),
+        dataType:    'xml',
+        data:        data,
+        type:        'POST',
+        contentType: "application/xml",
+        url:         this._highriseURL(resource),
+        proxy_v2:    true,
         headers: {
           'Authorization': 'Basic ' + Base64.encode(helpers.fmt('%@:X', this.settings.token))
         }

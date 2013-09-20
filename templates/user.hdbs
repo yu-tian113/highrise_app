@@ -6,7 +6,7 @@
   {{#emails}}<li class="email"><a href="mailto:{{address}}">{{address}}</a></li>{{/emails}}
   {{#phoneNumbers}}<li class="phone"><b>{{number}}</b></li>{{/phoneNumbers}}
   {{#twitter_accounts}}<li class="twitter">@{{username}}</li>{{/twitter_accounts}}
-  <li class="add_note"><b><a href="#" onclick="return false;">{{t "note.add_to"}} {{firstName}}</a></li>
+  <li class="add_note"><b><a href="#" onclick="return false;">{{t "note.add_to" name=firstName}}</a></li>
   <li class="add_note" style="display: none"><b>{{t "note.added"}} - </b><a href="#" onclick="return false;">{{t "note.create_another"}}</a></li>
   <li>
     <form style="display: none;">
