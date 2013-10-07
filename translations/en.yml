@@ -9,6 +9,10 @@ parts:
       title: "Subdomain of highrise account"
       value: "Subdomain"
   - translation:
+      key: "txt.apps.highrise_app.app.parameters.subdomain.helptext"
+      title: "Subset of text to help the Admin understand the instructions"
+      value: "The subdomain of your Highrise account (if your Highrise url is DOMAIN.highrisehq.com, just enter DOMAIN)."
+  - translation:
       key: "txt.apps.highrise_app.app.parameters.token.label"
       title: "API token"
       value: "Token"
