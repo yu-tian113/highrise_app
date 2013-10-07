@@ -3,7 +3,7 @@
     "parameters": {
       "subdomain": {
         "label": "Subdomain",
-        "helptext": "The subdomain of your Highrise account (if your Highrise url is DOMAIN.highrisehq.com, just enter DOMAIN)."
+        "helpText": "The subdomain of your Highrise account (if your Highrise url is DOMAIN.highrisehq.com, just enter DOMAIN)."
       },
       "token": {
         "label": "Token"
