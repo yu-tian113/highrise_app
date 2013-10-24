@@ -95,7 +95,8 @@
       this.$('.search_section').show();
 
       results = this.$(data).find('people');
-      if (results.length === 0) {
+      result = results.find('person:first');
+      if (result.length === 0) {
         this.switchTo('not_found');
         return;
       }
