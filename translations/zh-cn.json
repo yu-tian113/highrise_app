@@ -1,0 +1,46 @@
+{
+  "app": {
+    "parameters": {
+      "subdomain": {
+        "label": "子域名",
+        "helpText": "您 Highrise 帐户的子域名（如果您的 Highrise URL 为“您的域名.highrisehq.com”，只需输入“您的域名”即可）。"
+      },
+      "token": {
+        "label": "密钥"
+      },
+      "useSSL": {
+        "label": "使用 SSL？"
+      },
+      "description": "工单中的 Highrise 个人资料，带同步和搜索功能"
+    }
+  },
+  "auth": {
+    "error": "我们无法对 Highrise 进行身份验证",
+    "problem": "出现问题！"
+  },
+  "contact": {
+    "add_to_highrise": "将此 Zendesk 用户添加到 Highrise",
+    "not_found": "此电邮地址未找到联系人",
+    "problem": "出现了问题：%@"
+  },
+  "search": {
+    "button_label": "搜索",
+    "field_placeholder": "按名称搜索人员"
+  },
+  "global": {
+    "back": "返回",
+    "cancel": "取消",
+    "submit": "提交",
+    "submitting": "正在提交……"
+  },
+  "note": {
+    "add_to": "添加注释到",
+    "added": "注释已添加",
+    "body": {
+      "empty": "注释主体为空！",
+      "message": "{{value}}（Zendesk 工单 #{{ticketID}}）"
+    },
+    "create_another": "创建另一条"
+  },
+  "search_results": "搜索结果"
+}

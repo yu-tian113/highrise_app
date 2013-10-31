@@ -1,0 +1,46 @@
+{
+  "app": {
+    "parameters": {
+      "subdomain": {
+        "label": "하위 도메인",
+        "helpText": "Highrise 계정의 하위 도메인(만약 Highrise URL이 귀사도메인.Highrisehq.com이면 귀사도메인을 입력하십시오.)"
+      },
+      "token": {
+        "label": "토큰"
+      },
+      "useSSL": {
+        "label": "SSL을 사용하십니까?"
+      },
+      "description": "동기화 및 검색 기능과 함께 티켓의 Highrise 프로필"
+    }
+  },
+  "auth": {
+    "error": "Highrise 인증을 할 수 없습니다.",
+    "problem": "다음과 같은 문제가 있었습니다!"
+  },
+  "contact": {
+    "add_to_highrise": "이 Zendesk 사용자를 Highrise에 추가",
+    "not_found": "이 이메일 주소로 등록된 대화 상대가 없습니다",
+    "problem": "다음과 같은 문제가 있었습니다. %@"
+  },
+  "search": {
+    "button_label": "검색",
+    "field_placeholder": "이름으로 사람 검색"
+  },
+  "global": {
+    "back": "뒤로",
+    "cancel": "취소",
+    "submit": "제출",
+    "submitting": "제출 중..."
+  },
+  "note": {
+    "add_to": "메모 추가:",
+    "added": "메모가 추가되었습니다",
+    "body": {
+      "empty": "메모 본문이 비워 있습니다!",
+      "message": "{{value}} (Zendesk 티켓 #{{ticketID}})"
+    },
+    "create_another": "다른 메모 만들기"
+  },
+  "search_results": "검색 결과"
+}

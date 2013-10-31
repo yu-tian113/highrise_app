@@ -2,7 +2,8 @@
   "app": {
     "parameters": {
       "subdomain": {
-        "label": "Subdomäne"
+        "label": "Subdomäne",
+        "helpText": "Die Subdomäne Ihres Highrise-Kontos (wenn Ihre Highrise-URL IHREDOMÄNE.highrisehq.com lautet, geben Sie nur IHREDOMÄNE ein)."
       },
       "token": {
         "label": "Token"

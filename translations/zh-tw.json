@@ -1,0 +1,46 @@
+{
+  "app": {
+    "parameters": {
+      "subdomain": {
+        "label": "子網域",
+        "helpText": "您 Highrise 帳戶的子網域（若您的 Highrise URL 為「您的網域.highrisehq.com」，只需輸入「您的網域」即可）。"
+      },
+      "token": {
+        "label": "金鑰"
+      },
+      "useSSL": {
+        "label": "使用 SSL？"
+      },
+      "description": "工單中的 Highrise 個人檔案，帶同步和搜尋"
+    }
+  },
+  "auth": {
+    "error": "我們不能驗證 Highrise",
+    "problem": "出現問題！"
+  },
+  "contact": {
+    "add_to_highrise": "新增此 Zendesk 使用者至 Highrise",
+    "not_found": "找不到帶此電郵地址的連絡人",
+    "problem": "出現問題：%@"
+  },
+  "search": {
+    "button_label": "搜尋",
+    "field_placeholder": "按名稱搜尋人員"
+  },
+  "global": {
+    "back": "上一步",
+    "cancel": "取消",
+    "submit": "提交",
+    "submitting": "提交中……"
+  },
+  "note": {
+    "add_to": "新增備註至",
+    "added": "已新增備註",
+    "body": {
+      "empty": "備註本文為空！",
+      "message": "{{value}}（Zendesk 工單 #{{ticketID}}）"
+    },
+    "create_another": "建立另一條"
+  },
+  "search_results": "搜尋結果"
+}

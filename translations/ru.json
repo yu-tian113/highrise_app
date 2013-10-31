@@ -1,0 +1,46 @@
+{
+  "app": {
+    "parameters": {
+      "subdomain": {
+        "label": "Поддомен",
+        "helpText": "Поддомен вашего аккаунта Highrise (если ваш адрес в Highrise - ВАШ_ДОМЕН.highrisehq.com, введите просто ВАШ_ДОМЕН)."
+      },
+      "token": {
+        "label": "Маркер"
+      },
+      "useSSL": {
+        "label": "Использовать SSL?"
+      },
+      "description": "Поддержка профилей Highrise в тикетах, синхронизация и поиск"
+    }
+  },
+  "auth": {
+    "error": "Не удалось выполнить авторизацию в Highrise",
+    "problem": "Возникла проблема!"
+  },
+  "contact": {
+    "add_to_highrise": "Добавить этого пользователя Zendesk в Highrise",
+    "not_found": "Не найден контакт с таким адресом электронной почты",
+    "problem": "Возникла проблема: %@"
+  },
+  "search": {
+    "button_label": "Поиск",
+    "field_placeholder": "Поиск людей по имени"
+  },
+  "global": {
+    "back": "Назад",
+    "cancel": "Отмена",
+    "submit": "Отправить",
+    "submitting": "Отправка..."
+  },
+  "note": {
+    "add_to": "Добавить примечание к",
+    "added": "Примечание добавлено",
+    "body": {
+      "empty": "Нет текста примечания!",
+      "message": "{{value}} (тикет Zendesk #{{ticketID}})"
+    },
+    "create_another": "Создать другое"
+  },
+  "search_results": "Результаты поиска"
+}

@@ -1,0 +1,46 @@
+{
+  "app": {
+    "parameters": {
+      "subdomain": {
+        "label": "Subdomain",
+        "helpText": "The subdomain of your Highrise account (if your Highrise URL is YOURDOMAIN.highrisehq.com, just enter YOURDOMAIN)."
+      },
+      "token": {
+        "label": "Token"
+      },
+      "useSSL": {
+        "label": "Use SSL?"
+      },
+      "description": "Highrise profiles in tickets, with sync and search"
+    }
+  },
+  "auth": {
+    "error": "We couldn't authenticate into Highrise",
+    "problem": "There's been a problem!"
+  },
+  "contact": {
+    "add_to_highrise": "Add this Zendesk user to Highrise",
+    "not_found": "No contact found with this email address",
+    "problem": "There's been a problem: %@"
+  },
+  "search": {
+    "button_label": "Search",
+    "field_placeholder": "Search for people by name"
+  },
+  "global": {
+    "back": "Back",
+    "cancel": "Cancel",
+    "submit": "Submit",
+    "submitting": "Submitting..."
+  },
+  "note": {
+    "add_to": "Add a Note to",
+    "added": "Note Added",
+    "body": {
+      "empty": "Note body is empty!",
+      "message": "{{value}} (Zendesk ticket #{{ticketID}})"
+    },
+    "create_another": "Create Another"
+  },
+  "search_results": "Search Results"
+}

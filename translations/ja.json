@@ -2,7 +2,8 @@
   "app": {
     "parameters": {
       "subdomain": {
-        "label": "サブドメイン"
+        "label": "サブドメイン",
+        "helpText": "Highriseアカウントのサブドメイン（HighriseのURLが[お客様のドメイン].highrisehq.comの場合は、[お客様のドメイン]を入力するだけです）。"
       },
       "token": {
         "label": "トークン"

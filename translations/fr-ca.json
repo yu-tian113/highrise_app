@@ -11,7 +11,7 @@
       "useSSL": {
         "label": "Utiliser SSL ?"
       },
-      "description": "Highrise établit le profil des tickets, avec la synchronisation et la recherche"
+      "description": "Highrise établit le profil des billets, avec la synchronisation et la recherche"
     }
   },
   "auth": {
@@ -20,7 +20,7 @@
   },
   "contact": {
     "add_to_highrise": "Ajouter cet utilisateur Zendesk à Highrise",
-    "not_found": "Aucun contact avec cette adresse e-mail trouvé",
+    "not_found": "Aucun contact avec cette adresse courriel trouvé",
     "problem": "Un problème est survenu : %@"
   },
   "search": {
@@ -38,7 +38,7 @@
     "added": "Note ajoutée",
     "body": {
       "empty": "Le corps de la note est vide !",
-      "message": "{{value}} (ticket Zendesk #{{ticketID}})"
+      "message": "{{value}} (billet Zendesk #{{ticketID}})"
     },
     "create_another": "En créer une autre"
   },

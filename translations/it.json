@@ -2,7 +2,8 @@
   "app": {
     "parameters": {
       "subdomain": {
-        "label": "Sottodominio"
+        "label": "Sottodominio",
+        "helpText": "Il sottodominio del vostro account Highrise (se l’ URL Highrise è MIODOMINIO.highrisehq.com, inserire solo MIODOMINIO)."
       },
       "token": {
         "label": "Token"
