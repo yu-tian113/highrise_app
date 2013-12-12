@@ -70,7 +70,7 @@ parts:
       value: "Submitting..."
   - translation:
       key: "txt.apps.highrise_app.note.add_to"
-      title: "Help text to note box when it's empty"
+      title: "the name variable here will be replaced with a customer name, for example add a note to Bob"
       value: "Add a Note to {{name}}"
   - translation:
       key: "txt.apps.highrise_app.note.added"
