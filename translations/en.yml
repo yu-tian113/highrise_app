@@ -71,7 +71,7 @@ parts:
   - translation:
       key: "txt.apps.highrise_app.note.add_to"
       title: "Help text to note box when it's empty"
-      value: "Add a Note to"
+      value: "Add a Note to {{name}}"
   - translation:
       key: "txt.apps.highrise_app.note.added"
       title: "Success message when note is added"
