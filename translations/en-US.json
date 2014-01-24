@@ -34,7 +34,7 @@
     "submitting": "Submitting..."
   },
   "note": {
-    "add_to": "Add a Note to",
+    "add_to": "Add a note to {{name}}",
     "added": "Note Added",
     "body": {
       "empty": "Note body is empty!",

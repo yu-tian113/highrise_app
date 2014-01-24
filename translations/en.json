@@ -2,45 +2,112 @@
   "app": {
     "parameters": {
       "subdomain": {
-        "label": "Subdomain",
-        "helpText": "The subdomain of your Highrise account (if your Highrise URL is YOURDOMAIN.highrisehq.com, just enter YOURDOMAIN)."
+        "label": {
+          "title": "Subdomain of highrise account",
+          "value": "Subdomain"
+        },
+        "helpText": {
+          "title": "Subset of text to help the Admin understand the instructions",
+          "value": "The subdomain of your Highrise account (if your Highrise URL is YOURDOMAIN.highrisehq.com, just enter YOURDOMAIN)."
+        }
       },
       "token": {
-        "label": "Token"
+        "label": {
+          "title": "API token",
+          "value": "Token"
+        }
       },
       "useSSL": {
-        "label": "Use SSL?"
+        "label": {
+          "title": "Question for the admin when installing the app on wether or not he wants to use SSL",
+          "value": "Use SSL?"
+        }
       },
-      "description": "Highrise profiles in tickets, with sync and search"
-    }
+      "description": {
+        "title": "Description of the app",
+        "value": "Highrise profiles in tickets, with sync and search"
+      }
+    },
+    "package": "highrise_app"
   },
   "auth": {
-    "error": "We couldn't authenticate into Highrise",
-    "problem": "There's been a problem!"
+    "error": {
+      "title": "Error message when authentication fails",
+      "value": "We couldn't authenticate into Highrise"
+    },
+    "problem": {
+      "title": "Error message for authentication",
+      "value": "There's been a problem!"
+    }
   },
   "contact": {
-    "add_to_highrise": "Add this Zendesk user to Highrise",
-    "not_found": "No contact found with this email address",
-    "problem": "There's been a problem: {{error}}"
+    "add_to_highrise": {
+      "title": "Button to add a zendesk user to highrise when the user isn't found in highrise first",
+      "value": "Add this Zendesk user to Highrise"
+    },
+    "not_found": {
+      "title": "standard message when there is no contact",
+      "value": "No contact found with this email address"
+    },
+    "problem": {
+      "title": "error message what follows is the error message from the api for example 'email incorrect' ",
+      "value": "There's been a problem: {{error}}"
+    }
   },
   "search": {
-    "button_label": "Search",
-    "field_placeholder": "Search for people by name"
+    "button_label": {
+      "title": "Search button",
+      "value": "Search"
+    },
+    "field_placeholder": {
+      "title": "Search button",
+      "value": "Search for people by name"
+    }
   },
   "global": {
-    "back": "Back",
-    "cancel": "Cancel",
-    "submit": "Submit",
-    "submitting": "Submitting..."
+    "back": {
+      "title": "Back button",
+      "value": "Back"
+    },
+    "cancel": {
+      "title": "Cancel button",
+      "value": "Cancel"
+    },
+    "submit": {
+      "title": "Submit button",
+      "value": "Submit"
+    },
+    "submitting": {
+      "title": "Wait text when the submit button has been pressed",
+      "value": "Submitting..."
+    }
   },
   "note": {
-    "add_to": "Add a Note to {{name}}",
-    "added": "Note Added",
-    "body": {
-      "empty": "Note body is empty!",
-      "message": "{{value}} (Zendesk ticket #{{ticketID}})"
+    "add_to": {
+      "title": "the name variable here will be replaced with a customer name, for example add a note to Bob",
+      "value": "Add a note to {{name}}"
     },
-    "create_another": "Create Another"
+    "added": {
+      "title": "Success message when note is added",
+      "value": "Note Added"
+    },
+    "body": {
+      "empty": {
+        "title": "Message inside the note box when note box is empty",
+        "value": "Note body is empty!"
+      },
+      "message": {
+        "title": "Gives the zendesk ticket number",
+        "value": "{{value}} (Zendesk ticket #{{ticketID}})"
+      }
+    },
+    "create_another": {
+      "title": "Button to create another note",
+      "value": "Create Another"
+    }
   },
-  "search_results": "Search Results"
+  "search_results": {
+    "title": "Search results title",
+    "value": "Search Results"
+  }
 }

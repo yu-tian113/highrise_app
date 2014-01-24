@@ -34,7 +34,7 @@
     "submitting": "正在提交……"
   },
   "note": {
-    "add_to": "添加注释到",
+    "add_to": "添加注释到 {{name}}",
     "added": "注释已添加",
     "body": {
       "empty": "注释主体为空！",

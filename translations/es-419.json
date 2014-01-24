@@ -34,7 +34,7 @@
     "submitting": "Enviando..."
   },
   "note": {
-    "add_to": "Agregar una nota a",
+    "add_to": "Agregar una nota a {{name}}",
     "added": "Nota agregada",
     "body": {
       "empty": "El cuerpo de la nota está vacío.",

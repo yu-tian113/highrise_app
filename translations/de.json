@@ -3,7 +3,7 @@
     "parameters": {
       "subdomain": {
         "label": "Subdomäne",
-        "helpText": "Die Subdomäne Ihres Highrise-Kontos (wenn Ihre Highrise-URL IHREDOMÄNE.highrisehq.com lautet, geben Sie nur IHREDOMÄNE ein)."
+        "helpText": "Die Subdomäne Ihres Highrise-Kontos (wenn Ihre Highrise-URL IhreDomäne.highrisehq.com lautet, geben Sie nur „IhreDomäne“ ein)."
       },
       "token": {
         "label": "Token"
@@ -34,7 +34,7 @@
     "submitting": "Einreichen..."
   },
   "note": {
-    "add_to": "Notiz hinzufügen zu",
+    "add_to": "Notiz an {{name}} hinzufügen",
     "added": "Notiz hinzugefügt",
     "body": {
       "empty": "Notiz ist leer!",

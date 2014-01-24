@@ -34,7 +34,7 @@
     "submitting": "提交中……"
   },
   "note": {
-    "add_to": "新增備註至",
+    "add_to": "新增備註至 {{name}}",
     "added": "已新增備註",
     "body": {
       "empty": "備註本文為空！",
