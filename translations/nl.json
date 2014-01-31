@@ -34,7 +34,7 @@
     "submitting": "Verzenden..."
   },
   "note": {
-    "add_to": "Een notitie toevoegen aan",
+    "add_to": "Een notitie toevoegen aan {{name}}",
     "added": "Notitie toegevoegd",
     "body": {
       "empty": "Geen tekst in notitie!",

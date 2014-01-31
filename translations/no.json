@@ -2,45 +2,45 @@
   "app": {
     "parameters": {
       "subdomain": {
-        "label": "Underdomæne",
-        "helpText": "Underdomænet for din Highrise-konto (hvis din Highrise-URL er DITDOMÆNE.highrisehq.com, skal du blot indtaste DITDOMÆNE)."
+        "label": "Underdomene",
+        "helpText": "Underdomenet til Highrise-kontoen (hvis Highrise URL-adressen er DITTDOMENE.highrisehq.com, skriv bare DITTDOMENE)."
       },
       "token": {
         "label": "Token"
       },
       "useSSL": {
-        "label": "Brug SSL?"
+        "label": "Bruk SSL?"
       },
-      "description": "Highrise-profiler i tickets med synkronisering og søgning"
+      "description": "Highrise-profiler i saker, med synkronisering og søk"
     }
   },
   "auth": {
-    "error": "Vi kunne ikke autentificere i Highrise",
-    "problem": "Der opstod et problem!"
+    "error": "Vi kan ikke godkjennes i Highrise",
+    "problem": "Det har oppstått et problem!"
   },
   "contact": {
-    "add_to_highrise": "Føj denne Zendesk-bruger til Highrise",
-    "not_found": "Der blev ikke fundet nogen kontakt med denne e-mailadresse",
-    "problem": "Der opstod et problem: %@"
+    "add_to_highrise": "Legg til denne Zendesk-brukeren til Highrise",
+    "not_found": "Finner ingen kontaktperson med denne e-post-adressen.",
+    "problem": "Det har oppstått et problem: %@"
   },
   "search": {
-    "button_label": "Søg",
-    "field_placeholder": "Søg efter personer efter navn"
+    "button_label": "Søk",
+    "field_placeholder": "Søk etter personer etter navn"
   },
   "global": {
-    "back": "Tilbage",
-    "cancel": "Annuller",
-    "submit": "Send",
-    "submitting": "Sender…"
+    "back": "Tilbake",
+    "cancel": "Avbryt",
+    "submit": "Send inn",
+    "submitting": "Sender inn..."
   },
   "note": {
-    "add_to": "Føj en note til",
-    "added": "Note tilføjet",
+    "add_to": "Legg til en merknad til {{name}}",
+    "added": "Merknad ble lagt til",
     "body": {
-      "empty": "Noten er tom!",
-      "message": "{{value}} (Zendesk ticket #{{ticketID}})"
+      "empty": "Brødteksten i merknaden er tom!",
+      "message": "{{value}} (Zendesk-sak #{{ticketID}})"
     },
-    "create_another": "Opret en anden"
+    "create_another": "Opprett en annen"
   },
-  "search_results": "Søgeresultater"
+  "search_results": "Søkeresultater"
 }

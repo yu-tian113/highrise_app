@@ -43,7 +43,7 @@ parts:
   - translation:
       key: "txt.apps.highrise_app.contact.problem"
       title: "error message what follows is the error message from the api for example 'email incorrect' "
-      value: "There's been a problem: %@"
+      value: "There's been a problem: {{error}}"
   - translation:
       key: "txt.apps.highrise_app.search.button_label"
       title: "Search button"

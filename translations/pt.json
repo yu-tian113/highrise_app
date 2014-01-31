@@ -34,13 +34,13 @@
     "submitting": "Enviando..."
   },
   "note": {
-    "add_to": "Adicionar uma observação a",
+    "add_to": "Adicionar uma observação a {{name}}",
     "added": "Observação adicionada",
     "body": {
       "empty": "O corpo da observação está vazio!",
       "message": "{{value}} (ticket do Zendesk nº#{{ticketID}})"
     },
-    "create_another": "Criar outro"
+    "create_another": "Criar outra"
   },
   "search_results": "Resultados da pesquisa"
 }
