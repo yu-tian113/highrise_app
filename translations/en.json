@@ -52,6 +52,10 @@
     "problem": {
       "title": "error message what follows is the error message from the api for example 'email incorrect' ",
       "value": "There's been a problem: {{error}}"
+    },
+    "error": {
+      "title": "error message what follows is the error message from the api for example 'email incorrect' ",
+      "value": "There's been a problem: {{error}}"
     }
   },
   "search": {
