@@ -21,7 +21,8 @@
   "contact": {
     "add_to_highrise": "이 Zendesk 사용자를 Highrise에 추가",
     "not_found": "이 이메일 주소로 등록된 대화 상대가 없습니다",
-    "problem": "다음과 같은 문제가 있었습니다. %@"
+    "problem": "다음과 같은 문제가 있었습니다. {{error}}",
+    "error": "문제가 발생했습니다. {{error}}"
   },
   "search": {
     "button_label": "검색",

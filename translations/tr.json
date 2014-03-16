@@ -2,45 +2,46 @@
   "app": {
     "parameters": {
       "subdomain": {
-        "label": "Subdomain",
-        "helpText": "The subdomain of your Highrise account (if your Highrise URL is YOURDOMAIN.highrisehq.com, just enter YOURDOMAIN)."
+        "label": "Alt etki alanı",
+        "helpText": "Highrise hesabınızın alt etki alanı (Highrise URL’niz ETKIALANIADINIZ.highrisehq.com ise, sadece ETKIALANIADINIZ kısmını girin)."
       },
       "token": {
-        "label": "Token"
+        "label": "Belirteç"
       },
       "useSSL": {
-        "label": "Use SSL?"
+        "label": "SSL kullanılsın mı?"
       },
-      "description": "Highrise profiles in tickets, with sync and search"
+      "description": "Senkronize ve arama özellikleriyle birlikte kayıtlarda bulunan Highrise profilleri"
     }
   },
   "auth": {
-    "error": "We couldn't authenticate into Highrise",
-    "problem": "There's been a problem!"
+    "error": "Highrise’a giriş için doğrulama yapamıyoruz",
+    "problem": "Bir problem oluştu!"
   },
   "contact": {
-    "add_to_highrise": "Add this Zendesk user to Highrise",
-    "not_found": "No contact found with this email address",
-    "problem": "There's been a problem: %@"
+    "add_to_highrise": "Bu Zendesk kullanıcısını Highrise’a ekle",
+    "not_found": "Bu e-posta adresine sahip bir kişi bulunamadı",
+    "problem": "Bir problem oluştu: {{error}}",
+    "error": "There was a problem: {{error}}"
   },
   "search": {
-    "button_label": "Search",
-    "field_placeholder": "Search for people by name"
+    "button_label": "Arama",
+    "field_placeholder": "Kişileri isimlerine göre ara "
   },
   "global": {
-    "back": "Back",
-    "cancel": "Cancel",
-    "submit": "Submit",
-    "submitting": "Submitting..."
+    "back": "Geri",
+    "cancel": "İptal",
+    "submit": "Gönder",
+    "submitting": "Gönderiliyor..."
   },
   "note": {
-    "add_to": "Add a note to {{name}}",
-    "added": "Note Added",
+    "add_to": "{{name}} için bir not ekleyin",
+    "added": "Not Eklendi",
     "body": {
-      "empty": "Note body is empty!",
-      "message": "{{value}} (Zendesk ticket #{{ticketID}})"
+      "empty": "Not gövdesi boş!",
+      "message": "{{value}} (Zendesk kaydı #{{ticketID}})"
     },
-    "create_another": "Create Another"
+    "create_another": "Başka Not Oluştur"
   },
-  "search_results": "Search Results"
+  "search_results": "Arama Sonuçları"
 }

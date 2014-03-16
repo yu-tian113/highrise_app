@@ -21,7 +21,8 @@
   "contact": {
     "add_to_highrise": "Føj denne Zendesk-bruger til Highrise",
     "not_found": "Der blev ikke fundet nogen kontakt med denne e-mailadresse",
-    "problem": "Der opstod et problem: %@"
+    "problem": "Der opstod et problem: {{error}}",
+    "error": "Der var et problem: {{error}}"
   },
   "search": {
     "button_label": "Søg",

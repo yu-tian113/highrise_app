@@ -21,7 +21,8 @@
   "contact": {
     "add_to_highrise": "Deze Zendesk-gebruiker toevoegen aan Highrise",
     "not_found": "Geen contactpersoon gevonden met dit e-mailadres",
-    "problem": "Er is een probleem: %@"
+    "problem": "Er is een probleem: {{error}}",
+    "error": "Er is een probleem opgetreden: {{error}}"
   },
   "search": {
     "button_label": "Zoeken",

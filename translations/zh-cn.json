@@ -21,7 +21,8 @@
   "contact": {
     "add_to_highrise": "将此 Zendesk 用户添加到 Highrise",
     "not_found": "此电邮地址未找到联系人",
-    "problem": "出现了问题：%@"
+    "problem": "出现了问题：{{error}}",
+    "error": "出现了问题：{{error}}"
   },
   "search": {
     "button_label": "搜索",

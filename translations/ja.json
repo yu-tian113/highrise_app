@@ -21,7 +21,8 @@
   "contact": {
     "add_to_highrise": "このZendeskユーザーをHighriseに追加",
     "not_found": "このメールアドレスの連絡先が見つかりません",
-    "problem": "問題が発生しました: %@"
+    "problem": "問題が発生しました: {{error}}",
+    "error": "問題がありました: {{error}}"
   },
   "search": {
     "button_label": "検索",
