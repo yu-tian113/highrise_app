@@ -21,7 +21,8 @@
   "contact": {
     "add_to_highrise": "Добавить этого пользователя Zendesk в Highrise",
     "not_found": "Не найден контакт с таким адресом электронной почты",
-    "problem": "Возникла проблема: %@"
+    "problem": "Возникла проблема: {{error}}",
+    "error": "Возникла неполадка: {{error}}"
   },
   "search": {
     "button_label": "Поиск",

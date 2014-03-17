@@ -1,0 +1,47 @@
+{
+  "app": {
+    "parameters": {
+      "subdomain": {
+        "label": "Poddomena",
+        "helpText": "Poddomena konta Highrise (jeżeli adres URL Highrise to TWOJADOMENA.highrisehq.com, wprowadź TWOJADOMENA)."
+      },
+      "token": {
+        "label": "Token"
+      },
+      "useSSL": {
+        "label": "Czy chcesz używać SSL?"
+      },
+      "description": "Profile Highrise w zgłoszeniach z synchronizacją i wyszukiwaniem"
+    }
+  },
+  "auth": {
+    "error": "Nie można uwierzytelnić w Highrise",
+    "problem": "Wystąpił problem!"
+  },
+  "contact": {
+    "add_to_highrise": "Dodaj tego użytkownika Zendesk do Highrise",
+    "not_found": "Nie znaleziono kontaktu z tym adresem e-mail",
+    "problem": "Wystąpił problem: {{error}}",
+    "error": "There was a problem: {{error}}"
+  },
+  "search": {
+    "button_label": "Szukaj",
+    "field_placeholder": "Wyszukaj osoby wg nazwisk"
+  },
+  "global": {
+    "back": "Wstecz",
+    "cancel": "Anuluj",
+    "submit": "Wyślij",
+    "submitting": "Wysyłanie..."
+  },
+  "note": {
+    "add_to": "Dodaj notatkę do {{name}}",
+    "added": "Notatka dodana",
+    "body": {
+      "empty": "Treść notatki jest pusta.",
+      "message": "{{value}} (zgłoszenie Zendesk #{{ticketID}})"
+    },
+    "create_another": "Utwórz inną"
+  },
+  "search_results": "Wyniki wyszukiwania"
+}

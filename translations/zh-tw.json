@@ -21,7 +21,8 @@
   "contact": {
     "add_to_highrise": "新增此 Zendesk 使用者至 Highrise",
     "not_found": "找不到帶此電郵地址的連絡人",
-    "problem": "出現問題：%@"
+    "problem": "出現問題：{{error}}",
+    "error": "出現問題：{{error}}"
   },
   "search": {
     "button_label": "搜尋",

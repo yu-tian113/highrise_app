@@ -21,7 +21,8 @@
   "contact": {
     "add_to_highrise": "Diesen Zendesk-Benutzer zu Highrise hinzufügen",
     "not_found": "Keinen Kontakt mit dieser E-Mail-Adresse gefunden",
-    "problem": "Problem aufgetreten: %@"
+    "problem": "Problem aufgetreten: {{error}}",
+    "error": "Problem aufgetreten: {{error}}"
   },
   "search": {
     "button_label": "Suchen",

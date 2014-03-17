@@ -2,45 +2,46 @@
   "app": {
     "parameters": {
       "subdomain": {
-        "label": "Subdomain",
-        "helpText": "The subdomain of your Highrise account (if your Highrise URL is YOURDOMAIN.highrisehq.com, just enter YOURDOMAIN)."
+        "label": "Underdomän",
+        "helpText": "Underdomänen i ditt Highrise-konto (om din Highrise-webbadress är YOURDOMAIN.highrisehq.com ska du bara ange YOURDOMAIN)."
       },
       "token": {
         "label": "Token"
       },
       "useSSL": {
-        "label": "Use SSL?"
+        "label": "Vill du använda SSL?"
       },
-      "description": "Highrise profiles in tickets, with sync and search"
+      "description": "Highrise-profiler i ärenden, med synkronisering och sökning"
     }
   },
   "auth": {
-    "error": "We couldn't authenticate into Highrise",
-    "problem": "There's been a problem!"
+    "error": "Det gick inte att autentisera med Highrise",
+    "problem": "Ett problem har inträffat!"
   },
   "contact": {
-    "add_to_highrise": "Add this Zendesk user to Highrise",
-    "not_found": "No contact found with this email address",
-    "problem": "There's been a problem: %@"
+    "add_to_highrise": "Lägg till denna Zendesk-användare i Highrise",
+    "not_found": "Ingen kontakt med denna e-postadress hittades",
+    "problem": "Ett problem har inträffat: {{error}}",
+    "error": "Ett problem inträffade: {{error}}"
   },
   "search": {
-    "button_label": "Search",
-    "field_placeholder": "Search for people by name"
+    "button_label": "Sök",
+    "field_placeholder": "Sök efter personer enligt namn"
   },
   "global": {
-    "back": "Back",
-    "cancel": "Cancel",
-    "submit": "Submit",
-    "submitting": "Submitting..."
+    "back": "Tillbaka",
+    "cancel": "Avbryt",
+    "submit": "Skicka",
+    "submitting": "Skickar..."
   },
   "note": {
-    "add_to": "Add a note to {{name}}",
-    "added": "Note Added",
+    "add_to": "Lägg till en anteckning i {{name}}",
+    "added": "Anteckning tillagd",
     "body": {
-      "empty": "Note body is empty!",
-      "message": "{{value}} (Zendesk ticket #{{ticketID}})"
+      "empty": "Anteckningen är tom!",
+      "message": "{{value}} (Zendesk-ärende #{{ticketID}})"
     },
-    "create_another": "Create Another"
+    "create_another": "Skapa en till"
   },
-  "search_results": "Search Results"
+  "search_results": "Sökresultat"
 }
