@@ -14,7 +14,7 @@
     requests: {
       addNote: function(data)             { return this._postRequest(data, this.resources.NOTES_URI); },
       addContact: function(data, userID)  { return this._postRequest(data, this.resources.PEOPLE_URI); },
-      lookupByEmail: function(email)      { return this._getRequest(helpers.fmt(this.resources.EMAIL_LOOKUP_URI, email)); },
+      lookupByEmail: function(email)      { return this._getRequest(helpers.fmt(this.resources.EMAIL_LOOKUP_URI, encodeURIComponent(email))); },
       search: function(str)               { return this._getRequest(helpers.fmt(this.resources.SEARCH_URI, str)); }
     },
 
@@ -178,6 +178,7 @@
     _getRequest: function(resource) {
       return {
         url: this._highriseURL(resource),
+        contentType: "application/xml",
         proxy_v2: true,
         headers: {
           'Authorization': 'Basic ' + Base64.encode(helpers.fmt('%@:X', this.settings.token))
