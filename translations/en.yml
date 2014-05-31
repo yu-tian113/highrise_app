@@ -31,7 +31,7 @@ parts:
   - translation:
       key: "txt.apps.highrise_app.auth.problem"
       title: "Error message for authentication"
-      value: "There's been a problem!"
+      value: "There's been a problem."
   - translation:
       key: "txt.apps.highrise_app.contact.add_to_highrise"
       title: "Button to add a zendesk user to highrise when the user isn't found in highrise first"
@@ -83,7 +83,7 @@ parts:
   - translation:
       key: "txt.apps.highrise_app.note.body.empty"
       title: "Message inside the note box when note box is empty"
-      value: "Note body is empty!"
+      value: "Note body is empty."
   - translation:
       key: "txt.apps.highrise_app.note.body.message"
       title: "Gives the zendesk ticket number"
