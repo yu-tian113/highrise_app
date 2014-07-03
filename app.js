@@ -128,7 +128,7 @@
 
       this.$(people).each(function() {
         var element = self.$(this),
-            name    = element.children('first-name').text(),
+            name    = helpers.fmt("%@ %@", element.children('first-name').text(), element.children('last-name').text()),
             id      = element.children('id').text();
 
         results.push({
