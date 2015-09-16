@@ -3,7 +3,7 @@
     "parameters": {
       "subdomain": {
         "label": "Sottodominio",
-        "helpText": "Il sottodominio del vostro account Highrise (se l’ URL Highrise è MIODOMINIO.highrisehq.com, inserire solo MIODOMINIO)."
+        "helpText": "Il sottodominio del vostro account Highrise (se l’URL Highrise è MIODOMINIO.highrisehq.com, inserire solo MIODOMINIO)."
       },
       "token": {
         "label": "Token"
@@ -20,7 +20,7 @@
   },
   "contact": {
     "add_to_highrise": "Aggiungi questo utente Zendesk a Highrise",
-    "not_found": "Nessun contatto trovato con questo indirizzo e-mail",
+    "not_found": "Nessun contatto trovato con questo indirizzo email",
     "problem": "Si è verificato un problema: {{error}}",
     "error": "Si è verificato un problema: {{error}}"
   },

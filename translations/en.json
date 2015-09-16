@@ -37,7 +37,7 @@
     },
     "problem": {
       "title": "Error message for authentication",
-      "value": "There's been a problem!"
+      "value": "There's been a problem."
     }
   },
   "contact": {
@@ -98,7 +98,7 @@
     "body": {
       "empty": {
         "title": "Message inside the note box when note box is empty",
-        "value": "Note body is empty!"
+        "value": "Note body is empty."
       },
       "message": {
         "title": "Gives the zendesk ticket number",

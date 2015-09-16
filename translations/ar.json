@@ -1,0 +1,47 @@
+{
+  "app": {
+    "parameters": {
+      "subdomain": {
+        "label": "نطاق فرعي",
+        "helpText": "النطاق الفرعي لحسابك في Highrise (إذا كان عنوان URL حسابك في Highrise هو YOURDOMAIN.highrisehq.com، فما عليك إلا إدخال YOURDOMAIN)."
+      },
+      "token": {
+        "label": "رمز مميز"
+      },
+      "useSSL": {
+        "label": "هل تريد استخدام SSL؟"
+      },
+      "description": "ملفات تعريف Highrise في التذاكر، مع إمكانية المزامنة والبحث"
+    }
+  },
+  "auth": {
+    "error": "لم نتمكن من التوثيق في Highrise",
+    "problem": "حدثت مشكلة."
+  },
+  "contact": {
+    "add_to_highrise": "أضف مستخدم Zendesk هذا إلى Highrise",
+    "not_found": "لا توجد جهة اتصال لعنوان البريد الإلكتروني هذا؟",
+    "problem": "حدثت مشكلة: {{error}}",
+    "error": "حدثت مشكلة: {{error}}"
+  },
+  "search": {
+    "button_label": "بحث",
+    "field_placeholder": "البحث عن أشخاص بأسمائهم"
+  },
+  "global": {
+    "back": "السابق",
+    "cancel": "إلغاء",
+    "submit": "إرسال",
+    "submitting": "جارٍ الإرسال..."
+  },
+  "note": {
+    "add_to": "إضافة ملاحظة إلى {{name}}",
+    "added": "تمت إضافة الملاحظة",
+    "body": {
+      "empty": "نص الرسالة فارغ.",
+      "message": "{{value}} (تذكرة Zendesk #{{ticketID}})"
+    },
+    "create_another": "إنشاء تذكرة أخرى"
+  },
+  "search_results": "نتائج البحث"
+}

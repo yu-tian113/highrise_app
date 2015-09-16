@@ -35,10 +35,10 @@
     "submitting": "Sender…"
   },
   "note": {
-    "add_to": "Føj en note til {{name}}",
-    "added": "Note tilføjet",
+    "add_to": "Føj et notat til {{name}}",
+    "added": "Notat tilføjet",
     "body": {
-      "empty": "Noten er tom!",
+      "empty": "Notatet er tomt!",
       "message": "{{value}} (Zendesk ticket #{{ticketID}})"
     },
     "create_another": "Opret en anden"

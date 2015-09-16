@@ -1,0 +1,47 @@
+{
+  "app": {
+    "parameters": {
+      "subdomain": {
+        "label": "Subdomeniu",
+        "helpText": "Subdomeniul contului dumneavoastră Highrise (dacă adresa URL a Highrise este DOMENIULDUMNEAVOASTRĂ.highrisehq.com, introduceţi doar DOMENIULDUMNEAVOASTRĂ)."
+      },
+      "token": {
+        "label": "Simbol"
+      },
+      "useSSL": {
+        "label": "Utilizaţi SSL?"
+      },
+      "description": "Profiluri Highrise în tichete, cu ajutorul sincronizării şi căutării"
+    }
+  },
+  "auth": {
+    "error": "Nu v-am putut autentifica în Highrise",
+    "problem": "A existat o problemă."
+  },
+  "contact": {
+    "add_to_highrise": "Adăugaţi acest utilizator Zendesk la Highrise",
+    "not_found": "Nu s-au găsit contacte cu această adresă de e-mail",
+    "problem": "A existat o problemă: {{error}}",
+    "error": "A existat o problemă: {{error}}"
+  },
+  "search": {
+    "button_label": "Căutare",
+    "field_placeholder": "Căutare persoane după nume"
+  },
+  "global": {
+    "back": "Înapoi",
+    "cancel": "Anulare",
+    "submit": "Trimitere",
+    "submitting": "Se trimite..."
+  },
+  "note": {
+    "add_to": "Adăugaţi o notă la {{name}}",
+    "added": "Notă adăugată",
+    "body": {
+      "empty": "Corpul notei este gol.",
+      "message": "{{value}} (tichetul Zendesk #{{ticketID}})"
+    },
+    "create_another": "Creare altul"
+  },
+  "search_results": "Rezultate căutare"
+}

@@ -1,0 +1,47 @@
+{
+  "app": {
+    "parameters": {
+      "subdomain": {
+        "label": "Subdoména",
+        "helpText": "Subdoména účtu Highrise (je-li vaše adresa URL Highrise VAŠE_DOMÉNA.highrisehq.com, stačí zadat VAŠE_DOMÉNA)."
+      },
+      "token": {
+        "label": "Token"
+      },
+      "useSSL": {
+        "label": "Použít SSL?"
+      },
+      "description": "Profily Highrise v tiketech, se synchronizací a hledáním"
+    }
+  },
+  "auth": {
+    "error": "Nelze vás ověřit do Highrise",
+    "problem": "Došlo k problému."
+  },
+  "contact": {
+    "add_to_highrise": "Přidat tohoto uživatele Zendesku do Highrise",
+    "not_found": "Nebyl nalezen žádný kontakt s touto e-mailovou adresou",
+    "problem": "Došlo k problému: {{error}}",
+    "error": "Došlo k problému: {{error}}"
+  },
+  "search": {
+    "button_label": "Hledat",
+    "field_placeholder": "Hledání lidí podle jména"
+  },
+  "global": {
+    "back": "Zpět",
+    "cancel": "Zrušit",
+    "submit": "Odeslat",
+    "submitting": "Odesílání..."
+  },
+  "note": {
+    "add_to": "Přidat poznámku k uživateli {{name}}",
+    "added": "Poznámka byla přidána",
+    "body": {
+      "empty": "Tělo poznámky je prázdné.",
+      "message": "{{value}} (tiket Zendesku #{{ticketID}})"
+    },
+    "create_another": "Vytvořit další"
+  },
+  "search_results": "Výsledky hledání"
+}
