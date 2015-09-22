@@ -1,0 +1,47 @@
+{
+  "app": {
+    "parameters": {
+      "subdomain": {
+        "label": "Alitoimialue",
+        "helpText": "Highrise-tilin alitoimialue (jos Highrise URL on OMATOIMIALUE.highrisehq.com, kirjoita OMATOIMIALUE)."
+      },
+      "token": {
+        "label": "Tunnus"
+      },
+      "useSSL": {
+        "label": "Käytetäänkö SSL:ää?"
+      },
+      "description": "Tikettien Highrise-profiilit synkronoinnin ja haun kanssa"
+    }
+  },
+  "auth": {
+    "error": "Emme pystyneet todentamaan Highriseen",
+    "problem": "Esiintyi ongelma!"
+  },
+  "contact": {
+    "add_to_highrise": "Lisää Zendesk-käyttäjä Highriseen",
+    "not_found": "Tätä sähköpostiosoitetta käyttävää henkilöä ei löytynyt",
+    "problem": "Esiintyi ongelma: {{error}}",
+    "error": "Esiintyi virhe: {{error}}"
+  },
+  "search": {
+    "button_label": "Haku",
+    "field_placeholder": "Etsi henkilöitä nimen perusteella"
+  },
+  "global": {
+    "back": "Takaisin",
+    "cancel": "Peruuta",
+    "submit": "Lähetä",
+    "submitting": "Lähettää..."
+  },
+  "note": {
+    "add_to": "Lisää huomautus kohteeseen {{name}}",
+    "added": "Huomautus lisätty",
+    "body": {
+      "empty": "Huomautuksen runko on tyhjä.",
+      "message": "{{value}} (Zendesk-tiketti #{{ticketID}})"
+    },
+    "create_another": "Luo toinen"
+  },
+  "search_results": "Hakutulokset"
+}

@@ -2,8 +2,8 @@
   "app": {
     "parameters": {
       "subdomain": {
-        "label": "Поддомен",
-        "helpText": "Поддомен вашего аккаунта Highrise (если ваш адрес в Highrise - ВАШ_ДОМЕН.highrisehq.com, введите просто ВАШ_ДОМЕН)."
+        "label": "Субдомен",
+        "helpText": "Субдомен вашего аккаунта Highrise (если ваш адрес в Highrise - ВАШ_ДОМЕН.highrisehq.com, введите просто ВАШ_ДОМЕН)."
       },
       "token": {
         "label": "Маркер"

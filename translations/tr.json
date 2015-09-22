@@ -22,7 +22,7 @@
     "add_to_highrise": "Bu Zendesk kullanıcısını Highrise’a ekle",
     "not_found": "Bu e-posta adresine sahip bir kişi bulunamadı",
     "problem": "Bir problem oluştu: {{error}}",
-    "error": "There was a problem: {{error}}"
+    "error": "Bir problem oluştu: {{error}}"
   },
   "search": {
     "button_label": "Arama",

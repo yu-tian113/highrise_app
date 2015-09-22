@@ -1,0 +1,47 @@
+{
+  "app": {
+    "parameters": {
+      "subdomain": {
+        "label": "Aldomén",
+        "helpText": "A Highrise fiókjának aldoménje (ha a Highrise URL-je SAJÁTDOMÉN.highrisehq.com, akkor csak írja be a SAJÁTDOMÉN-t)."
+      },
+      "token": {
+        "label": "Token"
+      },
+      "useSSL": {
+        "label": "Használ SSL-t?"
+      },
+      "description": "Highrise profilok a jegyeken, szinkronizáláskor és kereséskor"
+    }
+  },
+  "auth": {
+    "error": "Nem tudjuk hitelesíteni a Highrise-ba.",
+    "problem": "Hiba adódott."
+  },
+  "contact": {
+    "add_to_highrise": "A Zendesk felhasználó hozzáadása a Highrise-hoz",
+    "not_found": "Nincs kapcsolati találat ezekkel az e-mail címekkel",
+    "problem": "Hiba adódott: {{error}}",
+    "error": "Probléma adódott: {{error}}"
+  },
+  "search": {
+    "button_label": "Keresés",
+    "field_placeholder": "Emberek keresése név alapján"
+  },
+  "global": {
+    "back": "Vissza",
+    "cancel": "Mégsem",
+    "submit": "Beküld",
+    "submitting": "Beküldés..."
+  },
+  "note": {
+    "add_to": "Jegyzetet hozzáadása {{name}}-hoz",
+    "added": "Jegyzet hozzáadva",
+    "body": {
+      "empty": "A jegyzettörzs üres.",
+      "message": "{{value}} (Zendesk jegy #{{ticketID}})"
+    },
+    "create_another": "Más létrehozása"
+  },
+  "search_results": "Keresési eredmények"
+}

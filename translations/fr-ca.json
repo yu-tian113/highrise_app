@@ -3,7 +3,7 @@
     "parameters": {
       "subdomain": {
         "label": "Sous-domaine",
-        "helpText": "Le sous-domaine de votre compte Highrise (si votre URL Highrise est VOTREDOMAINE.highrisehq.com, sasissez simplement VOTREDOMAINE)."
+        "helpText": "Le sous-domaine de votre compte Highrise (si votre URL Highrise est VOTREDOMAINE.highrisehq.com, saisissez simplement VOTREDOMAINE)."
       },
       "token": {
         "label": "Jeton/token"

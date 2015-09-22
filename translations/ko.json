@@ -3,7 +3,7 @@
     "parameters": {
       "subdomain": {
         "label": "하위 도메인",
-        "helpText": "Highrise 계정의 하위 도메인(만약 Highrise URL이 귀사도메인.Highrisehq.com이면 귀사도메인을 입력하십시오.)"
+        "helpText": "Highrise 계정의 하위 도메인(만약 Highrise URL이 귀사도메인.Highrisehq.com이면 귀사도메인을 입력하세요.)"
       },
       "token": {
         "label": "토큰"
@@ -20,7 +20,7 @@
   },
   "contact": {
     "add_to_highrise": "이 Zendesk 사용자를 Highrise에 추가",
-    "not_found": "이 이메일 주소로 등록된 대화 상대가 없습니다",
+    "not_found": "이 이메일 주소로 등록된 대화 상대가 없습니다.",
     "problem": "다음과 같은 문제가 있었습니다. {{error}}",
     "error": "문제가 발생했습니다. {{error}}"
   },
@@ -36,9 +36,9 @@
   },
   "note": {
     "add_to": "{{name}}에 메모 추가",
-    "added": "메모가 추가되었습니다",
+    "added": "메모가 추가되었습니다.",
     "body": {
-      "empty": "메모 본문이 비워 있습니다!",
+      "empty": "메모 본문이 비어 있습니다!",
       "message": "{{value}} (Zendesk 티켓 #{{ticketID}})"
     },
     "create_another": "다른 메모 만들기"

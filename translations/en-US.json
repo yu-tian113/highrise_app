@@ -16,7 +16,7 @@
   },
   "auth": {
     "error": "We couldn't authenticate into Highrise",
-    "problem": "There's been a problem!"
+    "problem": "There's been a problem."
   },
   "contact": {
     "add_to_highrise": "Add this Zendesk user to Highrise",
@@ -38,7 +38,7 @@
     "add_to": "Add a note to {{name}}",
     "added": "Note Added",
     "body": {
-      "empty": "Note body is empty!",
+      "empty": "Note body is empty.",
       "message": "{{value}} (Zendesk ticket #{{ticketID}})"
     },
     "create_another": "Create Another"
