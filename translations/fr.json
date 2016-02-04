@@ -6,7 +6,7 @@
         "helpText": "Le sous-domaine de votre compte Highrise (si votre URL Highrise est VOTREDOMAINE.highrisehq.com, saisissez simplement VOTREDOMAINE)."
       },
       "token": {
-        "label": "Jeton/token"
+        "label": "Token"
       },
       "useSSL": {
         "label": "Utiliser SSL ?"

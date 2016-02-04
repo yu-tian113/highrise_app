@@ -6,7 +6,7 @@
         "helpText": "Highrise-tilin alitoimialue (jos Highrise URL on OMATOIMIALUE.highrisehq.com, kirjoita OMATOIMIALUE)."
       },
       "token": {
-        "label": "Tunnus"
+        "label": "Token"
       },
       "useSSL": {
         "label": "Käytetäänkö SSL:ää?"
