@@ -6,7 +6,7 @@
         "helpText": "النطاق الفرعي لحسابك في Highrise (إذا كان عنوان URL حسابك في Highrise هو YOURDOMAIN.highrisehq.com، فما عليك إلا إدخال YOURDOMAIN)."
       },
       "token": {
-        "label": "رمز مميز"
+        "label": "إذن"
       },
       "useSSL": {
         "label": "هل تريد استخدام SSL؟"
@@ -38,7 +38,7 @@
     "add_to": "إضافة ملاحظة إلى {{name}}",
     "added": "تمت إضافة الملاحظة",
     "body": {
-      "empty": "نص الرسالة فارغ.",
+      "empty": "نص الملاحظة فارغ.",
       "message": "{{value}} (تذكرة Zendesk #{{ticketID}})"
     },
     "create_another": "إنشاء تذكرة أخرى"
