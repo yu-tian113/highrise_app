@@ -3,7 +3,7 @@
     "parameters": {
       "subdomain": {
         "label": "Subdoména",
-        "helpText": "Subdoména účtu Highrise (je-li vaše adresa URL Highrise VAŠE_DOMÉNA.highrisehq.com, stačí zadat VAŠE_DOMÉNA)."
+        "helpText": "Subdoména účtu Highrise (je-li vaše URL Highrise adresa VAŠE_DOMÉNA.highrisehq.com, stačí zadat VAŠE_DOMÉNA)."
       },
       "token": {
         "label": "Token"
@@ -11,11 +11,11 @@
       "useSSL": {
         "label": "Použít SSL?"
       },
-      "description": "Profily Highrise v tiketech, se synchronizací a hledáním"
+      "description": "Profily Highrise v tiketech, se synchronizací a hledáním."
     }
   },
   "auth": {
-    "error": "Nelze vás ověřit do Highrise",
+    "error": "Ověření do Highrise není možné",
     "problem": "Došlo k problému."
   },
   "contact": {

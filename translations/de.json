@@ -41,7 +41,7 @@
       "empty": "Notiz ist leer!",
       "message": "{{value}} (Zendesk-Ticket #{{ticketID}})"
     },
-    "create_another": "Andere erstellen"
+    "create_another": "Weitere erstellen"
   },
   "search_results": "Suchergebnisse"
 }

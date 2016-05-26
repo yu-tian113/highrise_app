@@ -15,7 +15,7 @@
     }
   },
   "auth": {
-    "error": "我們不能驗證 Highrise",
+    "error": "我們無法通過 Highrise 驗證",
     "problem": "出現問題！"
   },
   "contact": {

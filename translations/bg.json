@@ -2,46 +2,46 @@
   "app": {
     "parameters": {
       "subdomain": {
-        "label": "Subdomain",
-        "helpText": "The subdomain of your Highrise account (if your Highrise URL is YOURDOMAIN.highrisehq.com, just enter YOURDOMAIN)."
+        "label": "Поддомейн",
+        "helpText": "Поддомейнът на акаунта ви във Highrise (ако URL на вашия Highrise е YOURDOMAIN.highrisehq.com, просто въведете YOURDOMAIN)."
       },
       "token": {
-        "label": "Token"
+        "label": "Токен"
       },
       "useSSL": {
-        "label": "Use SSL?"
+        "label": "Използване на SSL?"
       },
-      "description": "Highrise profiles in tickets, with sync and search"
+      "description": "Highrise профили в казуси, синхронизация и търсене"
     }
   },
   "auth": {
-    "error": "We couldn't authenticate into Highrise",
-    "problem": "There's been a problem."
+    "error": "Неуспешно автентифициране в Highrise",
+    "problem": "Възникна проблем."
   },
   "contact": {
-    "add_to_highrise": "Add this Zendesk user to Highrise",
-    "not_found": "No contact found with this email address",
-    "problem": "There's been a problem: {{error}}",
-    "error": "There was a problem: {{error}}"
+    "add_to_highrise": "Добавяне на този Zendesk потребител в Highrise",
+    "not_found": "Не е намерен контакт с този имейл адрес",
+    "problem": "Възникна проблем: {{error}}",
+    "error": "Възникна проблем: {{error}}"
   },
   "search": {
-    "button_label": "Search",
-    "field_placeholder": "Search for people by name"
+    "button_label": "Търсене",
+    "field_placeholder": "Търсене на хора по име"
   },
   "global": {
-    "back": "Back",
-    "cancel": "Cancel",
-    "submit": "Submit",
-    "submitting": "Submitting..."
+    "back": "Назад",
+    "cancel": "Отмяна",
+    "submit": "Подаване",
+    "submitting": "Изпраща се..."
   },
   "note": {
-    "add_to": "Add a note to {{name}}",
-    "added": "Note Added",
+    "add_to": "Добавяне на бележка за {{name}}",
+    "added": "Бележката е добавена",
     "body": {
-      "empty": "Note body is empty.",
-      "message": "{{value}} (Zendesk ticket #{{ticketID}})"
+      "empty": "Тялото на бележката е празно.",
+      "message": "{{value}} (Казус в Zendesk #{{ticketID}})"
     },
-    "create_another": "Create Another"
+    "create_another": "Създаване на друг"
   },
-  "search_results": "Search Results"
+  "search_results": "Резултати от търсенето"
 }

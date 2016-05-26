@@ -11,11 +11,11 @@
       "useSSL": {
         "label": "SSLを使用しますか?"
       },
-      "description": "チケットのHighriseプロファイル、同期および検索機能付き"
+      "description": "チケットにHighrise プロフィール、同期および検察機能を追加"
     }
   },
   "auth": {
-    "error": "Highriseに認証できませんでした",
+    "error": "Highriseで認証できませんでした",
     "problem": "問題が発生しました!"
   },
   "contact": {

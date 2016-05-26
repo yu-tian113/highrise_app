@@ -35,7 +35,7 @@
     "submitting": "Skickar..."
   },
   "note": {
-    "add_to": "Lägg till en anteckning i {{name}}",
+    "add_to": "Lägg till en anteckning till {{name}}",
     "added": "Anteckning tillagd",
     "body": {
       "empty": "Anteckningen är tom!",
