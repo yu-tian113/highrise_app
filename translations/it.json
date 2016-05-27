@@ -38,10 +38,10 @@
     "add_to": "Aggiungi una nota per {{name}}",
     "added": "Nota aggiunta",
     "body": {
-      "empty": "Il corpo della nota è vuoto.",
+      "empty": "La nota è vuota",
       "message": "{{value}} (ticket Zendesk #{{ticketID}})"
     },
-    "create_another": "Crea un altro"
+    "create_another": "Creane un’altra"
   },
   "search_results": "Risultati ricerca"
 }
