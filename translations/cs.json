@@ -18,8 +18,18 @@
     "error": "Ověření do Highrise není možné",
     "problem": "Došlo k problému."
   },
+  "pregolion": {
+    "contact": {
+      "add_to_highrise": "Přidat tohoto uživatele Zendesku do Highrise"
+    },
+    "note": {
+      "body": {
+        "message": "{{value}} (tiket Zendesku #{{ticketID}})"
+      }
+    }
+  },
   "contact": {
-    "add_to_highrise": "Přidat tohoto uživatele Zendesku do Highrise",
+    "add_to_highrise": "Přidat tohoto uživatele Zendesk Supportu do Highrise",
     "not_found": "Nebyl nalezen žádný kontakt s touto e-mailovou adresou",
     "problem": "Došlo k problému: {{error}}",
     "error": "Došlo k problému: {{error}}"
@@ -39,7 +49,7 @@
     "added": "Poznámka byla přidána",
     "body": {
       "empty": "Tělo poznámky je prázdné.",
-      "message": "{{value}} (tiket Zendesku #{{ticketID}})"
+      "message": "{{value}} (Tiket Zendesk Supportu #{{ticketID}})"
     },
     "create_another": "Vytvořit další"
   },

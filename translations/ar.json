@@ -18,8 +18,18 @@
     "error": "لم نتمكن من التوثيق في Highrise",
     "problem": "حدثت مشكلة."
   },
+  "pregolion": {
+    "contact": {
+      "add_to_highrise": "أضف مستخدم Zendesk هذا إلى Highrise"
+    },
+    "note": {
+      "body": {
+        "message": "{{value}} (تذكرة Zendesk #{{ticketID}})"
+      }
+    }
+  },
   "contact": {
-    "add_to_highrise": "أضف مستخدم Zendesk هذا إلى Highrise",
+    "add_to_highrise": "أضف مستخدم Zendesk Support هذا إلى Highrise",
     "not_found": "لا توجد جهة اتصال لعنوان البريد الإلكتروني هذا؟",
     "problem": "حدثت مشكلة: {{error}}",
     "error": "حدثت مشكلة: {{error}}"
@@ -39,7 +49,7 @@
     "added": "تمت إضافة الملاحظة",
     "body": {
       "empty": "نص الملاحظة فارغ.",
-      "message": "{{value}} (تذكرة Zendesk #{{ticketID}})"
+      "message": "{{value}} (تذكرة Zendesk Support #{{ticketID}})"
     },
     "create_another": "إنشاء تذكرة أخرى"
   },

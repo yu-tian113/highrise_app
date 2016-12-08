@@ -18,8 +18,18 @@
     "error": "Nu v-am putut autentifica în Highrise",
     "problem": "A existat o problemă."
   },
+  "pregolion": {
+    "contact": {
+      "add_to_highrise": "Adăugaţi acest utilizator Zendesk la Highrise"
+    },
+    "note": {
+      "body": {
+        "message": "{{value}} (tichetul Zendesk #{{ticketID}})"
+      }
+    }
+  },
   "contact": {
-    "add_to_highrise": "Adăugaţi acest utilizator Zendesk la Highrise",
+    "add_to_highrise": "Adăugaţi acest utilizator Zendesk Support la Highrise",
     "not_found": "Nu s-au găsit contacte cu această adresă de e-mail",
     "problem": "A existat o problemă: {{error}}",
     "error": "A existat o problemă: {{error}}"
@@ -39,7 +49,7 @@
     "added": "Notă adăugată",
     "body": {
       "empty": "Corpul notei este gol.",
-      "message": "{{value}} (tichetul Zendesk #{{ticketID}})"
+      "message": "{{value}} (tichetul Zendesk Support #{{ticketID}})"
     },
     "create_another": "Creare altul"
   },

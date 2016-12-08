@@ -18,8 +18,18 @@
     "error": "Highrise’a giriş için doğrulama yapamıyoruz",
     "problem": "Bir problem oluştu!"
   },
+  "pregolion": {
+    "contact": {
+      "add_to_highrise": "Bu Zendesk kullanıcısını Highrise’a ekle"
+    },
+    "note": {
+      "body": {
+        "message": "{{value}} (Zendesk kaydı #{{ticketID}})"
+      }
+    }
+  },
   "contact": {
-    "add_to_highrise": "Bu Zendesk kullanıcısını Highrise’a ekle",
+    "add_to_highrise": "Bu Zendesk Support kullanıcısını Highrise’a ekle",
     "not_found": "Bu e-posta adresine sahip bir kişi bulunamadı",
     "problem": "Bir problem oluştu: {{error}}",
     "error": "Bir problem oluştu: {{error}}"
@@ -39,7 +49,7 @@
     "added": "Not Eklendi",
     "body": {
       "empty": "Not gövdesi boş!",
-      "message": "{{value}} (Zendesk kaydı #{{ticketID}})"
+      "message": "{{value}} (Zendesk Support kaydı #{{ticketID}})"
     },
     "create_another": "Başka Not Oluştur"
   },

@@ -18,8 +18,18 @@
     "error": "Autenticazione in Highrise non riuscita",
     "problem": "Si è verificato un problema."
   },
+  "pregolion": {
+    "contact": {
+      "add_to_highrise": "Aggiungi questo utente Zendesk a Highrise"
+    },
+    "note": {
+      "body": {
+        "message": "{{value}} (ticket Zendesk #{{ticketID}})"
+      }
+    }
+  },
   "contact": {
-    "add_to_highrise": "Aggiungi questo utente Zendesk a Highrise",
+    "add_to_highrise": "Aggiungi questo utente Zendesk Support a Highrise",
     "not_found": "Nessun contatto trovato con questo indirizzo email",
     "problem": "Si è verificato un problema: {{error}}",
     "error": "Si è verificato un problema: {{error}}"
@@ -39,7 +49,7 @@
     "added": "Nota aggiunta",
     "body": {
       "empty": "La nota è vuota",
-      "message": "{{value}} (ticket Zendesk #{{ticketID}})"
+      "message": "{{value}} (ticket Zendesk Support #{{ticketID}})"
     },
     "create_another": "Creane un’altra"
   },
