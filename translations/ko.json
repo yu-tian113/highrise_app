@@ -18,8 +18,18 @@
     "error": "Highrise 인증을 할 수 없습니다.",
     "problem": "다음과 같은 문제가 있었습니다!"
   },
+  "pregolion": {
+    "contact": {
+      "add_to_highrise": "이 Zendesk 사용자를 Highrise에 추가"
+    },
+    "note": {
+      "body": {
+        "message": "{{value}} (Zendesk 티켓 #{{ticketID}})"
+      }
+    }
+  },
   "contact": {
-    "add_to_highrise": "이 Zendesk 사용자를 Highrise에 추가",
+    "add_to_highrise": "이 Zendesk Support 사용자를 Highrise에 추가",
     "not_found": "이 이메일 주소로 등록된 대화 상대가 없습니다.",
     "problem": "다음과 같은 문제가 있었습니다. {{error}}",
     "error": "문제가 발생했습니다. {{error}}"
@@ -39,7 +49,7 @@
     "added": "메모가 추가되었습니다.",
     "body": {
       "empty": "메모 본문이 비어 있습니다!",
-      "message": "{{value}} (Zendesk 티켓 #{{ticketID}})"
+      "message": "{{value}} (Zendesk Support 티켓 #{{ticketID}})"
     },
     "create_another": "다른 메모 만들기"
   },

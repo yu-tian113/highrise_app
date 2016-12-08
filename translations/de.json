@@ -18,8 +18,18 @@
     "error": "Authentifizierung bei Highrise nicht möglich",
     "problem": "Problem aufgetreten!"
   },
+  "pregolion": {
+    "contact": {
+      "add_to_highrise": "Diesen Zendesk-Benutzer zu Highrise hinzufügen"
+    },
+    "note": {
+      "body": {
+        "message": "{{value}} (Zendesk-Ticket #{{ticketID}})"
+      }
+    }
+  },
   "contact": {
-    "add_to_highrise": "Diesen Zendesk-Benutzer zu Highrise hinzufügen",
+    "add_to_highrise": "Diesen Zendesk Support-Benutzer zu Highrise hinzufügen",
     "not_found": "Keinen Kontakt mit dieser E-Mail-Adresse gefunden",
     "problem": "Problem aufgetreten: {{error}}",
     "error": "Problem aufgetreten: {{error}}"
@@ -32,14 +42,14 @@
     "back": "Zurück",
     "cancel": "Abbrechen",
     "submit": "Einreichen",
-    "submitting": "Einreichen..."
+    "submitting": "Wird eingereicht..."
   },
   "note": {
     "add_to": "Notiz an {{name}} hinzufügen",
     "added": "Notiz hinzugefügt",
     "body": {
       "empty": "Notiz ist leer!",
-      "message": "{{value}} (Zendesk-Ticket #{{ticketID}})"
+      "message": "{{value}} (Zendesk Support-Ticket #{{ticketID}})"
     },
     "create_another": "Weitere erstellen"
   },

@@ -18,8 +18,18 @@
     "error": "Неуспешно автентифициране в Highrise",
     "problem": "Възникна проблем."
   },
+  "pregolion": {
+    "contact": {
+      "add_to_highrise": "Добавяне на този Zendesk потребител в Highrise"
+    },
+    "note": {
+      "body": {
+        "message": "{{value}} (Казус в Zendesk #{{ticketID}})"
+      }
+    }
+  },
   "contact": {
-    "add_to_highrise": "Добавяне на този Zendesk потребител в Highrise",
+    "add_to_highrise": "Добавяне на този потребител на Zendesk Support в Highrise",
     "not_found": "Не е намерен контакт с този имейл адрес",
     "problem": "Възникна проблем: {{error}}",
     "error": "Възникна проблем: {{error}}"
@@ -39,7 +49,7 @@
     "added": "Бележката е добавена",
     "body": {
       "empty": "Тялото на бележката е празно.",
-      "message": "{{value}} (Казус в Zendesk #{{ticketID}})"
+      "message": "{{value}} (Казус в Zendesk Support #{{ticketID}})"
     },
     "create_another": "Създаване на друг"
   },

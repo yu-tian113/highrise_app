@@ -18,8 +18,18 @@
     "error": "Wij kunnen geen verificatie uitvoeren bij Highrise",
     "problem": "Er is een probleem!"
   },
+  "pregolion": {
+    "contact": {
+      "add_to_highrise": "Deze Zendesk-gebruiker toevoegen aan Highrise"
+    },
+    "note": {
+      "body": {
+        "message": "{{value}} (Zendesk-ticket #{{ticketID}})"
+      }
+    }
+  },
   "contact": {
-    "add_to_highrise": "Deze Zendesk-gebruiker toevoegen aan Highrise",
+    "add_to_highrise": "Deze Zendesk Support-gebruiker toevoegen aan Highrise",
     "not_found": "Geen contactpersoon gevonden met dit e-mailadres",
     "problem": "Er is een probleem: {{error}}",
     "error": "Er is een probleem opgetreden: {{error}}"
@@ -39,7 +49,7 @@
     "added": "Notitie toegevoegd",
     "body": {
       "empty": "Geen tekst in notitie!",
-      "message": "{{value}} (Zendesk-ticket #{{ticketID}})"
+      "message": "{{value}} (Zendesk Support-ticket #{{ticketID}})"
     },
     "create_another": "Nog een maken"
   },

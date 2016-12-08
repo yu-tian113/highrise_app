@@ -18,8 +18,18 @@
     "error": "Vi kunne ikke autentificere i Highrise",
     "problem": "Der opstod et problem!"
   },
+  "pregolion": {
+    "contact": {
+      "add_to_highrise": "Føj denne Zendesk-bruger til Highrise"
+    },
+    "note": {
+      "body": {
+        "message": "{{value}} (Zendesk ticket #{{ticketID}})"
+      }
+    }
+  },
   "contact": {
-    "add_to_highrise": "Føj denne Zendesk-bruger til Highrise",
+    "add_to_highrise": "Føj denne Zendesk Support-bruger til Highrise",
     "not_found": "Der blev ikke fundet nogen kontakt med denne e-mailadresse",
     "problem": "Der opstod et problem: {{error}}",
     "error": "Der var et problem: {{error}}"
@@ -39,9 +49,9 @@
     "added": "Notat tilføjet",
     "body": {
       "empty": "Notatet er tomt!",
-      "message": "{{value}} (Zendesk ticket #{{ticketID}})"
+      "message": "{{value}} (Zendesk Support-ticket #{{ticketID}})"
     },
-    "create_another": "Opret en anden"
+    "create_another": "Opret et andet"
   },
   "search_results": "Søgeresultater"
 }

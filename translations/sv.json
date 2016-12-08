@@ -18,8 +18,18 @@
     "error": "Det gick inte att autentisera med Highrise",
     "problem": "Ett problem har inträffat!"
   },
+  "pregolion": {
+    "contact": {
+      "add_to_highrise": "Lägg till denna Zendesk-användare i Highrise"
+    },
+    "note": {
+      "body": {
+        "message": "{{value}} (Zendesk-ärende #{{ticketID}})"
+      }
+    }
+  },
   "contact": {
-    "add_to_highrise": "Lägg till denna Zendesk-användare i Highrise",
+    "add_to_highrise": "Lägg till denna Zendesk Support-användare i Highrise",
     "not_found": "Ingen kontakt med denna e-postadress hittades",
     "problem": "Ett problem har inträffat: {{error}}",
     "error": "Ett problem inträffade: {{error}}"
@@ -39,7 +49,7 @@
     "added": "Anteckning tillagd",
     "body": {
       "empty": "Anteckningen är tom!",
-      "message": "{{value}} (Zendesk-ärende #{{ticketID}})"
+      "message": "{{value}} (Zendesk Support-ärende #{{ticketID}})"
     },
     "create_another": "Skapa en till"
   },

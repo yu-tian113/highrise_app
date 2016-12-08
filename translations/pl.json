@@ -18,8 +18,18 @@
     "error": "Nie można uwierzytelnić w Highrise",
     "problem": "Wystąpił problem!"
   },
+  "pregolion": {
+    "contact": {
+      "add_to_highrise": "Dodaj tego użytkownika Zendesk do Highrise"
+    },
+    "note": {
+      "body": {
+        "message": "{{value}} (zgłoszenie Zendesk #{{ticketID}})"
+      }
+    }
+  },
   "contact": {
-    "add_to_highrise": "Dodaj tego użytkownika Zendesk do Highrise",
+    "add_to_highrise": "Dodaj tego użytkownika Zendesk Support do Highrise",
     "not_found": "Nie znaleziono kontaktu z tym adresem e-mail",
     "problem": "Wystąpił problem: {{error}}",
     "error": "Wystąpił problem: {{error}}"
@@ -39,7 +49,7 @@
     "added": "Notatka dodana",
     "body": {
       "empty": "Treść notatki jest pusta.",
-      "message": "{{value}} (zgłoszenie Zendesk #{{ticketID}})"
+      "message": "{{value}} (zgłoszenie Zendesk Support #{{ticketID}})"
     },
     "create_another": "Utwórz inną"
   },

@@ -18,10 +18,20 @@
     "error": "Échec de l’authentification dans Highrise",
     "problem": "Un problème est survenu !"
   },
+  "pregolion": {
+    "contact": {
+      "add_to_highrise": "Ajouter cet utilisateur Zendesk à Highrise"
+    },
+    "note": {
+      "body": {
+        "message": "{{value}} (ticket Zendesk #{{ticketID}})"
+      }
+    }
+  },
   "contact": {
     "add_to_highrise": "Ajouter cet utilisateur Zendesk à Highrise",
     "not_found": "Aucun contact avec cette adresse courriel trouvé",
-    "problem": "Un problème est survenu : %@",
+    "problem": "Un problème est survenu : {{error}}",
     "error": "Un problème est survenu : {{error}}"
   },
   "search": {
@@ -35,7 +45,7 @@
     "submitting": "Envoi..."
   },
   "note": {
-    "add_to": "Ajouter une note à",
+    "add_to": "Ajouter une note à {{name}}",
     "added": "Note ajoutée",
     "body": {
       "empty": "Le corps de la note est vide !",

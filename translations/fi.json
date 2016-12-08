@@ -18,8 +18,18 @@
     "error": "Emme pystyneet todentamaan Highriseen",
     "problem": "Esiintyi ongelma!"
   },
+  "pregolion": {
+    "contact": {
+      "add_to_highrise": "Lisää Zendesk-käyttäjä Highriseen"
+    },
+    "note": {
+      "body": {
+        "message": "{{value}} (Zendesk-tiketti #{{ticketID}})"
+      }
+    }
+  },
   "contact": {
-    "add_to_highrise": "Lisää Zendesk-käyttäjä Highriseen",
+    "add_to_highrise": "Lisää tämä Zendesk Support -käyttäjä Highriseen",
     "not_found": "Tätä sähköpostiosoitetta käyttävää henkilöä ei löytynyt",
     "problem": "Esiintyi ongelma: {{error}}",
     "error": "Esiintyi virhe: {{error}}"
@@ -39,7 +49,7 @@
     "added": "Huomautus lisätty",
     "body": {
       "empty": "Huomautuksen runko on tyhjä.",
-      "message": "{{value}} (Zendesk-tiketti #{{ticketID}})"
+      "message": "{{value}} (Zendesk Support -tiketti #{{ticketID}})"
     },
     "create_another": "Luo toinen"
   },

@@ -18,8 +18,18 @@
     "error": "Vi kan ikke godkjennes i Highrise",
     "problem": "Det har oppstått et problem!"
   },
+  "pregolion": {
+    "contact": {
+      "add_to_highrise": "Legg til denne Zendesk-brukeren til Highrise"
+    },
+    "note": {
+      "body": {
+        "message": "{{value}} (Zendesk-sak #{{ticketID}})"
+      }
+    }
+  },
   "contact": {
-    "add_to_highrise": "Legg til denne Zendesk-brukeren til Highrise",
+    "add_to_highrise": "Legg til denne Zendesk Support-brukeren til Highrise",
     "not_found": "Finner ingen kontaktperson med denne e-post-adressen.",
     "problem": "Det har oppstått et problem: {{error}}",
     "error": "Det oppstod et problem: {{error}}"
@@ -39,7 +49,7 @@
     "added": "Merknad ble lagt til",
     "body": {
       "empty": "Brødteksten i merknaden er tom!",
-      "message": "{{value}} (Zendesk-sak #{{ticketID}})"
+      "message": "{{value}} (Zendesk Support-saken #{{ticketID}})"
     },
     "create_another": "Opprett en annen"
   },

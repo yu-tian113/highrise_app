@@ -18,8 +18,18 @@
     "error": "Не удалось выполнить проверку подлинности в Highrise",
     "problem": "Возникла проблема!"
   },
+  "pregolion": {
+    "contact": {
+      "add_to_highrise": "Добавить этого пользователя Zendesk в Highrise"
+    },
+    "note": {
+      "body": {
+        "message": "{{value}} (тикет Zendesk #{{ticketID}})"
+      }
+    }
+  },
   "contact": {
-    "add_to_highrise": "Добавить этого пользователя Zendesk в Highrise",
+    "add_to_highrise": "Добавить этого пользователя Zendesk Support в Highrise",
     "not_found": "Не найден контакт с таким адресом электронной почты",
     "problem": "Возникла проблема: {{error}}",
     "error": "Возникла неполадка: {{error}}"
@@ -39,7 +49,7 @@
     "added": "Примечание добавлено",
     "body": {
       "empty": "Нет текста примечания!",
-      "message": "{{value}} (тикет Zendesk #{{ticketID}})"
+      "message": "{{value}} (тикет Zendesk Support #{{ticketID}})"
     },
     "create_another": "Создать другое"
   },
