@@ -33,10 +33,6 @@ parts:
       title: "Error message for authentication"
       value: "There's been a problem."
   - translation:
-      key: "pregolion.txt.apps.highrise_app.contact.add_to_highrise"
-      title: "Button to add a zendesk user to highrise when the user isn't found in highrise first"
-      value: "Add this Zendesk user to Highrise"
-  - translation:
       key: "txt.apps.highrise_app.contact.add_to_highrise"
       title: "Button to add a zendesk user to highrise when the user isn't found in highrise first"
       value: "Add this Zendesk Support user to Highrise"
@@ -88,10 +84,6 @@ parts:
       key: "txt.apps.highrise_app.note.body.empty"
       title: "Message inside the note box when note box is empty"
       value: "Note body is empty."
-  - translation:
-      key: "pregolion.txt.apps.highrise_app.note.body.message"
-      title: "Gives the zendesk ticket number"
-      value: "{{value}} (Zendesk ticket #{{ticketID}})"
   - translation:
       key: "txt.apps.highrise_app.note.body.message"
       title: "Gives the zendesk ticket number"
