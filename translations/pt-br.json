@@ -18,16 +18,6 @@
     "error": "Não foi possível autenticar no Highrise",
     "problem": "Ocorreu um problema!"
   },
-  "pregolion": {
-    "contact": {
-      "add_to_highrise": "Adicionar esse usuário do Zendesk ao Highrise"
-    },
-    "note": {
-      "body": {
-        "message": "{{value}} (ticket do Zendesk nº#{{ticketID}})"
-      }
-    }
-  },
   "contact": {
     "add_to_highrise": "Adicionar esse usuário do Zendesk Support ao Highrise",
     "not_found": "Nenhum contato encontrado com esse endereço de email",

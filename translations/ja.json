@@ -18,16 +18,6 @@
     "error": "Highriseで認証できませんでした",
     "problem": "問題が発生しました!"
   },
-  "pregolion": {
-    "contact": {
-      "add_to_highrise": "このZendeskユーザーをHighriseに追加"
-    },
-    "note": {
-      "body": {
-        "message": "{{value}} （ZendeskチケットNo.#{{ticketID}}）"
-      }
-    }
-  },
   "contact": {
     "add_to_highrise": "このZendesk SupportユーザーをHighriseに追加",
     "not_found": "このメールアドレスの連絡先が見つかりません",

@@ -18,16 +18,6 @@
     "error": "لم نتمكن من التوثيق في Highrise",
     "problem": "حدثت مشكلة."
   },
-  "pregolion": {
-    "contact": {
-      "add_to_highrise": "أضف مستخدم Zendesk هذا إلى Highrise"
-    },
-    "note": {
-      "body": {
-        "message": "{{value}} (تذكرة Zendesk #{{ticketID}})"
-      }
-    }
-  },
   "contact": {
     "add_to_highrise": "أضف مستخدم Zendesk Support هذا إلى Highrise",
     "not_found": "لا توجد جهة اتصال لعنوان البريد الإلكتروني هذا؟",
