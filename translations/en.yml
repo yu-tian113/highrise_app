@@ -8,13 +8,14 @@ parts:
       key: "txt.apps.highrise_app.app.name"
       title: "Name for App: Highrise"
       value: "Highrise"
+      hidden: true
   - translation:
       key: "txt.apps.highrise_app.app.short_description"
-      title: "Description for App: Highrise"
+      title: "Description for App: Highrise. Do not translate \"Highrise.\""
       value: "Highrise profiles in tickets, with sync and search"
   - translation:
       key: "txt.apps.highrise_app.app.long_description"
-      title: "Long Description for App: Highrise"
+      title: "Long Description for App: Highrise. Do not translate \"Highrise.\""
       value: "Solve tickets faster by extending the collaborative power of Zendesk Support to Highrise.  You can easily keep track of all of your contacts. Every individual has their own unique page where you and your team can collaborate and share notes, add tasks, and most importantly, close deals.  Including Highrise content on Zendesk Support ticket pages enables your support agents to see that contact’s Highrise information in-context, including Twitter handle, phone number, and more.
 
 
@@ -24,7 +25,7 @@ Agents can add a profile or notes to contacts in Highrise from within Zendesk Su
 By enabling this app, You agree to the [Built by Zendesk Terms of Use](https://www.zendesk.com/company/built-by-zendesk-agmt/)."
   - translation:
       key: "txt.apps.highrise_app.app.installation_instructions"
-      title: "Installation Instructions for App: Highrise"
+      title: "Installation Instructions for App: Highrise. Do not translate \"Highrise.\""
       value: "Sign in to your Zendesk Support account, then click the Admin icon in the sidebar.   Select Apps > Marketplace, then find the Highrise app and click the tile.  On the Highrise app page, click Install app in the upper-right corner. Enter the following information about your Highrise account:
 
 
@@ -44,7 +45,7 @@ When you complete the information, click \"\"Install\"\".  On a ticket page, exp
       value: "Subdomain"
   - translation:
       key: "txt.apps.highrise_app.app.parameters.subdomain.helpText"
-      title: "Subset of text to help the Admin understand the instructions"
+      title: "Subset of text to help the Admin understand the instructions. Do not translate \"Highrise.\""
       value: "The subdomain of your Highrise account (if your Highrise URL is YOURDOMAIN.highrisehq.com, just enter YOURDOMAIN)."
   - translation:
       key: "txt.apps.highrise_app.app.parameters.token.label"
@@ -56,11 +57,11 @@ When you complete the information, click \"\"Install\"\".  On a ticket page, exp
       value: "Use SSL?"
   - translation:
       key: "txt.apps.highrise_app.app.parameters.description"
-      title: "Description of the app"
+      title: "Description of the app. Do not translate \"Highrise.\""
       value: "Highrise profiles in tickets, with sync and search"
   - translation:
       key: "txt.apps.highrise_app.auth.error"
-      title: "Error message when authentication fails"
+      title: "Error message when authentication fails. Do not translate \"Highrise.\""
       value: "We couldn't authenticate into Highrise"
   - translation:
       key: "txt.apps.highrise_app.auth.problem"
@@ -68,7 +69,7 @@ When you complete the information, click \"\"Install\"\".  On a ticket page, exp
       value: "There's been a problem."
   - translation:
       key: "txt.apps.highrise_app.contact.add_to_highrise"
-      title: "Button to add a zendesk user to highrise when the user isn't found in highrise first"
+      title: "Button to add a zendesk user to highrise when the user isn't found in highrise first. Do not translate \"Highrise.\""
       value: "Add this Zendesk Support user to Highrise"
   - translation:
       key: "txt.apps.highrise_app.contact.not_found"
