@@ -31,14 +31,14 @@ By enabling this app, You agree to the [Built by Zendesk Terms of Use](https://w
 
 * **Highrise subdomain** - The subdomain portion of the URL of your Highrise account (i.e. **subdomain**.highrisehq.com).  Remember **not** to include the http or https or .highrisehq.com part of the URL.
 
-* **API token** - Your Highrise account API token.  You can find this in Highrise under \"\"Account & Settings->API token\"\".
+* **API token** - Your Highrise account API token.  You can find this in Highrise under \"Account & Settings -> API token\".
 
 * **Use SSL** - If your Highrise is SSL enabled (if it uses https in the URL), select this box.
 
 * **Title** - Name for the application.
 
 
-When you complete the information, click \"\"Install\"\".  On a ticket page, expand the **apps** and your new Highrise contact search bar will appear."
+When you complete the information, click \"Install\".  On a ticket page, expand the **apps** and your new Highrise contact search bar will appear."
   - translation:
       key: "txt.apps.highrise_app.app.parameters.subdomain.label"
       title: "Subdomain of highrise account"
