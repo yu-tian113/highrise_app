@@ -22,23 +22,23 @@ parts:
 Agents can add a profile or notes to contacts in Highrise from within Zendesk Support, giving your sales and marketing teams complete visibility into customer service cases.
 
 
-By enabling this app, You agree to the [Built by Zendesk Terms of Use](https://www.zendesk.com/company/built-by-zendesk-agmt/)."
+By enabling this app, you agree to the [Built by Zendesk Terms of Use](https://www.zendesk.com/company/built-by-zendesk-agmt/)."
   - translation:
       key: "txt.apps.highrise_app.app.installation_instructions"
       title: "Installation Instructions for App: Highrise. Do not translate \"Highrise.\""
       value: "Sign in to your Zendesk Support account, then click the Admin icon in the sidebar.   Select Apps > Marketplace, then find the Highrise app and click the tile.  On the Highrise app page, click Install app in the upper-right corner. Enter the following information about your Highrise account:
 
 
-* **Highrise subdomain** - The subdomain portion of the URL of your Highrise account (i.e. **subdomain**.highrisehq.com).  Remember **not** to include the http or https or .highrisehq.com part of the URL.
+* **Highrise subdomain** - The subdomain portion of the URL of your Highrise account (example, **subdomain**.highrisehq.com).  Remember **not** to include the http or https or .highrisehq.com part of the URL.
 
 * **API token** - Your Highrise account API token.  You can find this in Highrise under \"Account & Settings -> API token\".
 
-* **Use SSL** - If your Highrise is SSL enabled (if it uses https in the URL), select this box.
+* **Use SSL** - If your Highrise is SSL-enabled (if it uses https in the URL), select this box.
 
 * **Title** - Name for the application.
 
 
-When you complete the information, click \"Install\".  On a ticket page, expand the **apps** and your new Highrise contact search bar will appear."
+When you complete the information, click \"Install\".  On a ticket page, click **apps** and your new Highrise contact search bar will appear."
   - translation:
       key: "txt.apps.highrise_app.app.parameters.subdomain.label"
       title: "Subdomain of highrise account"
