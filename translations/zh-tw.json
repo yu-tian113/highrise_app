@@ -1,5 +1,9 @@
 {
   "app": {
+    "name": "Highrise",
+    "short_description": "工單中的 Highrise 個人檔案，帶同步和搜尋",
+    "long_description": "透過將 Zendesk Support 的合作力量延伸到 Highrise，更快地解決工單。 您可便捷地追蹤所有連絡人。每個人都有其獨立的頁面，供您和您的團隊開展合作，共用備註，新增工作，並且最重要的是，完成交易。 在 Zendesk Support 工單頁面上加入 Highrise 內容可使您的支援代理看到該連絡人的背景 Highrise 資訊，包括 Twitter 使用者名稱、電話號碼以及更多。\n\n代理可從 Zendesk Support 內新增個人檔案或備註到 Highrise 中的連絡人，使您的銷售和市場行銷團隊可見全部的客戶服務個案。\n\n啟用此 app 即表示您同意 [Zendesk 自建使用條款](https://www.zendesk.com/company/built-by-zendesk-agmt/)。",
+    "installation_instructions": "登入 Zendesk Support 帳戶，再按一下側欄中的「管理員」圖示。  選取 App > Marketplace，再尋找 Highrise app 並按一下該圖磚。 在 Highrise app 頁面上，按一下右上角的「安裝 App」。輸入您 Highrise 帳戶的以下資訊：\n\n* **Highrise 子網域** - 您 Highrise 帳戶 URL 的子網域部分（例如 **subdomain**.highrisehq.com）。 請記住**不要**包含 URL 的 http 或 https 或 .highrisehq.com 部分。\n* **API 金鑰** - 您 Highrise 帳戶的 API 金鑰。 您可在 Highrise 的「Account & Settings -> API token」下找到。\n* **使用 SSL** - 若您的 Highrise 啟用 SSL（若 URL 中使用 https），請核取此方塊。\n* **標題** - 應用程式名稱。\n\n當您填完此資訊後，按一下「安裝」。 在工單頁面上，按一下 **app**，就會顯示您的新 Highrise 連絡人搜尋列。",
     "parameters": {
       "subdomain": {
         "label": "子網域",
@@ -29,7 +33,7 @@
     "field_placeholder": "按名稱搜尋人員"
   },
   "global": {
-    "back": "上一步",
+    "back": "上一頁",
     "cancel": "取消",
     "submit": "提交",
     "submitting": "提交中……"
