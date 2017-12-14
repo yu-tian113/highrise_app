@@ -1,5 +1,9 @@
 {
   "app": {
+    "name": "Highrise",
+    "short_description": "동기화 및 검색 기능과 함께 티켓의 Highrise 프로필",
+    "long_description": "Zendesk Support의 공동 작업 능력을 Highrise로 확장하여 더 빨리 티켓을 해결하세요.  모든 연락처를 쉽게 추적할 수 있습니다. 모든 연락처 개개인은 귀하와 귀하의 팀이 함께 공동 작업을 하고, 메모 공유, 작업 추가 및 가장 중요하게는 계약을 맺을 수 있도록 해주는 고유의 페이지를 가지고 있습니다.  Zendesk Support 티켓 페이지에 Highrise 콘텐츠를 포함함으로써, 지원 상담원들은 트위터 핸들, 전화번호 및 기타 다른 사항들을 포함한 연락처의 Highrise 정보를 전체적인 내용 안에서 볼 수 있습니다.\n\n상담원들은 Zendesk Support에서 Highrise 연락처에 프로필 또는 메모를 추가하여 판매 및 마케팅 팀이 고객 서비스 케이스를 완벽하고 철저하게 파악할 수 있도록 합니다.\n\n이 앱을 사용 설정하면 [Zendesk에서 제공 이용 약관](https://www.zendesk.com/company/built-by-zendesk-agmt/)에 동의하는 것입니다.",
+    "installation_instructions": "Zendesk Support 계정에 로그인한 다음 사이드바에 있는 관리자 아이콘을 클릭합니다.   앱 > 마켓플레이스를 선택한 다음 Highrise 앱을 찾아 타일을 클릭합니다.  Highrise 앱 페이지에서 오른쪽 위에 있는 앱 설치를 클릭합니다. Highrise 계정에 대한 다음 정보를 입력합니다.\n\n* **Highrise 하위 도메인** - Highrise 계정의 URL 하위 도메인 부분(예: **subdomain**.highrisehq.com).  Http, https 또는 URL의 .highrisehq.com 부분을 포함하지 **마세요**.\n* **API 토큰** - Highrise 계정 API 토큰.  Highrise \"계정 및 설정->API 토큰\"에서 찾을 수 있습니다.\n* **SSL 사용** - Highrise에서 SSL을 사용하는 경우(즉, URL에 https를 사용하는 경우), 이 확인란을 선택하세요.\n* **제목** - 애플리케이션의 이름.\n\n다음의 정보를 입력한 후 \"설치\"를 클릭합니다.  티켓 페이지에서 **앱**을 클릭하면 새로운 Highrise 연락처 검색 창이 표시됩니다.",
     "parameters": {
       "subdomain": {
         "label": "하위 도메인",

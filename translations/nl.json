@@ -1,5 +1,9 @@
 {
   "app": {
+    "name": "Highrise",
+    "short_description": "Highrise-profielen in tickets, met synchronisatie- en zoekfunctionaliteit",
+    "long_description": "Los sneller tickets op door te profiteren van de mogelijkheden tot samenwerking tussen Zendesk Support en Highrise.  U kunt eenvoudig al uw contacten bijhouden. Iedereen heeft zijn eigen unieke pagina waar u en uw team kunnen samenwerken en opmerkingen kunnen delen, taken toevoegen, en het allerbelangrijkste, deals kunnen sluiten.  Door inhoud van Highrise in ticketpagina’s van Zendesk Support op te nemen, zien uw agenten de Highrise-informatie over contactpersonen, waaronder Twitter-gegevens en telefoonnummer, in de context van de tickets.\n\nAgenten kunnen een profiel en opmerkingen aan contactpersonen in Highrise toevoegen vanuit Zendesk Support, waardoor uw sales- en marketingteams volledig inzicht hebben in klantenserviceaanvragen.\n\nDoor deze app in te schakelen, gaat u akkoord met de [Gebruiksvoorwaarden van Gemaakt door Zendesk](https://www.zendesk.com/company/built-by-zendesk-agmt/).",
+    "installation_instructions": "Meld u aan bij uw Zendesk Support-account en klik op het pictogram Admin op de zijbalk.   Selecteer Apps > Marketplace, zoek de Highrise-app en klik op de tegel.  Klik op de pagina van de Highrise-app, en klik op App installeren rechtsboven. Geef de volgende informatie op over uw Highrise-account:\n\n* **Highrise-subdomein** - Het subdomeingedeelte van het webadres van uw Highrise-account (bijv. **subdomein**.highrisehq.com).  Geef **niet** het gedeelte http of https of .highrisehq.com van het webadres op.\n* **API-token** - Het API-token van uw Highrise-account.  U vindt dit in Highrise onder \"Account & Settings -> API token\".\n* **SSL gebruiken** - Als uw Highrise geschikt is voor SSL (als https in het webadres kan worden gebruikt), schakel dan dit selectievakje in.\n* **Titel** - naam van de toepassing.\n\nKlik op Installeren nadat u de informatie hebt opgegeven.  Klik op **apps** op een ticketpagina en uw nieuwe Highrise-zoekbalk voor contactpersonen wordt weergegeven.",
     "parameters": {
       "subdomain": {
         "label": "Subdomein",
@@ -15,7 +19,7 @@
     }
   },
   "auth": {
-    "error": "Wij kunnen geen verificatie uitvoeren bij Highrise",
+    "error": "Wij kunnen geen authenticatie uitvoeren bij Highrise",
     "problem": "Er is een probleem!"
   },
   "contact": {
