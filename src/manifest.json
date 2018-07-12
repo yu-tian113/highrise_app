@@ -1,0 +1,35 @@
+{
+  "name": "Highrise App",
+  "author": {
+    "name": "Zendesk",
+    "email": "support@zendesk.com",
+    "url": "https://www.zendesk.com"
+  },
+  "defaultLocale": "en",
+  "private": false,
+  "location": {
+    "support": {
+      "ticket_sidebar": {
+        "url": "assets/iframe.html"
+      }
+    }
+  },
+  "parameters": [
+    {
+      "name": "subdomain",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "token",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "useSSL",
+      "type": "checkbox"
+    }
+  ],
+  "version": "2.0.0",
+  "frameworkVersion": "2.0"
+}
