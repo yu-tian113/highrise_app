@@ -1,0 +1,87 @@
+ul {
+  margin-left: 0;
+}
+
+ul.options li {
+  display: block;
+  background: app-asset-url("bullets.png") no-repeat scroll 0 -275px;
+  padding: 0 0 0 17px;
+  margin: 5px 11px 8px 0;
+
+  &.people   { background-position: 0 -732px; }
+  &.email    { background-position: 0 -426px; }
+  &.phone    { background-position: 0 -872px; }
+  &.twitter  { background-position: 0 -987px; }
+  &.add_note { background-position: 0 -140px; }
+
+  /* Not Used */
+  &.link     { background-position: 0 2px; }
+  &.forum    { background-position: 0 -578px; }
+}
+
+.add_contact {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.loading {
+  margin-bottom: 10px;
+}
+
+.message {
+  .back {
+    margin: 10px 0;
+  }
+
+  .error {
+    color: red;
+    text-align: center;
+  }
+}
+
+.note form {
+  margin-bottom: 8px;
+  text-align: right;
+
+  .submit {
+    margin-left: 6px
+  }
+
+  textarea {
+    margin-bottom: 6px;
+    width: 95%;
+  }
+}
+
+.results {
+  .back {
+    margin: 5px 0 10px 0;
+  }
+
+  table {
+    margin-top: 5px;
+
+    td {
+      border: 0;
+      line-height: 12px;
+      padding: 5px 2px;
+    }
+  }
+}
+
+.search_section {
+  hr {
+    color: gray;
+  }
+
+  .search_term {
+    margin-right: 2px;
+    width: 74%;
+  }
+}
+
+.user_data td {
+  border: 0;
+  line-height: 12px;
+  padding: 5px 2px;
+}

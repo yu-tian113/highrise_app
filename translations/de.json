@@ -1,0 +1,51 @@
+{
+  "app": {
+    "name": "Highrise",
+    "short_description": "Highrise-Profile in Tickets mit Synchronisations- und Suchfunktion",
+    "long_description": "Schnellere Lösung von Tickets durch Integration von Highrise-Daten in Zendesk Support.  Behalten Sie alle Ihre Kontakte mühelos im Blick. Jeder Benutzer hat seine persönliche Seite für das gemeinsame Arbeiten im Team, Vergleichen von Notizen, Hinzufügen von Aufgaben und Abschließen von Geschäften.  Bei Einbettung von Highrise-Inhalten in Zendesk Support-Ticketseiten können Ihre Supportagenten die Highrise-Informationen des entsprechenden Kontakts (einschließlich Twitter-Name, Telefonnummer usw.) im Kontext sehen.\n\nAgenten können von Zendesk Support aus ein Profil oder Notizen zu Kontakten in Highrise hinzufügen, damit Ihre Verkaufs- und Marketingteams umfassenden Einblick in Kundenservicefälle erhalten.\n\nDurch Aktivierung dieser App akzeptieren Sie die [Allgemeinen Geschäftsbedingungen für von Zendesk erstellte Apps](https://www.zendesk.com/company/built-by-zendesk-agmt/).",
+    "installation_instructions": "Melden Sie sich bei Ihrem Zendesk Support-Konto an und klicken Sie in der Seitenleiste auf das Admin-Symbol.   Klicken Sie auf „Apps“ > „Marketplace“, machen Sie die Highrise-App ausfindig und klicken Sie auf die Kachel.  Klicken Sie oben rechts auf der Seite für die Highrise-App auf „App installieren“. Geben Sie die folgenden Informationen zu Ihrem Highrise-Konto ein:\n\n* **Highrise-Subdomäne** – Die Subdomäne aus der URL Ihres Highrise-Kontos (d. h. **subdomäne**.highrisehq.com).  „http“ bzw. „https“ und „.highrisehq.com“ dürfen **nicht** als Teil der URL angegeben werden.\n* **API-Token** – Das API-Token Ihres Highrise-Kontos.  Sie finden diesen Wert in Highrise unter „Account & Settings“ > „API token“.\n* **SSL verwenden** – Wenn in Ihrem Highrise-Konto SSL aktiviert ist (d. h. wenn die URL mit „https“ beginnt), markieren Sie dieses Kästchen..\n* **Titel** – Name der App.\n\nKlicken Sie nach Eingabe dieser Informationen auf „Installieren“.  Wenn Sie jetzt von einer Ticketseite aus auf **Apps** klicken, erscheint die Highrise-Kontaktsuchleiste.",
+    "parameters": {
+      "subdomain": {
+        "label": "Subdomäne",
+        "helpText": "Die Subdomäne Ihres Highrise-Kontos (wenn Ihre Highrise-URL IhreDomäne.highrisehq.com lautet, geben Sie nur „IhreDomäne“ ein)."
+      },
+      "token": {
+        "label": "Token"
+      },
+      "useSSL": {
+        "label": "SSL verwenden?"
+      },
+      "description": "Highrise-Profile in Tickets mit Synchronisations- und Suchfunktion"
+    }
+  },
+  "auth": {
+    "error": "Authentifizierung bei Highrise nicht möglich",
+    "problem": "Problem aufgetreten!"
+  },
+  "contact": {
+    "add_to_highrise": "Diesen Zendesk Support-Benutzer zu Highrise hinzufügen",
+    "not_found": "Keinen Kontakt mit dieser E-Mail-Adresse gefunden",
+    "problem": "Problem aufgetreten: {{error}}",
+    "error": "Problem aufgetreten: {{error}}"
+  },
+  "search": {
+    "button_label": "Suchen",
+    "field_placeholder": "Namentlich nach Personen suchen"
+  },
+  "global": {
+    "back": "Zurück",
+    "cancel": "Abbrechen",
+    "submit": "Einreichen",
+    "submitting": "Wird eingereicht..."
+  },
+  "note": {
+    "add_to": "Notiz an {{name}} hinzufügen",
+    "added": "Notiz hinzugefügt",
+    "body": {
+      "empty": "Notiz ist leer!",
+      "message": "{{value}} (Zendesk Support-Ticket #{{ticketID}})"
+    },
+    "create_another": "Weitere erstellen"
+  },
+  "search_results": "Suchergebnisse"
+}

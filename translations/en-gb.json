@@ -1,0 +1,51 @@
+{
+  "app": {
+    "name": "Highrise",
+    "short_description": "Highrise profiles in tickets, with sync and search",
+    "long_description": "Solve tickets faster by extending the collaborative power of Zendesk Support to Highrise.  You can easily keep track of all of your contacts. Every individual has their own unique page where you and your team can collaborate and share notes, add tasks, and most importantly, close deals.  Including Highrise content on Zendesk Support ticket pages enables your support agents to see that contact’s Highrise information in context, including Twitter handle, phone number, and more.\n\nAgents can add a profile or notes to contacts in Highrise from within Zendesk Support, giving your sales and marketing teams complete visibility into customer service cases.\n\nBy enabling this app, you agree to the [Built by Zendesk Terms of Use](https://www.zendesk.com/company/built-by-zendesk-agmt/).",
+    "installation_instructions": "Sign in to your Zendesk Support account, then click the Admin icon in the sidebar.   Select Apps > Marketplace, then find the Highrise app and click the tile.  On the Highrise app page, click Install app in the upper-right corner. Enter the following information about your Highrise account:\n\n* **Highrise subdomain** - The subdomain portion of the URL of your Highrise account (example, **subdomain**.highrisehq.com).  Remember **not** to include the http or https or .highrisehq.com part of the URL.\n* **API token** - Your Highrise account API token.  You can find this in Highrise under \"Account & Settings -> API token\".\n* **Use SSL** - If your Highrise is SSL-enabled (if it uses https in the URL), select this box.\n* **Title** - Name for the application.\n\nWhen you complete the information, click \"Install\".  On a ticket page, click **Apps** and your new Highrise contact search bar will appear.",
+    "parameters": {
+      "subdomain": {
+        "label": "Subdomain",
+        "helpText": "The subdomain of your Highrise account (if your Highrise URL is YOURDOMAIN.highrisehq.com, just enter YOURDOMAIN)."
+      },
+      "token": {
+        "label": "Token"
+      },
+      "useSSL": {
+        "label": "Use SSL?"
+      },
+      "description": "Highrise profiles in tickets, with sync and search"
+    }
+  },
+  "auth": {
+    "error": "We couldn't authenticate into Highrise",
+    "problem": "There's been a problem."
+  },
+  "contact": {
+    "add_to_highrise": "Add this Zendesk Support user to Highrise",
+    "not_found": "No contact found with this email address",
+    "problem": "There's been a problem: {{error}}",
+    "error": "There was a problem: {{error}}"
+  },
+  "search": {
+    "button_label": "Search",
+    "field_placeholder": "Search for people by name"
+  },
+  "global": {
+    "back": "Back",
+    "cancel": "Cancel",
+    "submit": "Submit",
+    "submitting": "Submitting..."
+  },
+  "note": {
+    "add_to": "Add a note to {{name}}",
+    "added": "Note Added",
+    "body": {
+      "empty": "Note body is empty.",
+      "message": "{{value}} (Zendesk Support ticket #{{ticketID}})"
+    },
+    "create_another": "Create Another"
+  },
+  "search_results": "Search Results"
+}

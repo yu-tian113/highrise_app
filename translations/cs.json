@@ -1,0 +1,51 @@
+{
+  "app": {
+    "name": "Highrise",
+    "short_description": "Profily Highrise v tiketech, se synchronizací a hledáním",
+    "long_description": "Řešte tikety rychleji rozšířením schopností spolupráce Zendesk Supportu na aplikaci Highrise.  Můžete si snadno udržovat přehled o všech svých kontaktech. Každý má svou vlastní jedinečnou stránku, kde vy a váš tým můžete ve spolupráci sdílet poznámky, přidávat úkoly, a co je nejdůležitější, uzavírat nové obchody.  Začlenění obsahu Highrise na stránky tiketů Zendesk Supportu umožňuje vašim agentům podpory zobrazit informace z Highrise pro daný kontakt v kontextu, včetně identifikátoru Twitteru, telefonního čísla a dalších údajů.\n\nAgenti mohou přidávat profil nebo poznámky ke kontaktům v Highrise z prostředí Zendesk Supportu, což poskytuje vašim prodejním a marketingovým týmům kompletní přehled o případech služeb zákazníkům.\n\nTím, že zapnete tuto aplikaci, souhlasíte s [Podmínkami používání služby Zendesk](https://www.zendesk.com/company/built-by-zendesk-agmt/).",
+    "installation_instructions": "Přihlaste se do svého účtu Zendesk Supportu a klikněte na ikonu administrátora v postranním panelu.   Vyberte Aplikace > Marketplace, pak najděte aplikaci Highrise a klikněte na její dlaždici.  V pravém horním rohu stránky aplikace Highrise klikněte na Nainstalovat aplikaci. Zadejte následující informace o svém účtu Highrise:\n\n* **Subdoména Highrise** – Část adresy URL vašeho účtu Highrise vyjadřující subdoménu (např. **subdoména**. highrisehq.com).  Nezapomeňte zadat subdoménu **bez** části http nebo https nebo .highrisehq.com z adresy URL.\n* **Token API** – Token API vašeho účtu Highrise.  Tento token najdete v Highrise pomocí příkazu „Účet a nastavení -> Token API“.\n* **Použít SSL** – Je-li ve vašem Highrise zapnutý protokol SSL (pokud se v adrese URL používá https), zaškrtněte toto políčko.\n* **Titul** – Název aplikace.\n\nPo vyplnění údajů klikněte na tlačítko „Nainstalovat“.  Na stránce tiketu rozbalte seznam **Aplikace** a zobrazí se váš nový panel hledání kontaktů Highrise.",
+    "parameters": {
+      "subdomain": {
+        "label": "Subdoména",
+        "helpText": "Subdoména účtu Highrise (je-li vaše URL Highrise adresa VAŠE_DOMÉNA.highrisehq.com, stačí zadat VAŠE_DOMÉNA)."
+      },
+      "token": {
+        "label": "Token"
+      },
+      "useSSL": {
+        "label": "Použít SSL?"
+      },
+      "description": "Profily Highrise v tiketech, se synchronizací a hledáním."
+    }
+  },
+  "auth": {
+    "error": "Ověření do Highrise není možné",
+    "problem": "Došlo k problému."
+  },
+  "contact": {
+    "add_to_highrise": "Přidat tohoto uživatele Zendesk Supportu do Highrise",
+    "not_found": "Nebyl nalezen žádný kontakt s touto e-mailovou adresou",
+    "problem": "Došlo k problému: {{error}}",
+    "error": "Došlo k problému: {{error}}"
+  },
+  "search": {
+    "button_label": "Hledat",
+    "field_placeholder": "Hledání lidí podle jména"
+  },
+  "global": {
+    "back": "Zpět",
+    "cancel": "Zrušit",
+    "submit": "Odeslat",
+    "submitting": "Odesílání..."
+  },
+  "note": {
+    "add_to": "Přidat poznámku k uživateli {{name}}",
+    "added": "Poznámka byla přidána",
+    "body": {
+      "empty": "Tělo poznámky je prázdné.",
+      "message": "{{value}} (Tiket Zendesk Supportu #{{ticketID}})"
+    },
+    "create_another": "Vytvořit další"
+  },
+  "search_results": "Výsledky hledání"
+}

@@ -1,0 +1,47 @@
+{
+  "app": {
+    "parameters": {
+      "subdomain": {
+        "label": "תת-דומיין",
+        "helpText": "תת-הדומיין של חשבון Highrise שלך (אם כתובת ה-URL שלך ב-Highrise היא YOURDOMAIN.highrisehq.com, הזן רק את YOURDOMAIN)."
+      },
+      "token": {
+        "label": "אסימון"
+      },
+      "useSSL": {
+        "label": "להשתמש ב-SSL?"
+      },
+      "description": "פרופילים של Highrise בפניות, עם סנכרון וחיפוש"
+    }
+  },
+  "auth": {
+    "error": "האימות נכשל ולא הצלחנו להיכנס ל-Highrise",
+    "problem": "נתקלנו בבעיה."
+  },
+  "contact": {
+    "add_to_highrise": "הוסף את ה-Zendesk הזה ל-Highrise",
+    "not_found": "לא נמצאו אנשי קשר עם כתובת דואר אלקטרוני כזאת",
+    "problem": "נתקלנו בבעיה: {{error}}",
+    "error": "נתקלנו בבעיה: {{error}}"
+  },
+  "search": {
+    "button_label": "חיפוש",
+    "field_placeholder": "חיפוש אנשים לפי שם"
+  },
+  "global": {
+    "back": "הקודם",
+    "cancel": "ביטול",
+    "submit": "שלח",
+    "submitting": "שולח..."
+  },
+  "note": {
+    "add_to": "הוסף הערה ל- {{name}}",
+    "added": "ההערה נוספה",
+    "body": {
+      "empty": "גוף ההערה ריק.",
+      "message": "{{value}} (פניית Zendesk #{{ticketID}})"
+    },
+    "create_another": "צור עוד"
+  },
+  "search_results": "תוצאות החיפוש"
+}

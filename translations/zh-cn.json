@@ -1,0 +1,51 @@
+{
+  "app": {
+    "name": "Highrise",
+    "short_description": "工单中的 Highrise 个人资料，带同步和搜索功能",
+    "long_description": "通过将 Zendesk Support 的合作力量延伸到 Highrise，更快地解决工单。 您可方便地跟踪您所有的联系人。每个人都有其独立的页面，您和您的团队可在上面展开合作，共享注释，添加任务，并且最重要的是，完成交易。 在 Zendesk Support 工单页面上加入 Highrise 内容可使您的支持专员看到该联系人的背景 Highrise 信息，包括 Twitter 用户名、电话号码以及更多。\n\n专员可从 Zendesk Support 内添加个人资料或注释到 Highrise 中的联系人，使您的销售和市场营销团队能对客户服务个案具备全局视野。\n\n启用此应用即表示您同意 [Zendesk 自建使用条款](https://www.zendesk.com/company/built-by-zendesk-agmt/)。",
+    "installation_instructions": "登录您的 Zendesk Support 帐户，然后单击侧栏中的管理员图标。  选择应用 > 市场，然后查找 Highrise 应用并单击该磁贴。 在 Highrise 应用页面上，单击右上角的“安装应用”。输入您 Highrise 帐户的以下信息：\n\n* **Highrise 子域名** - 您 Highrise 帐户 URL 的子域名部分（例如 **subdomain**.highrisehq.com）。 请记住**不要**包含 URL 的 http 或 https 或 .highrisehq.com 部分。\n* **API 密钥** - 您 Highrise 帐户的 API 密钥。 您可在 Highrise 的“Account & Settings -> API token”下找到。\n* **使用 SSL** - 如果您的 Highrise 启用 SSL（如果 URL 中使用 https），请勾选此复选框。\n* **标题** - 应用程序的名称。\n\n当您完成信息后，单击“安装”。 在工单页面上，单击**应用**，您新的 Highrise 联系人搜索栏就会显示出来。",
+    "parameters": {
+      "subdomain": {
+        "label": "子域名",
+        "helpText": "您 Highrise 帐户的子域名（如果您的 Highrise URL 为“您的域名.highrisehq.com”，只需输入“您的域名”即可）。"
+      },
+      "token": {
+        "label": "密钥"
+      },
+      "useSSL": {
+        "label": "使用 SSL？"
+      },
+      "description": "工单中的 Highrise 个人资料，带同步和搜索功能"
+    }
+  },
+  "auth": {
+    "error": "我们无法对 Highrise 进行身份验证",
+    "problem": "出现问题！"
+  },
+  "contact": {
+    "add_to_highrise": "将此 Zendesk Support 用户添加到 Highrise",
+    "not_found": "此电邮地址未找到联系人",
+    "problem": "出现了问题：{{error}}",
+    "error": "出现了问题：{{error}}"
+  },
+  "search": {
+    "button_label": "搜索",
+    "field_placeholder": "按名称搜索人员"
+  },
+  "global": {
+    "back": "返回",
+    "cancel": "取消",
+    "submit": "提交",
+    "submitting": "正在提交……"
+  },
+  "note": {
+    "add_to": "添加注释到 {{name}}",
+    "added": "注释已添加",
+    "body": {
+      "empty": "注释主体为空！",
+      "message": "{{value}}（Zendesk Support 工单 #{{ticketID}}）"
+    },
+    "create_another": "创建另一条"
+  },
+  "search_results": "搜索结果"
+}

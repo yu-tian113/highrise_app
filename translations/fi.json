@@ -1,0 +1,51 @@
+{
+  "app": {
+    "name": "Highrise",
+    "short_description": "Tikettien Highrise-profiilit synkronoinnin ja haun kanssa",
+    "long_description": "Ratkaise tiketit nopeammin laajentamalla Zendeskin yhteistyön voimaa Highriseen.  Voit helposti seurata kaikkien yhteyshenkilöiden toimia. Jokaisella henkilöllä on oma sivunsa, jossa sinä ja tiimisi voitte toimia yhteistyössä ja jakaa muistiinpanoja, lisätä tehtäviä ja mikä tärkeintä, sopia kaupoista.  Highrise-sisällön lisääminen Zendesk Support -tiketin sivulle antaa tukihenkilöille mahdollisuuden nähdä kyseisen yhteyshenkilön Highrise-tiedot kontekstissa, mukaan lukien Twitter-kahva, puhelinnumero ja muuta. \n\nTukihenkilöt voivat lisätä profiilin tai huomautukset yhteyshenkilöille Highrisessa Zendesk Supportista käsin, jolloin myynti- ja markkinointitiimeillä on täysi näkyvyys asiakaspalvelutapauksiin.\n\nOttamalla tämän sovelluksen käyttöön hyväksyt [Zendeskin kehittämä -käyttöehdot](https://www.zendesk.com/company/built-by-zendesk-agmt/).",
+    "installation_instructions": "Kirjaudu sisään Zendesk Support -tilille ja napsauta sitten sivupalkin Järjestelmänvalvoja-kuvaketta.   Valitse Sovellukset > Sovelluskauppa, etsi Highrise-sovellus ja napsauta ruutua.  Napsauta Highrise-sovelluksen sivun oikeassa yläkulmassa Asenna sovellus. Anna seuraavat tiedot Highrise-tilistäsi:\n\n* **Highrise-alatoimialue** - Highrise-tilin URL:n alatoimialue (esimerkiksi **alatoimialue**.highrisehq.com).  Muista, **ettet** sisällytä URL-osoitteen http- tai https- tai .highrisehq.com-osaa.\n* **API-token** - Highrise-tilin API-token.  Tämä on Highrisessa kohdassa Tili & asetukset -> API-token\".\n* **Käytä SSL:ää** - Jos Highrise käyttää SSL:ää (jos se käyttää https:ää URL:ssä),valitse tämä ruutu.\n* **Otsikko** - Sovelluksen nimi.\n\nKun olet lisännyt kaikki tiedot, napsauta Asenna.  Napsauta tikettisivulla **sovellukset**, jolloin esiin tulee Highrise-yhteyshenkilön hakupalkki.",
+    "parameters": {
+      "subdomain": {
+        "label": "Alitoimialue",
+        "helpText": "Highrise-tilin alitoimialue (jos Highrise URL on OMATOIMIALUE.highrisehq.com, kirjoita OMATOIMIALUE)."
+      },
+      "token": {
+        "label": "Token"
+      },
+      "useSSL": {
+        "label": "Käytetäänkö SSL:ää?"
+      },
+      "description": "Tikettien Highrise-profiilit synkronoinnin ja haun kanssa"
+    }
+  },
+  "auth": {
+    "error": "Emme pystyneet todentamaan Highriseen",
+    "problem": "Esiintyi ongelma!"
+  },
+  "contact": {
+    "add_to_highrise": "Lisää tämä Zendesk Support -käyttäjä Highriseen",
+    "not_found": "Tätä sähköpostiosoitetta käyttävää henkilöä ei löytynyt",
+    "problem": "Esiintyi ongelma: {{error}}",
+    "error": "Esiintyi virhe: {{error}}"
+  },
+  "search": {
+    "button_label": "Haku",
+    "field_placeholder": "Etsi henkilöitä nimen perusteella"
+  },
+  "global": {
+    "back": "Takaisin",
+    "cancel": "Peruuta",
+    "submit": "Lähetä",
+    "submitting": "Lähettää..."
+  },
+  "note": {
+    "add_to": "Lisää huomautus kohteeseen {{name}}",
+    "added": "Huomautus lisätty",
+    "body": {
+      "empty": "Huomautuksen runko on tyhjä.",
+      "message": "{{value}} (Zendesk Support -tiketti #{{ticketID}})"
+    },
+    "create_another": "Luo toinen"
+  },
+  "search_results": "Hakutulokset"
+}

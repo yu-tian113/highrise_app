@@ -1,0 +1,51 @@
+{
+  "app": {
+    "name": "Highrise",
+    "short_description": "Perfiles de Highrise en tickets, con sincronización y búsqueda",
+    "long_description": "Resuelva tickets más rápidamente extendiendo el poder de colaboración de Zendesk a Highrise.  Puede realizar fácilmente el seguimiento de todos sus contactos. Cada individuo tiene su propia página donde usted y su equipo pueden colaborar y compartir notas, agregar tareas y, lo más importante, cerrar tratos.  Si incluye contenido de Highrise en las páginas de tickets de Zendesk Support, los agentes de soporte podrán ver la información de Highrise de ese contacto en contexto, incluido su identificador de Twitter, número de teléfono y mucho más.\n\nLos agentes pueden agregar un perfil o notas a los contactos en Highrise desde Zendesk Support, lo cual brinda a los equipos de ventas y marketing una visión completa de los casos de atención al cliente.\n\nAl activar esta aplicación, usted acepta los [Términos de uso de Creadas por Zendesk](https://www.zendesk.com/company/built-by-zendesk-agmt/).",
+    "installation_instructions": "Inicie sesión en su cuenta de Zendesk Support y luego haga clic en el icono Administrador en la barra lateral.   Seleccione Aplicaciones > Marketplace, busque la aplicación Highrise y haga clic en el mosaico.  En la página de la aplicación Highrise, haga clic en Instalar aplicación en la esquina superior derecha. Ingrese la siguiente información sobre la cuenta de Highrise:\n\n* **Subdominio de Highrise** - La parte del subdominio del URL de la cuenta de Highrise (ejemplo, **subdominio**.highrisehq.com).  Recuerde **no** incluir la parte de http o https o .highrisehq.com del URL.\n* **Token de API** - El token de API de la cuenta de Highrise.  Esto se encuentra en Highrise, bajo \"Accounts & Settings -> API token\".\n* **Usar SSL** - Seleccione esta casilla si su cuenta de Highrise admite SSL (si utiliza https en el URL).\n* **Título** - Nombre de la aplicación.\n\nCuando la información esté completa, haga clic en \"Instalar\".  En la página de un ticket, haga clic en **aplicaciones** y aparecerá la nueva barra de búsqueda de contactos de su cuenta de Highrise.",
+    "parameters": {
+      "subdomain": {
+        "label": "Subdominio",
+        "helpText": "El subdominio de su cuenta de Highrise (si el URL de su cuenta de Highrise es SUDOMINIO.highrisehq.com, introduzca SUDOMINIO)."
+      },
+      "token": {
+        "label": "Token"
+      },
+      "useSSL": {
+        "label": "¿Usar SSL?"
+      },
+      "description": "Perfiles de Highrise en tickets, con sincronización y búsqueda"
+    }
+  },
+  "auth": {
+    "error": "Error de autenticación en Highrise",
+    "problem": "Ha ocurrido un problema."
+  },
+  "contact": {
+    "add_to_highrise": "Añadir este usuario de Zendesk a Highrise",
+    "not_found": "No se ha encontrado ningún contacto con esta dirección de correo electrónico",
+    "problem": "Ha ocurrido un problema: {{error}}",
+    "error": "Hubo un problema: {{error}}"
+  },
+  "search": {
+    "button_label": "Buscar",
+    "field_placeholder": "Buscar personas por nombre"
+  },
+  "global": {
+    "back": "Atrás",
+    "cancel": "Cancelar",
+    "submit": "Enviar",
+    "submitting": "Enviando..."
+  },
+  "note": {
+    "add_to": "Añadir una nota a {{name}}",
+    "added": "Nota añadida",
+    "body": {
+      "empty": "El cuerpo de la nota está vacío.",
+      "message": "{{value}} (ticket #{{ticketID}} de Zendesk Support)"
+    },
+    "create_another": "Crear otra"
+  },
+  "search_results": "Resultados de la búsqueda"
+}
