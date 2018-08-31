@@ -1,9 +1,0 @@
-<div class="results">
-  <p>{{t "search_results"}}<b> ({{total}})</b></p>
-  <ul class="options">
-    {{#results}}
-      <li class="{{type}}"><a target="_blank" href="{{url}}">{{name}}</a></li>
-    {{/results}}
-  </li>
-  <div class="back"><a href="#" onclick="return false;"><< {{t "global.back"}}</a></div>
-</div>

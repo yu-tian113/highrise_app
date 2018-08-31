@@ -1,3 +1,0 @@
-<div class="add_contact">
-  <p>{{t "contact.not_found"}}</p><p><a href="#" onclick="return false;">{{t "contact.add_to_highrise"}}</a></p>
-</div>

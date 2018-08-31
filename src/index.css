@@ -1,0 +1,113 @@
+@import '@zendeskgarden/css-bedrock';
+@import '@zendeskgarden/css-buttons/dist/index.css';
+@import '@zendeskgarden/css-forms/dist/index.css';
+@import '@zendeskgarden/css-utilities/dist/index.css';
+@import '@zendeskgarden/css-callouts/dist/index.css';
+
+[data-main] {
+  overflow: hidden;
+  padding: 0 3px;
+}
+
+.loader {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 36px;
+}
+
+input[type="submit"] {
+  &.is-loading {
+    background-image: url("loader-white.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 24px auto;
+    text-indent: -9999px;
+  }
+}
+
+.contact {
+  border-top: 1px dotted var(--zd-color-iron);
+  min-height: 45px;
+  position: relative;
+
+  .showResults & {
+    display: none;
+  }
+
+  form,
+  .note_added {
+    display: none;
+  }
+
+  &.showForm {
+    form {
+      display: block;
+    }
+  }
+
+  &.showAdded {
+    .note_added {
+      display: flex;
+    }
+
+    .note_new {
+      display: none !important;
+    }
+  }
+
+  li {
+    align-items: center;
+
+    svg {
+      width: 12px;
+      color: var(--zd-color-grey-600);
+    }
+  }
+
+  p .loader {
+    left: auto;
+    position: relative;
+    top: auto;
+    transform: none;
+  }
+}
+
+.search {
+  form > div {
+    flex-grow: 1;
+
+    .c-txt__input--media__figure {
+      top: 12px;
+      left: -4px;
+    }
+
+    input[type="text"]:focus + .c-txt__input--media__figure {
+      svg {
+        color: var(--zd-color-grey-600);
+      }
+    }
+  }
+}
+
+.results {
+  display: none;
+
+  .showResults & {
+    display: block;
+  }
+
+  .back {
+    align-items: center;
+
+    svg {
+      width: 12px;
+    }
+  }
+
+  ul {
+    max-height: 300px;
+    overflow-y: auto;
+  }
+}

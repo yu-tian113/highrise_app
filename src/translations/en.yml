@@ -33,8 +33,6 @@ By enabling this app, you agree to the [Built by Zendesk Terms of Use](https://w
 
 * **API token** - Your Highrise account API token.  You can find this in Highrise under \"Account & Settings -> API token\".
 
-* **Use SSL** - If your Highrise is SSL-enabled (if it uses https in the URL), select this box.
-
 * **Title** - Name for the application.
 
 
@@ -51,14 +49,6 @@ When you complete the information, click \"Install\".  On a ticket page, click *
       key: "txt.apps.highrise_app.app.parameters.token.label"
       title: "API token"
       value: "Token"
-  - translation:
-      key: "txt.apps.highrise_app.app.parameters.useSSL.label"
-      title: "Question for the admin when installing the app on wether or not he wants to use SSL"
-      value: "Use SSL?"
-  - translation:
-      key: "txt.apps.highrise_app.app.parameters.description"
-      title: "Description of the app. Do not translate \"Highrise.\""
-      value: "Highrise profiles in tickets, with sync and search"
   - translation:
       key: "txt.apps.highrise_app.auth.error"
       title: "Error message when authentication fails. Do not translate \"Highrise.\""
