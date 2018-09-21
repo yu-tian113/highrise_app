@@ -25,7 +25,7 @@ Agents can add a profile or notes to contacts in Highrise from within Zendesk Su
 By enabling this app, you agree to the [Built by Zendesk Terms of Use](https://www.zendesk.com/company/built-by-zendesk-agmt/)."
   - translation:
       key: "txt.apps.highrise_app.app.installation_instructions"
-      title: "Installation Instructions for App: Highrise. Do not translate 'Highrise', 'Account & Settings' and 'API Token'"
+      title: "Installation Instructions for App: Highrise. Do not translate 'Highrise', 'Account & Settings' and 'API Token' since the app UI is not localized."
       value: "Sign in to your Zendesk Support account, then click the Admin icon in the sidebar.   Select Apps > Marketplace, then find the Highrise app and click the tile.  On the Highrise app page, click Install app in the upper-right corner. Enter the following information about your Highrise account:
 
 
