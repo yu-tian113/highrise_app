@@ -24,7 +24,7 @@ if (!document.createRange) {
 let app
 const getBeforeEachCallback = (mockClientRequestReturnValue) => {
   return (done) => {
-    document.body.innerHTML = '<section data-main><img class="loader" src="loader-green.gif"/></section>'
+    document.body.innerHTML = '<section data-main><img class="loader" src="spinner.gif"/></section>'
     DOMFinder.clear()
     CLIENT.request = jest.fn()
       .mockReturnValueOnce(mockClientRequestReturnValue)
